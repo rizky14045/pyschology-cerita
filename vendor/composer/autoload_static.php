@@ -519,14 +519,11 @@ class ComposerStaticInit3aea1d58ab389750d0f99645351f61cd
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-<<<<<<< HEAD
         'App\\Http\\Controllers\\Admin\\ArticleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ArticleController.php',
         'App\\Http\\Controllers\\Admin\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AuthController.php',
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
         'App\\Http\\Controllers\\Admin\\FaqController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/FaqController.php',
-=======
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
->>>>>>> d75225ebda4b30d0b8a2e16db4491997ce54ac46
         'App\\Http\\Controllers\\Admin\\PyschologyController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PyschologyController.php',
         'App\\Http\\Controllers\\Admin\\PyschologyOrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PyschologyOrderController.php',
         'App\\Http\\Controllers\\Admin\\SettingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SettingController.php',
