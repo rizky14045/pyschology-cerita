@@ -27,13 +27,13 @@
 
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded-circle header-profile-user me-2" src="{{asset('assets/images/users/avatar-1.jpg')}}" alt="Header Avatar"> 
-                        <span class="d-none d-md-inline-block ms-1">Donald T. <i class="mdi mdi-chevron-down"></i> </span>
+                        <img class="rounded-circle header-profile-user me-2" src="{{asset('uploads/profile_image/')}}/{{Auth::user()->profile_image ?? 'default.png'}}" alt="Header Avatar"> 
+                        <span class="d-none d-md-inline-block ms-1">{{Auth::user()->name}} <i class="mdi mdi-chevron-down"></i> </span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item-->
-                        <a class="dropdown-item" href="#"><i class="dripicons-user font-size-16 align-middle d-inline-block me-1"></i> Profile</a>
-                        <a class="dropdown-item text-danger" href="#"><i class="dripicons-power-off font-size-16 align-middle me-1 text-danger"></i> Logout</a>
+                        <a class="dropdown-item" href="{{route('admin.user.edit-profile')}}"><i class="dripicons-user font-size-16 align-middle d-inline-block me-1"></i> Profile</a>
+                        <a class="dropdown-item text-danger" href="{{route('logout')}}"><i class="dripicons-power-off font-size-16 align-middle me-1 text-danger"></i> Logout</a>
                     </div>
                 </div>
 

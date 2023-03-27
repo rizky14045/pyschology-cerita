@@ -46,6 +46,7 @@
                              
         <!-- JAVASCRIPT -->
         @include('admin.partials.scripts')
+        @include('sweetalert::alert')
 
         
 

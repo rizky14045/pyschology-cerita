@@ -20,7 +20,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="{{route('admin.article.index')}}" class="waves-effect">
                         <i class="far fa-newspaper"></i>
                         <span>Article</span>
                     </a>
@@ -43,6 +43,10 @@
                         <li>
                             <a href="{{route('admin.testimony.index')}}"><i class="fas fa-clock
                                 "></i>Testimony</a>
+                        </li>
+                        <li>
+                            <a href="{{route('admin.faq.index')}}"><i class="fas fa-question-circle
+                                "></i>Faq</a>
                         </li>
                         <li>
                             

@@ -14,7 +14,7 @@
             <div class="col-md-4">
                 <div class="float-end d-none d-md-block">
                     <div class="dropdown">
-                        <a class="btn btn-primary">
+                        <a href="{{route('admin.user.create')}}" class="btn btn-primary">
                             <i class="fas fa-plus"></i> Add User</i>
                         </a>
                     </div>
@@ -28,36 +28,36 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-
                 <h4 class="card-title">Data User</h4>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered ">
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@TwBootstrap</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{$loop->iteration}}</td>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->role}}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary text-white" href="{{route('admin.user.edit',['id'=>$user->id])}}">Edit</a>
+                                    <form action="{{route('admin.user.delete',['id'=>$user->id])}}" class="d-inline" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-sm btn-danger text-white" >Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                      
                         </tbody>
                     </table>
                 </div>
