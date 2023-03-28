@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
+    @php
+    $setting = App\Models\Setting::get();   
+    @endphp
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,9 +11,9 @@
     <meta name="copyright" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Medikit - Medical and Doctor HTML Template.</title>
+    <title>{{$setting->where('key','name')->first()->value}}</title>
 
-    <link rel="icon" href="{{ asset('assets/vendor/img/favicon.png') }}" />
+    <link rel="icon" href="{{asset('uploads/setting/'.$setting->where('key','favicon')->first()->value)}}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
@@ -68,7 +70,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-12">
                             <div class="logo">
-                                <a href="/"><img src="{{ asset('assets/vendor/img/logo.png') }}"
+                                <a href="/"><img src="{{asset('uploads/setting/'.$setting->where('key','logo')->first()->value)}}"
                                         alt="#" /></a>
                             </div>
 
@@ -140,19 +142,16 @@
 
                             <ul class="social">
                                 <li>
-                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://wa.me/{{$setting->where('key','whatsapp')->first()->value}}"><i class="fa-brands fa-whatsapp"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+                                    <a href="{{$setting->where('key','facebook')->first()->value}}"><i class="fa-brands fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="{{$setting->where('key','twitter')->first()->value}}"><i class="fa-brands fa-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa-brands fa-vimeo"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                    <a href="{{$setting->where('key','instagram')->first()->value}}"><i class="fa-brands fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>

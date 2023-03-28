@@ -13,4 +13,10 @@
         <script src="{{asset('assets/js/pages/dashboard.init.js')}}"></script>
 
         <script src="{{asset('assets/js/app.js')}}"></script>
+        <script>
+                 $('form').submit(function() {
+            $(this).find("button[type='submit']").prop('disabled',true);
+        });
+    </script>
+        </script>
         @yield('scripts')
