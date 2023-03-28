@@ -8,14 +8,14 @@
                 <h6 class="page-title">User</h6>
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Testimony</li>
+                    <li class="breadcrumb-item active" aria-current="page">Topic</li>
                 </ol>
             </div>
             <div class="col-md-4">
                 <div class="float-end d-none d-md-block">
                     <div class="dropdown">
-                        <a href="{{route('admin.testimony.create')}}" class="btn btn-primary">
-                            <i class="fas fa-plus"></i> Add Testimony</i>
+                        <a href="{{route('admin.topic.create')}}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Topic</i>
                         </a>
                     </div>
                 </div>
@@ -28,30 +28,30 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Data Testimony</h4>
+                <h4 class="card-title">Data Topic</h4>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered ">
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Client Name</th>
-                            <th>Client Image</th>
+                            <th>Topic</th>
+                            <th>Image</th>
                             <th>Description</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($testimonies as $testimony)
+                        @foreach ($topics as $topic)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$testimony->client_name}}</td>
+                                <td>{{$topic->topic_name}}</td>
                                 <td>
-                                    <img src="{{asset('uploads/testimony_image/'.$testimony->client_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
+                                    <img src="{{asset('uploads/topic_image/'.$topic->topic_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
                                 </td>
-                                <td>{{$testimony->description}}</td>
+                                <td>{{$topic->description}}</td>
                                 <td>
-                                    <a class="btn btn-sm btn-primary text-white" href="{{route('admin.testimony.edit',['id'=>$testimony->id])}}">Edit</a>
-                                    <form action="{{route('admin.testimony.delete',['id'=>$testimony->id])}}" class="d-inline" method="POST">
+                                    <a class="btn btn-sm btn-primary text-white" href="{{route('admin.topic.edit',['id'=>$topic->id])}}">Edit</a>
+                                    <form action="{{route('admin.topic.delete',['id'=>$topic->id])}}" class="d-inline" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-sm btn-danger text-white" >Delete</button>

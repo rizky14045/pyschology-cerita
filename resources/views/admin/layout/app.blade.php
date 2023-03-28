@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+@php
+$setting = App\Models\Setting::get();   
+@endphp
     @include('admin.partials.head')
     @yield('styles')
     <body data-sidebar="colored">

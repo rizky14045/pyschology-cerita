@@ -1,20 +1,12 @@
 <header id="page-topbar">
     <div class="d-flex">
         <div class="navbar-brand-box text-center">
-            <a href="index.html" class="logo logo-light">
+            <a href="{{url('admin')}}" class="logo logo-light">
                 <span class="logo-sm">
-                    <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="22">
+                    <img src="{{asset('uploads/setting/'.$setting->where('key','favicon')->first()->value)}}" alt="" height="22">
                 </span>
                 <span class="logo-lg">
-                    <img src="{{asset('assets/images/logo.png')}}" alt="" height="20">
-                </span>
-            </a>
-            <a href="index.html" class="logo logo-dark">
-                <span class="logo-sm">
-                    <img src="{{asset('assets/images/logo-sm.png')}}" alt="" height="22">
-                </span>
-                <span class="logo-lg">
-                    <img src="{{asset('assets/images/logo_dark.png')}}" alt="" height="20">
+                    <img src="{{asset('uploads/setting/'.$setting->where('key','logo')->first()->value)}}" alt="" height="20">
                 </span>
             </a>
         </div>

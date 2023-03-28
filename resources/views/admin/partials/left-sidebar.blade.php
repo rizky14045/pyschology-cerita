@@ -49,12 +49,20 @@
                                 "></i>Faq</a>
                         </li>
                         <li>
+                            <a href="{{route('admin.topic.index')}}"><i class="fas fa-star
+                                "></i>Topic</a>
+                        </li>
+                        <li>
+                            <a href="{{route('admin.product.index')}}"><i class="fas fa-desktop
+                                "></i>Product</a>
+                        </li>
+                        <li>
                             
                             
                             <a href="{{route('admin.user.index')}}"><i class="fas fa-user"></i>User</a>
                         </li>
                         <li>
-                            <a href="{{route('admin.setting.index')}}"><i class="fas fa-cog"></i>Setting</a>
+                            <a href="{{route('admin.settings.general.index')}}"><i class="fas fa-cog"></i>Setting</a>
                         </li>
                     </ul>
                 </li>

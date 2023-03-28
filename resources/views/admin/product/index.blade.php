@@ -8,14 +8,14 @@
                 <h6 class="page-title">User</h6>
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Testimony</li>
+                    <li class="breadcrumb-item active" aria-current="page">Product</li>
                 </ol>
             </div>
             <div class="col-md-4">
                 <div class="float-end d-none d-md-block">
                     <div class="dropdown">
-                        <a href="{{route('admin.testimony.create')}}" class="btn btn-primary">
-                            <i class="fas fa-plus"></i> Add Testimony</i>
+                        <a href="{{route('admin.product.create')}}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Product</i>
                         </a>
                     </div>
                 </div>
@@ -28,30 +28,44 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Data Testimony</h4>
+                <h4 class="card-title">Data Product</h4>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered ">
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Client Name</th>
-                            <th>Client Image</th>
-                            <th>Description</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Link</th>
+                            <th>Image</th>
+                            <th>List</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($testimonies as $testimony)
+                        @foreach ($products as $product)
+                            @php
+                            $list = json_decode($product->list_product);  
+                            @endphp
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$testimony->client_name}}</td>
+                                <td>{{$product->title}}</td>
+                                <td>{{$product->price}}</td>
+                                <td>{{$product->link}}</td>
                                 <td>
-                                    <img src="{{asset('uploads/testimony_image/'.$testimony->client_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
+                                    <img src="{{asset('uploads/product_image/'.$product->product_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
                                 </td>
-                                <td>{{$testimony->description}}</td>
                                 <td>
-                                    <a class="btn btn-sm btn-primary text-white" href="{{route('admin.testimony.edit',['id'=>$testimony->id])}}">Edit</a>
-                                    <form action="{{route('admin.testimony.delete',['id'=>$testimony->id])}}" class="d-inline" method="POST">
+                                    @foreach ($list as $item)
+                                        
+                                        @if ($item)
+                                        <li>{{$item}}</li>
+                                        @endif
+                                    @endforeach
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary text-white" href="{{route('admin.product.edit',['id'=>$product->id])}}">Edit</a>
+                                    <form action="{{route('admin.product.delete',['id'=>$product->id])}}" class="d-inline" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-sm btn-danger text-white" >Delete</button>

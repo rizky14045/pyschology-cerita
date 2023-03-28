@@ -139,9 +139,31 @@ class ArticleController extends Controller
     {
         $article = Article::where('id',$id)->first();
 
+        if($article->banner_image){
+            unlink(public_path('uploads/banner_image/'.$article->banner_image));
+        }
+
         $article->delete();
 
         Alert::success('Success', 'Article Has been updated successfully');
         return redirect()->route('admin.article.index');
     }
+    public function uploadImage(Request $request) {		
+        if($request->hasFile('upload')) {
+                $originName = $request->file('upload')->getClientOriginalName();
+                $fileName = pathinfo($originName, PATHINFO_FILENAME);
+                $extension = $request->file('upload')->getClientOriginalExtension();
+                $fileName = $fileName.'_'.time().'.'.$extension;
+            
+                $request->file('upload')->move(public_path('uploads/article/'), $fileName);
+       
+                $CKEditorFuncNum = $request->input('CKEditorFuncNum');
+                $url = asset('uploads/article/'.$fileName); 
+                $msg = 'Image uploaded successfully'; 
+                $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+                   
+                @header('Content-type: text/html; charset=utf-8'); 
+                echo $response;
+            }
+        }	
 }

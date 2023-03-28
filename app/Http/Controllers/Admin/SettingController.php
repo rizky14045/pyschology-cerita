@@ -2,84 +2,68 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Ramsey\Uuid\Rfc4122\UuidV4;
 use App\Http\Controllers\Controller;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SettingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function general()
     {
-        return view('admin.setting.index');
+        $data['setting'] = Setting::get();
+        return view('admin.setting.index',$data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function generalStore(Request $request)
     {
-        //
+        $setting = Setting::where('key','name')->first();
+        $setting->value = $request->name;
+        $setting->save();
+
+        $setting = Setting::where('key','logo')->first();
+        if(!empty($request->logo)){
+            //filename
+            $new_filename = UuidV4::uuid4().'.'.$request->logo->extension();
+            //move file
+            $request->logo->move('uploads/setting/',$new_filename);
+            
+            $setting->value = $new_filename;
+            $setting->save();
+        }
+
+        $setting = Setting::where('key','favicon')->first();
+        if(!empty($request->favicon)){
+            //filename
+            $new_filename = UuidV4::uuid4().'.'.$request->favicon->extension();
+            //move file
+            $request->favicon->move('uploads/setting/',$new_filename);
+            
+            $setting->value = $new_filename;
+            $setting->save();
+        }
+
+        Alert::success('Success', 'Setting have been changed');
+        return redirect('admin/settings/general');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function socialLink()
     {
-        //
+        return view('admin.settings.social-link');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function socialLinkStore(Request $request)
     {
-        //
-    }
+        foreach ($request->setting as $name => $setting) {
+            $data['name'] = $name;
+            $data['value'] = $setting;
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+            $setting = Setting::where('name',$name)->first();
+            $setting->update($data);
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Alert::success('Success', 'Setting have been changed');
+        return redirect('admin/settings/general');
     }
 }

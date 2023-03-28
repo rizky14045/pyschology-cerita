@@ -61,7 +61,7 @@
             <div class="form-group" align="right">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-success">Reset</button>
-                {{-- <a href="#" onClick="javascript:history.go(-1)" class="btn btn-danger">Cancel and Back</a> --}}
+                <a href="{{route('admin.user.index')}}" class="btn btn-danger">Back</a>
             </div>
         </form>
     </div>
