@@ -2,74 +2,18 @@
 
 @section('content')
     <section class="slider">
-        <div class="hero-slider">
-            <div class="single-slider" style="background-image: url('assets/vendor/img/slider2.jpg')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="text">
-                                <h1>
-                                    We Provide <span>Medical</span> Services That You Can
-                                    <span>Trust!</span>
-                                </h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                                    quam.
-                                </p>
-                                <div class="button">
-                                    <a href="#" class="btn">Get Appointment</a>
-                                    <a href="#" class="btn primary">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="single-slider" style="background-image: url('assets/vendor/img/slider.jpg')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="text">
-                                <h1>
-                                    We Provide <span>Medical</span> Services That You Can
-                                    <span>Trust!</span>
-                                </h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                                    quam.
-                                </p>
-                                <div class="button">
-                                    <a href="#" class="btn">Get Appointment</a>
-                                    <a href="#" class="btn primary">About Us</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="single-slider" style="background-image: url('assets/vendor/img/slider3.jpg')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="text">
-                                <h1>
-                                    We Provide <span>Medical</span> Services That You Can
-                                    <span>Trust!</span>
-                                </h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                                    quam.
-                                </p>
-                                <div class="button">
-                                    <a href="#" class="btn">Get Appointment</a>
-                                    <a href="#" class="btn primary">Conatct Now</a>
-                                </div>
-                            </div>
+        <div class="single-slider" style="background-image: url('assets/vendor/img/slider2.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <h1>
+                                Yuk, Ceritakan <span>Kegelisahanmu</span> Dapatkan Solusi Terbaik dari Para Psikolog Professional
+                            </h1>
+                            <p class="hero_desc">
+                               Kami memberikan layanan psikolog profesional secara online counseling dan
+                               offline counseling untuk menjadi teman berbagi cerita atas solusi setiap masalahmu.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -82,35 +26,16 @@
             <div class="schedule-inner">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-schedule first">
+                        <div class="single-schedule">
                             <div class="inner">
                                 <div class="icon">
                                     <i class="fa fa-ambulance"></i>
                                 </div>
                                 <div class="single-content">
-                                    <span>Lorem Amet</span>
-                                    <h4>Emergency Cases</h4>
+                                    <span>- Waktu yang Fleksibel</span>
+                                    <h4>Tersedia Konseling Online & Offline</h4>
                                     <p>
-                                        Lorem ipsum sit amet consectetur adipiscing elit. Vivamus
-                                        et erat in lacus convallis sodales.
-                                    </p>
-                                    <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-schedule middle">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i class="icofont-prescription"></i>
-                                </div>
-                                <div class="single-content">
-                                    <span>Fusce Porttitor</span>
-                                    <h4>Doctors Timetable</h4>
-                                    <p>
-                                        Lorem ipsum sit amet consectetur adipiscing elit. Vivamus
-                                        et erat in lacus convallis sodales.
+                                        Kamu bisa memilih waktu konseling, yang disesuaikan dengan kenyamananmu bercerita.
                                     </p>
                                     <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                                 </div>
@@ -118,23 +43,34 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-12">
-                        <div class="single-schedule last">
+                        <div class="single-schedule">
                             <div class="inner">
                                 <div class="icon">
                                     <i class="icofont-ui-clock"></i>
                                 </div>
                                 <div class="single-content">
-                                    <span>Donec luctus</span>
-                                    <h4>Opening Hours</h4>
-                                    <ul class="time-sidual">
-                                        <li class="day">
-                                            Monday - Fridayp <span>8.00-20.00</span>
-                                        </li>
-                                        <li class="day">Saturday <span>9.00-18.30</span></li>
-                                        <li class="day">
-                                            Monday - Thusday <span>9.00-15.00</span>
-                                        </li>
-                                    </ul>
+                                    <span>- Para Psikolog Profesional</span>
+                                    <h4>Berpengalaman Lebih dari 5 Tahun</h4>
+                                   <p>
+                                    Psikolog yang berpengalaman memberikan kamu ketenangan dalam bercerita, berkeluh kesah dan mencari solusi
+                                   </p>
+                                    <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-schedule">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i class="icofont-prescription"></i>
+                                </div>
+                                <div class="single-content">
+                                    <span>- Topik Masalah yang Bervariasi</span>
+                                    <h4>Pilih Topik Sesuai Kebutuhanmu</h4>
+                                    <p>
+                                        Setiap individu memiliki masalah yang berbeda-beda, untuk itu kami sediakan banyak pilihan topik masalah.
+                                    </p>
                                     <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -150,12 +86,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>We Are Always Ready to Help You & Your Family</h2>
-                        <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
-                            aliquet. pretiumts
-                        </p>
+                        <h2>Kami Selalu Ada untuk Menjadi Temanmu Bercerita</h2>
                     </div>
                 </div>
             </div>
@@ -163,33 +94,30 @@
                 <div class="col-lg-4 col-12">
                     <div class="single-features">
                         <div class="signle-icon">
-                            <i class="fa-solid fa-ambulance"></i>
+                            <img src="{{ asset('assets/images/offline_counseling.png') }}" alt="">
                         </div>
-                        <h3>Emergency Help</h3>
+                        <h3>Offline Counseling</h3>
                         <p>
                             Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam
                             vulputate.
                         </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="custom-single-features">
+                        <div class="signle-icon">
+                            <i>
+                                <img src="{{ asset('assets/images/brain1.png') }}">
+                            </i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="single-features">
                         <div class="signle-icon">
-                            <i class="fa-solid fa-hand-holding-medical"></i>
+                            <img src="{{ asset('assets/images/online_counseling.png') }}" alt="">
                         </div>
-                        <h3>Enriched Pharmecy</h3>
-                        <p>
-                            Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam
-                            vulputate.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-12">
-                    <div class="single-features last">
-                        <div class="signle-icon">
-                            <i class="fa-solid fa-stethoscope"></i>
-                        </div>
-                        <h3>Medical Treatment</h3>
+                        <h3>Online Counseling</h3>
                         <p>
                             Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam
                             vulputate.
@@ -249,7 +177,7 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Offer Different Services To Improve Your Health</h2>
-                        <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
+                            <img src="{{ asset('assets/images/brain1.png') }}" width="50">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -338,13 +266,13 @@
         </div>
     </section>
 
-    <section class="portfolio section">
+    <section class="blog section" id="blog">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>We Maintain Cleanliness Rules Inside Our Hospital</h2>
-                        <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
+                        <h2>Keep up with Our Most Recent Medical News.</h2>
+                        <img src="{{ asset('assets/images/brain1.png') }}" width="50">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -352,42 +280,61 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 col-12">
-                    <div class="owl-carousel portfolio-slider">
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf1.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-news">
+                        <div class="news-head">
+                            <img src="{{ asset('assets/vendor/img/blog1.jpg') }}" alt="#" />
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf2.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        <div class="news-body">
+                            <div class="news-content">
+                                <div class="date">22 Aug, 2020</div>
+                                <h2>
+                                    <a href="blog-single.html">We have annnocuced our new product.</a>
+                                </h2>
+                                <p class="text">
+                                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt sed do incididunt sed.
+                                </p>
+                            </div>
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf3.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-news">
+                        <div class="news-head">
+                            <img src="{{ asset('assets/vendor/img/blog2.jpg') }}" alt="#" />
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf4.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        <div class="news-body">
+                            <div class="news-content">
+                                <div class="date">15 Jul, 2020</div>
+                                <h2>
+                                    <a href="blog-single.html">Top five way for solving teeth problems.</a>
+                                </h2>
+                                <p class="text">
+                                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt sed do incididunt sed.
+                                </p>
+                            </div>
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf1.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-news">
+                        <div class="news-head">
+                            <img src="{{ asset('assets/vendor/img/blog3.jpg') }}" alt="#" />
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf2.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
-                        </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf3.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
-                        </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf4.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        <div class="news-body">
+                            <div class="news-content">
+                                <div class="date">05 Jan, 2020</div>
+                                <h2>
+                                    <a href="blog-single.html">We provide highly business soliutions.</a>
+                                </h2>
+                                <p class="text">
+                                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt sed do incididunt sed.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -401,7 +348,7 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Offer Different Services To Improve Your Health</h2>
-                        <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
+                        <img src="{{ asset('assets/images/brain1.png') }}" width="50">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -468,6 +415,132 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                             luctus dictum eros ut imperdiet.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-table section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>We Provide You The Best Treatment In Resonable Price</h2>
+                        <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
+                            aliquet. pretiumts
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="fa-solid fa-cut"></i>
+                            </div>
+                            <h4 class="title">Plastic Suggery</h4>
+                            <div class="price">
+                                <p class="amount">$199<span>/ Per Visit</span></p>
+                            </div>
+                        </div>
+
+                        <ul class="table-list">
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
+                                fentum
+                            </li>
+                            <li class="cross">
+                                <i class="icofont icofont-ui-close"></i>Nullam interdum enim
+                            </li>
+                            <li class="cross">
+                                <i class="icofont icofont-ui-close"></i>Donec ultricies metus
+                            </li>
+                            <li class="cross">
+                                <i class="icofont icofont-ui-close"></i>Pellentesque eget nibh
+                            </li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" href="#">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="fa-solid fa-tooth"></i>
+                            </div>
+                            <h4 class="title">Teeth Whitening</h4>
+                            <div class="price">
+                                <p class="amount">$299<span>/ Per Visit</span></p>
+                            </div>
+                        </div>
+
+                        <ul class="table-list">
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
+                                fentum
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Nullam interdum enim
+                            </li>
+                            <li class="cross">
+                                <i class="icofont icofont-ui-close"></i>Donec ultricies metus
+                            </li>
+                            <li class="cross">
+                                <i class="icofont icofont-ui-close"></i>Pellentesque eget nibh
+                            </li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" href="#">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <h4 class="title">Heart Suggery</h4>
+                            <div class="price">
+                                <p class="amount">$399<span>/ Per Visit</span></p>
+                            </div>
+                        </div>
+
+                        <ul class="table-list">
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
+                                fentum
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Nullam interdum enim
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Donec ultricies metus
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Pellentesque eget nibh
+                            </li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" href="#">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -564,7 +637,64 @@
         </div>
     </section>
 
-    <section class="departments section">
+    <section class="portfolio section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>We Maintain Support System And Healing Properly To Your Mental Illness</h2>
+                        <img src="{{ asset('assets/images/brain1.png') }}" width="50">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
+                            aliquet. pretiumts
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="owl-carousel portfolio-slider">
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf1.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf2.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf3.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf4.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf1.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf2.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf3.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                        <div class="single-pf">
+                            <img src="{{ asset('assets/vendor/img/pf4.jpg') }}" alt="#" />
+                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- <section class="departments section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -818,132 +948,6 @@
         </div>
     </section>
 
-    <section class="pricing-table section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>We Provide You The Best Treatment In Resonable Price</h2>
-                        <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
-                            aliquet. pretiumts
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-12">
-                    <div class="single-table">
-                        <div class="table-head">
-                            <div class="icon">
-                                <i class="fa-solid fa-cut"></i>
-                            </div>
-                            <h4 class="title">Plastic Suggery</h4>
-                            <div class="price">
-                                <p class="amount">$199<span>/ Per Visit</span></p>
-                            </div>
-                        </div>
-
-                        <ul class="table-list">
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
-                            </li>
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
-                                fentum
-                            </li>
-                            <li class="cross">
-                                <i class="icofont icofont-ui-close"></i>Nullam interdum enim
-                            </li>
-                            <li class="cross">
-                                <i class="icofont icofont-ui-close"></i>Donec ultricies metus
-                            </li>
-                            <li class="cross">
-                                <i class="icofont icofont-ui-close"></i>Pellentesque eget nibh
-                            </li>
-                        </ul>
-                        <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-12 col-12">
-                    <div class="single-table">
-                        <div class="table-head">
-                            <div class="icon">
-                                <i class="fa-solid fa-tooth"></i>
-                            </div>
-                            <h4 class="title">Teeth Whitening</h4>
-                            <div class="price">
-                                <p class="amount">$299<span>/ Per Visit</span></p>
-                            </div>
-                        </div>
-
-                        <ul class="table-list">
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
-                            </li>
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
-                                fentum
-                            </li>
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Nullam interdum enim
-                            </li>
-                            <li class="cross">
-                                <i class="icofont icofont-ui-close"></i>Donec ultricies metus
-                            </li>
-                            <li class="cross">
-                                <i class="icofont icofont-ui-close"></i>Pellentesque eget nibh
-                            </li>
-                        </ul>
-                        <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-12 col-12">
-                    <div class="single-table">
-                        <div class="table-head">
-                            <div class="icon">
-                                <i class="fa-solid fa-heart-pulse"></i>
-                            </div>
-                            <h4 class="title">Heart Suggery</h4>
-                            <div class="price">
-                                <p class="amount">$399<span>/ Per Visit</span></p>
-                            </div>
-                        </div>
-
-                        <ul class="table-list">
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
-                            </li>
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
-                                fentum
-                            </li>
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Nullam interdum enim
-                            </li>
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Donec ultricies metus
-                            </li>
-                            <li>
-                                <i class="icofont icofont-ui-check"></i>Pellentesque eget nibh
-                            </li>
-                        </ul>
-                        <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="team" class="team section overlay" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
@@ -1020,81 +1024,5 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="blog section" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Keep up with Our Most Recent Medical News.</h2>
-                        <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
-                            aliquet. pretiumts
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-news">
-                        <div class="news-head">
-                            <img src="{{ asset('assets/vendor/img/blog1.jpg') }}" alt="#" />
-                        </div>
-                        <div class="news-body">
-                            <div class="news-content">
-                                <div class="date">22 Aug, 2020</div>
-                                <h2>
-                                    <a href="blog-single.html">We have annnocuced our new product.</a>
-                                </h2>
-                                <p class="text">
-                                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt sed do incididunt sed.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-news">
-                        <div class="news-head">
-                            <img src="{{ asset('assets/vendor/img/blog2.jpg') }}" alt="#" />
-                        </div>
-                        <div class="news-body">
-                            <div class="news-content">
-                                <div class="date">15 Jul, 2020</div>
-                                <h2>
-                                    <a href="blog-single.html">Top five way for solving teeth problems.</a>
-                                </h2>
-                                <p class="text">
-                                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt sed do incididunt sed.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-news">
-                        <div class="news-head">
-                            <img src="{{ asset('assets/vendor/img/blog3.jpg') }}" alt="#" />
-                        </div>
-                        <div class="news-body">
-                            <div class="news-content">
-                                <div class="date">05 Jan, 2020</div>
-                                <h2>
-                                    <a href="blog-single.html">We provide highly business soliutions.</a>
-                                </h2>
-                                <p class="text">
-                                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt sed do incididunt sed.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </section> --}}
 @endsection
