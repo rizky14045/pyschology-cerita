@@ -20,13 +20,13 @@ class AuthController extends Controller
             'email'   => 'required|email',
             'password'  => 'required'
            ]);
-      
+
            $user_data = [
                'email'  => $request->get('email'),
                'password' => $request->get('password')
            ]
          ;
-      
+
            if(Auth::attempt($user_data))
            {
             Alert::success('Success', 'Login Successfully');
@@ -40,7 +40,7 @@ class AuthController extends Controller
     }
     public function logout(){
 
-        
+
         Alert::success('Success', 'Logout Successfully');
         Auth::logout();
         return redirect()->route('login');
