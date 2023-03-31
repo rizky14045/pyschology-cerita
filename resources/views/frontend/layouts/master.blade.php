@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
     @php
-    $setting = App\Models\Setting::get();   
+    $setting = App\Models\Setting::get();
     @endphp
 <head>
     <meta charset="utf-8" />
@@ -64,6 +64,36 @@
     </div>
 
     <header class="header">
+        <div class="topbar">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-md-5 col-12">
+                  <ul class="top-link">
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Psikolog</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-6 col-md-7 col-12">
+                  <ul class="top-contact">
+                    <li><i class="fa fa-phone"></i>+6212345678910</li>
+                    <li>
+                      <i class="fa fa-envelope"></i
+                      ><a
+                        href="/cdn-cgi/l/email-protection#d9aaaca9a9b6abad99a0b6acabb4b8b0b5f7bab6b4"
+                        ><span
+                          class="__cf_email__"
+                          data-cfemail="12616762627d6066526b7d67607f737b7e3c717d7f"
+                          >support@maribercerita.com</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="header-inner">
             <div class="container">
                 <div class="inner">
