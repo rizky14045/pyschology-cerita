@@ -291,7 +291,7 @@
         </a>
     </div>
 
-    <a href="#" class="float">
+    <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}" class="float" target="_blank">
         <img src="{{ asset('assets/vendor/img/whatsapp-logo.svg') }}" alt="">
     </a>
 
