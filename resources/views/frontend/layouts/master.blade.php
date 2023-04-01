@@ -78,12 +78,15 @@
                     </div>
                     <div class="col-lg-6 col-md-7 col-12">
                         <ul class="top-contact">
-                            <li><i class="fa fa-phone"></i>+6212345678910</li>
+                            <li><i class="fa fa-phone"></i>
+                                <a href="tel:+{{ $setting->where('key', 'whatsapp')->first()->value }}">
+                                    +{{ $setting->where('key', 'whatsapp')->first()->value }}
+                                    </a>
+                            </li>
                             <li>
                                 <i class="fa fa-envelope"></i><a
-                                    href="/cdn-cgi/l/email-protection#d9aaaca9a9b6abad99a0b6acabb4b8b0b5f7bab6b4"><span
-                                        class="__cf_email__"
-                                        data-cfemail="12616762627d6066526b7d67607f737b7e3c717d7f">support@maribercerita.com</span></a>
+                                    href="mailto:{{ $setting->where('key', 'email')->first()->value }}"><span
+                                        class="__cf_email__">{{ $setting->where('key', 'email')->first()->value }}</span></a>
                             </li>
                         </ul>
                     </div>
@@ -277,13 +280,13 @@
     </footer>
 
     <div class="icon-bar">
-        <a href="#" class="instagram">
+        <a href="{{ $setting->where('key', 'instagram')->first()->value }}" class="instagram">
             <i class="fa fa-instagram"></i>
         </a>
-        <a href="#" class="facebook">
+        <a href="{{ $setting->where('key', 'facebook')->first()->value }}" class="facebook">
             <i class="fa fa-facebook"></i>
         </a>
-        <a href="#" class="twitter">
+        <a href="{{ $setting->where('key', 'twitter')->first()->value }}" class="twitter">
             <i class="fa fa-twitter"></i>
         </a>
     </div>

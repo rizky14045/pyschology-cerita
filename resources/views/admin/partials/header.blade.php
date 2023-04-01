@@ -6,7 +6,7 @@
                     <img src="{{asset('uploads/setting/'.$setting->where('key','favicon')->first()->value)}}" alt="" height="22">
                 </span>
                 <span class="logo-lg">
-                    <img src="{{asset('uploads/setting/'.$setting->where('key','logo')->first()->value)}}" alt="" height="20">
+                    <img src="{{asset('uploads/setting/'.$setting->where('key','logo')->first()->value)}}" alt="" height="50">
                 </span>
             </a>
         </div>
