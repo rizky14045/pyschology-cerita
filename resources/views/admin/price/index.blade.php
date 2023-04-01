@@ -44,7 +44,7 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$price->title}}</td>
-                                <td>Rp .{{number_format($price->price)}}</td>
+                                <td>Rp. {{number_format($price->price)}}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary text-white" href="{{route('admin.price.edit',['id'=>$price->id])}}">Edit</a>
                                     <form action="{{route('admin.price.delete',['id'=>$price->id])}}" class="d-inline" method="POST">
