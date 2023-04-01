@@ -88,6 +88,9 @@
                                                 <label for="">Twitter</label>
                                                 <input type="text" class="form-control" name="setting[twitter]" value="{{$setting->where('key','twitter')->first()->value}}">
                                                 <br>
+                                                <label for="">Email</label>
+                                                <input type="email" class="form-control" name="setting[email]" value="{{$setting->where('key','email')->first()->value}}">
+                                                <br>
                                                 <button class="btn btn-primary">Save</button>
                                                 </div>   
                                             </div>
