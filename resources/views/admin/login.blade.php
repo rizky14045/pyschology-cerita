@@ -1,15 +1,18 @@
 <!doctype html>
 <html lang="en">
+    @php
+    $setting = App\Models\Setting::get();   
+    @endphp
 
     <head>
     
         <meta charset="utf-8">
-        <title>Login | Foxia - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>{{$setting->where('key','name')->first()->value}} - Admin Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('uploads/setting/'.$setting->where('key','favicon')->first()->value)}}">
 
         <!-- Bootstrap Css -->
         <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
@@ -37,7 +40,7 @@
                                 
                                 <div class="d-flex p-3">
                                     <div class="mx-auto text-center">
-                                        <img src="{{asset('assets/images/logo_dark.png')}}" alt="" class="text-center pb-3 w-50">
+                                        <img src="{{asset('uploads/setting/'.$setting->where('key','logo')->first()->value)}}" alt="" class="text-center pb-3 w-100 pb-4">
                                         <h4 class="font-size-18">Welcome Back !</h4>
                                         <p class="text-muted mb-0">Sign in to continue to bagikanceritamu.com</p>
                                     </div>

@@ -2,7 +2,8 @@
 
 @section('content')
     <section class="slider">
-        <div class="single-slider" style="background-image: url('assets/vendor/img/slider2.jpg')">
+        {{-- <div class="single-slider" style="background-image: url('assets/vendor/img/slider2.jpg')"> --}}
+        <div class="single-slider" style="background-image: url('assets/images/header3.jpeg')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">

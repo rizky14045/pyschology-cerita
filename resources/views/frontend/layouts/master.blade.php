@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-    @php
+@php
     $setting = App\Models\Setting::get();
-    @endphp
+@endphp
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,9 +12,9 @@
     <meta name="copyright" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>{{$setting->where('key','name')->first()->value}}</title>
+    <title>{{ $setting->where('key', 'name')->first()->value }}</title>
 
-    <link rel="icon" href="{{asset('uploads/setting/'.$setting->where('key','favicon')->first()->value)}}" />
+    <link rel="icon" href="{{ asset('uploads/setting/' . $setting->where('key', 'favicon')->first()->value) }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
@@ -66,41 +67,40 @@
     <header class="header">
         <div class="topbar">
             <div class="container">
-              <div class="row">
-                <div class="col-lg-6 col-md-5 col-12">
-                  <ul class="top-link">
-                    <li><a href="#">Tentang Kami</a></li>
-                    <li><a href="#">Psikolog</a></li>
-                    <li><a href="#">Kontak</a></li>
-                    <li><a href="#">FAQ</a></li>
-                  </ul>
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 col-12">
+                        <ul class="top-link">
+                            <li><a href="#">Tentang Kami</a></li>
+                            <li><a href="#">Psikolog</a></li>
+                            <li><a href="#">Kontak</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <ul class="top-contact">
+                            <li><i class="fa fa-phone"></i>
+                                <a href="tel:+{{ $setting->where('key', 'whatsapp')->first()->value }}">
+                                    +{{ $setting->where('key', 'whatsapp')->first()->value }}
+                                    </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i><a
+                                    href="mailto:{{ $setting->where('key', 'email')->first()->value }}"><span
+                                        class="__cf_email__">{{ $setting->where('key', 'email')->first()->value }}</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-7 col-12">
-                  <ul class="top-contact">
-                    <li><i class="fa fa-phone"></i>+6212345678910</li>
-                    <li>
-                      <i class="fa fa-envelope"></i
-                      ><a
-                        href="/cdn-cgi/l/email-protection#d9aaaca9a9b6abad99a0b6acabb4b8b0b5f7bab6b4"
-                        ><span
-                          class="__cf_email__"
-                          data-cfemail="12616762627d6066526b7d67607f737b7e3c717d7f"
-                          >support@maribercerita.com</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
         <div class="header-inner">
             <div class="container">
                 <div class="inner">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-12">
                             <div class="logo">
-                                <a href="/"><img src="{{asset('uploads/setting/'.$setting->where('key','logo')->first()->value)}}"
+                                <a href="/"><img
+                                        src="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}"
                                         alt="#" /></a>
                             </div>
 
@@ -172,16 +172,20 @@
 
                             <ul class="social">
                                 <li>
-                                    <a href="https://wa.me/{{$setting->where('key','whatsapp')->first()->value}}"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
                                 </li>
                                 <li>
-                                    <a href="{{$setting->where('key','facebook')->first()->value}}"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="{{ $setting->where('key', 'facebook')->first()->value }}"><i
+                                            class="fa-brands fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="{{$setting->where('key','twitter')->first()->value}}"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="{{ $setting->where('key', 'twitter')->first()->value }}"><i
+                                            class="fa-brands fa-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="{{$setting->where('key','instagram')->first()->value}}"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="{{ $setting->where('key', 'instagram')->first()->value }}"><i
+                                            class="fa-brands fa-instagram"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -274,6 +278,18 @@
             </div>
         </div>
     </footer>
+
+    <div class="icon-bar">
+        <a href="{{ $setting->where('key', 'instagram')->first()->value }}" class="instagram">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="{{ $setting->where('key', 'facebook')->first()->value }}" class="facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="{{ $setting->where('key', 'twitter')->first()->value }}" class="twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
 
     <a href="#" class="float">
         <img src="{{ asset('assets/vendor/img/whatsapp-logo.svg') }}" alt="">
