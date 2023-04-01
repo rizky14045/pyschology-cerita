@@ -112,11 +112,11 @@
 .overlay:before,
 .pagination .pagination-list li.active a,
 .pagination .pagination-list li:hover a {
-    background: #1A76D1;
+    background: #5AB8C3;
 }
 
 .accordion a:hover {
-    background: #1A76D1 !important;
+    background: #5AB8C3 !important;
 }
 
 .Feautes .single-features::before {
