@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\Admin\TopicController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\ProductController;
@@ -65,6 +66,14 @@ Route::prefix('admin')->group(function () {
         Route::get('/product/update/{id}', ProductController::class . '@edit')->name('admin.product.edit');
         Route::patch('/product/update/{id}', ProductController::class . '@update')->name('admin.product.update');
         Route::delete('/product/delete/{id}', ProductController::class . '@destroy')->name('admin.product.delete');
+
+        //Price
+        Route::get('/price', PriceController::class . '@index')->name('admin.price.index');
+        Route::get('/price/create', PriceController::class . '@create')->name('admin.price.create');
+        Route::post('/price/create', PriceController::class . '@store')->name('admin.price.store');
+        Route::get('/price/update/{id}', PriceController::class . '@edit')->name('admin.price.edit');
+        Route::patch('/price/update/{id}', PriceController::class . '@update')->name('admin.price.update');
+        Route::delete('/price/delete/{id}', PriceController::class . '@destroy')->name('admin.price.delete');
 
         //article
         Route::get('/article', ArticleController::class . '@index')->name('admin.article.index');
