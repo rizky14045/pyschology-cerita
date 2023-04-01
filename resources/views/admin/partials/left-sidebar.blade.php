@@ -57,6 +57,10 @@
                                 "></i>Product</a>
                         </li>
                         <li>
+                            <a href="{{route('admin.price.index')}}"><i class="fas fa-money-bill
+                                "></i>Price</a>
+                        </li>
+                        <li>
                             
                             
                             <a href="{{route('admin.user.index')}}"><i class="fas fa-user"></i>User</a>
