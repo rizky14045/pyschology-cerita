@@ -89,6 +89,8 @@ class PriceController extends Controller
             'price' => 'required|integer',
         ]);
         $price = Price::where('id', $id)->first();
+        
+        $requestData = $request->all();
 
         $price->update($requestData);
 
