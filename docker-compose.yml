@@ -1,0 +1,13 @@
+version: '1'
+services:
+    db:
+        image: mysql
+        container_name: mysql-psychology
+        hostname: mysql
+        ports:
+            - 3306:3306
+    adminer:
+        image: adminer
+        container_name: adminer-psychology
+        ports:
+            - 8080:8080
