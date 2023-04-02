@@ -31,8 +31,8 @@
                 <h4 class="card-title">Data Article</h4>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered ">
-                        <thead>
-                        <tr>
+                        <thead style="background-color: #20BBC7;">
+                        <tr class="text-white">
                             <th>No</th>
                             <th>Data</th>
                             <th>Created By</th>
