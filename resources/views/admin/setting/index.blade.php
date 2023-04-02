@@ -8,7 +8,7 @@
                 <h6 class="page-title">User</h6>
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
+                    <li class="breadcrumb-item active" aria-current="page">Setting</li>
                 </ol>
             </div>
         </div> 
