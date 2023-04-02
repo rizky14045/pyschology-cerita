@@ -32,7 +32,7 @@
             <div class="row pb-3">
                 <div class="form-group col-12">
                     <label>Price</label>
-                    <input type="text" class="form-control" name="price" required value="{{$price->price}}">
+                    <input type="number" class="form-control" name="price" required value="{{$price->price}}">
                     @if($errors->has('price'))
                     <div class="error">{{ $errors->first('price') }}</div>
                 @endif

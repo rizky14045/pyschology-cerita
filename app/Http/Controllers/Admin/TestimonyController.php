@@ -16,7 +16,7 @@ class TestimonyController extends Controller
      */
     public function index()
     {
-        $data['testimonies'] = Testimony::latest()->get();
+        $data['testimonies'] = Testimony::latest()->paginate(25);
 
         return view('admin.testimony.index',$data);
     }

@@ -17,7 +17,7 @@ class TopicController extends Controller
     public function index()
     {
         
-        $data['topics'] = Topic::latest()->get();
+        $data['topics'] = Topic::latest()->paginate(25);
 
         return view('admin.topic.index',$data);
     }
