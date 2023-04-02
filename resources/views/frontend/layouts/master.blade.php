@@ -111,8 +111,8 @@
                                             <a href="#">Beranda</a>
                                         </li>
                                         <li>
-                                            <a href="#">Layanan <i class="fa-solid fa-chevron-down"></i></a>
-                                            <ul class="dropdown" aria-labelledby="navbarDropdownMenuLink">
+                                            <a href="{{ route('services') }}">Layanan</i></a>
+                                            {{-- <ul class="dropdown" aria-labelledby="navbarDropdownMenuLink">
                                                 <li class="dropdown-submenu">
                                                     <a class="dropdown-item" href="#">Konseling Online</a>
                                                     <ul class="dropdown-menu changing-dropdown" id="">
@@ -131,7 +131,7 @@
                                                                 href="#">Konseling Offline Pasangan</a></li>
                                                     </ul>
                                                 </li>
-                                            </ul>
+                                            </ul> --}}
                                         </li>
                                         <li>
                                             <a href="{{ route('topics') }}">Topik Konseling</a>
@@ -142,7 +142,7 @@
                                         <li>
                                             <a href="{{ route('blogs') }}">Artikel</i></a>
                                         </li>
-                                        <li><a href="contact.html">About Us</a></li>
+                                        <li><a href="{{ route('about-us') }}">About Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -166,7 +166,51 @@
                                 Lorem ipsum dolor sit am consectetur adipisicing elit do
                                 eiusmod tempor incididunt ut labore dolore magna.
                             </p>
-
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-footer f-link">
+                            <h2>Quick Links</h2>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Beranda</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Topik Konseling</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Artikel</a>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li>
+                                            <a href="{{ route('services') }}"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Layanan</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Psikologi Kami</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>About Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>Social Media</h2>
                             <ul class="social">
                                 <li>
                                     <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}"><i
@@ -184,75 +228,6 @@
                                     <a href="{{ $setting->where('key', 'instagram')->first()->value }}"><i
                                             class="fa-brands fa-instagram"></i></a>
                                 </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-footer f-link">
-                            <h2>Quick Links</h2>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>About Us</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our
-                                                Cases</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Other Links</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Consuling</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Finance</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Testimonials</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>FAQ</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Contact Us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single-footer">
-                            <h2>Open Hours</h2>
-                            <p>
-                                Lorem ipsum dolor sit ame consectetur adipisicing elit do
-                                eiusmod tempor incididunt.
-                            </p>
-                            <ul class="time-sidual">
-                                <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-                                <li class="day">Saturday <span>9.00-18.30</span></li>
-                                <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
                             </ul>
                         </div>
                     </div>
