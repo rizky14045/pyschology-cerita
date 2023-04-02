@@ -34,7 +34,7 @@
                         <thead style="background-color: #20BBC7;">
                         <tr class="text-white">
                             <th>No</th>
-                            <th>Data</th>
+                            <th>Date</th>
                             <th>Created By</th>
                             <th>Title</th>
                             <th>Banner</th>
