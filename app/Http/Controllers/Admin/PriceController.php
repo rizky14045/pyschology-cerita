@@ -16,7 +16,7 @@ class PriceController extends Controller
      */
     public function index()
     {
-        $data['prices'] = Price::latest()->get();
+        $data['prices'] = Price::latest()->paginate(25);
 
         return view('admin.price.index',$data);
     }
