@@ -41,7 +41,7 @@
             <div class="row pb-3">
                 <div class="form-group col-12">
                     <label >Description</label>
-                    <textarea class="form-control" rows="5" name="description" placeholder="First Paragraph in Body"></textarea>
+                    <textarea class="form-control" rows="5" name="description" placeholder="Description"></textarea>
                     @if($errors->has('description'))
                         <div class="error">{{ $errors->first('description') }}</div>
                     @endif

@@ -69,7 +69,7 @@
                         </tbody>
                     </table>
                 </div>
-
+                {{$articles->links()}}
             </div>
         </div>
     </div> <!-- end col -->
