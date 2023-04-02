@@ -57,6 +57,14 @@
                                 "></i>Product</a>
                         </li>
                         <li>
+                            <a href="{{route('admin.header.index')}}"><i class="fas fa-file-image
+                                "></i>Header</a>
+                        </li>
+                        <li>
+                            <a href="{{route('admin.album.index')}}"><i class="fas fa-images
+                                "></i>Album</a>
+                        </li>
+                        <li>
                             <a href="{{route('admin.price.index')}}"><i class="fas fa-money-bill
                                 "></i>Price</a>
                         </li>

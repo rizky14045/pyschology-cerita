@@ -63,7 +63,7 @@
                         </tbody>
                     </table>
                 </div>
-
+                {{$topics->links()}}
             </div>
         </div>
     </div> <!-- end col -->

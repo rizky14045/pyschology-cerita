@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\AlbumController;
 use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\Admin\TopicController;
+use App\Http\Controllers\Admin\HeaderController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SettingController;
@@ -66,6 +68,22 @@ Route::prefix('admin')->group(function () {
         Route::get('/product/update/{id}', ProductController::class . '@edit')->name('admin.product.edit');
         Route::patch('/product/update/{id}', ProductController::class . '@update')->name('admin.product.update');
         Route::delete('/product/delete/{id}', ProductController::class . '@destroy')->name('admin.product.delete');
+
+        //header
+        Route::get('/header', HeaderController::class . '@index')->name('admin.header.index');
+        Route::get('/header/create', HeaderController::class . '@create')->name('admin.header.create');
+        Route::post('/header/create', HeaderController::class . '@store')->name('admin.header.store');
+        Route::get('/header/update/{id}', HeaderController::class . '@edit')->name('admin.header.edit');
+        Route::patch('/header/update/{id}', HeaderController::class . '@update')->name('admin.header.update');
+        Route::delete('/header/delete/{id}', HeaderController::class . '@destroy')->name('admin.header.delete');
+
+        //album
+        Route::get('/album', AlbumController::class . '@index')->name('admin.album.index');
+        Route::get('/album/create', AlbumController::class . '@create')->name('admin.album.create');
+        Route::post('/album/create', AlbumController::class . '@store')->name('admin.album.store');
+        Route::get('/album/update/{id}', AlbumController::class . '@edit')->name('admin.album.edit');
+        Route::patch('/album/update/{id}', AlbumController::class . '@update')->name('admin.album.update');
+        Route::delete('/album/delete/{id}', AlbumController::class . '@destroy')->name('admin.album.delete');
 
         //Price
         Route::get('/price', PriceController::class . '@index')->name('admin.price.index');
