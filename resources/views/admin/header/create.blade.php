@@ -58,7 +58,6 @@
                         <option>Topik Konseling</option>
                         <option>Artikel</option>
                         <option>About Us</option>
-
                     </select>
                     @if($errors->has('position'))
                     <div class="error">{{ $errors->first('position') }}</div>
