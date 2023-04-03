@@ -145,7 +145,7 @@
                                         <li>
                                             <a href="{{ route('blogs') }}">Artikel</i></a>
                                         </li>
-                                        <li><a href="{{ route('about-us') }}">About Us</a></li>
+                                        <li><a href="{{ route('about-us') }}">Tentang Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -243,10 +243,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-12">
                         <div class="copyright-content">
-                            <p>
-                                Â© Copyright 2018 | All Rights Reserved by
-                                <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a>
-                            </p>
+                            <p class="text-white"> © {{date('Y')}} bagikanceritamu.com <span class="d-none d-sm-inline-block"> by Ditama Digital.</span></p>
                         </div>
                     </div>
                 </div>
