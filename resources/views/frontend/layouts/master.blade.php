@@ -110,11 +110,14 @@
                             <div class="main-menu">
                                 <nav class="navigation">
                                     <ul class="nav menu">
-                                        <li class="active">
-                                            <a href="#">Beranda</a>
+                                        <li class="{{ Route::is('homepage') ? 'active' : '' }}">
+                                            <a href="/">Beranda</a>
                                         </li>
-                                        <li>
+                                        <li class="{{ Route::is('services') ? 'active' : '' }}">
                                             <a href="{{ route('services') }}">Layanan</i></a>
+
+                                            {{-- JANGAN DIHAPUS! --}}
+
                                             {{-- <ul class="dropdown" aria-labelledby="navbarDropdownMenuLink">
                                                 <li class="dropdown-submenu">
                                                     <a class="dropdown-item" href="#">Konseling Online</a>
@@ -136,16 +139,16 @@
                                                 </li>
                                             </ul> --}}
                                         </li>
-                                        <li>
+                                        <li class="{{ Route::is('topics') ? 'active' : '' }}">
                                             <a href="{{ route('topics') }}">Topik Konseling</a>
                                         </li>
-                                        <li>
+                                        <li class="{{ Route::is('doctors') ? 'active' : '' }}">
                                             <a href="{{ route('doctors') }}">Psikologi Kami</i></a>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <a href="{{ route('blogs') }}">Artikel</i></a>
-                                        </li>
-                                        <li><a href="{{ route('about-us') }}">Tentang Kami</a></li>
+                                        </li> --}}
+                                        <li class="{{ Route::is('about-us') ? 'active' : '' }}"><a href="{{ route('about-us') }}">Tentang Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -185,10 +188,10 @@
                                             <a href="#"><i class="fa fa-caret-right"
                                                     aria-hidden="true"></i>Topik Konseling</a>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <a href="#"><i class="fa fa-caret-right"
                                                     aria-hidden="true"></i>Artikel</a>
-                                        </li>
+                                        </li> --}}
                                         </li>
                                     </ul>
                                 </div>
