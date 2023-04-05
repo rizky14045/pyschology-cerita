@@ -41,7 +41,7 @@
                     @endif
                 </div>
             </div>
-            <div class="row pb-3">
+            {{-- <div class="row pb-3">
                 <div class="form-group col-12">
                     <label >Description</label>
                     <textarea class="form-control" rows="5" name="description">
@@ -51,7 +51,7 @@
                         <div class="error">{{ $errors->first('description') }}</div>
                     @endif
                 </div>
-            </div>
+            </div> --}}
             <div class="row pb-3">
                 <div class="form-group col-12">
                     <label >Body</label>

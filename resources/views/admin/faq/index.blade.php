@@ -30,9 +30,9 @@
             <div class="card-body">
                 <h4 class="card-title">Data Faq</h4>
                 <div class="table-responsive pt-3">
-                    <table class="table table-bordered ">
-                        <thead>
-                        <tr>
+                    <table class="table table-bordered">
+                        <thead style="background-color: #20BBC7;">
+                        <tr class="text-white">
                             <th>No</th>
                             <th>Title</th>
                             <th>Description</th>
@@ -59,6 +59,7 @@
                         </tbody>
                     </table>
                 </div>
+                {{$faqs->links()}}
 
             </div>
         </div>
