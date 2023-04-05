@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Price;
+use App\Models\Psychology;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PyschologyOrderController extends Controller
+class PsychologyOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class PyschologyOrderController extends Controller
      */
     public function index()
     {
-        return view('admin.pyschology-order.index');
+        return view('admin.psychology-order.index');
     }
 
     /**
@@ -24,7 +26,9 @@ class PyschologyOrderController extends Controller
      */
     public function create()
     {
-        return view('admin.pyschology-order.create');
+        $data['psychologies'] = Psychology::all();
+        $data['prices'] = Price::all();
+        return view('admin.psychology-order.create',$data);
     }
 
     /**

@@ -135,12 +135,20 @@
     <div id="fun-facts" class="fun-facts section overlay">
         <div class="container">
             <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-white">
+                        <h3 class="text-white">Langkah Mudah Bercerita dengan Kami untuk Membuat Kamu Lebih Bersemangat!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-fun">
-                        <i class="fa-solid fa-users"></i>
+                        <i class="fa-solid fa-calendar-days"></i>
                         <div class="content">
-                            <span>Konseling Berjalan </span>
-                            <p>Sudah terhubung dengan kami, maka kamu bisa langsung melakukan konseling</p>
+                            <span>Hubungi Customer Service</span>
+                            <p>Kami bisa kamu hubungi kapan saja.</p>
                         </div>
                     </div>
                 </div>
@@ -155,10 +163,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-fun">
-                        <i class="fa-solid fa-calendar-days"></i>
+                        <i class="fa-solid fa-users"></i>
                         <div class="content">
-                            <span>Hubungi Customer Service</span>
-                            <p>Kami bisa kamu hubungi kapan saja.</p>
+                            <span>Konseling Berjalan </span>
+                            <p>Sudah terhubung dengan kami, maka kamu bisa langsung melakukan konseling</p>
                         </div>
                     </div>
                 </div>
@@ -173,8 +181,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="content">
-                        <h2>Jika kamu ingin langsung bercerita kegelisahanmu pada kami
-                            Silahkan hubungi <br> 0813 - 9999 - 1459</h2>
+                        <h3>Jika kamu ingin langsung bercerita kegelisahanmu pada kami
+                            Silahkan hubungi 0813 - 9999 - 1459</h3>
                         <p>
                             Kami akan sesegera mungkin merespon kebutuhanmu dan atur janji waktu untuk berkonsultasi.
                         </p>
@@ -432,73 +440,26 @@
                         <div class="single-testimonial">
                             <img src="{{ asset('assets/vendor/img/testi1.png') }}" alt="#" />
                             <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
+                                "Admin benar-benar responsif, saya langsung dapat terjadwalkan konsultasi dengan cepat"
                             </p>
-                            <h4 class="name">Ruhfayed Sakib</h4>
+                            <h4 class="name">Mahasiswa</h4>
                         </div>
 
                         <div class="single-testimonial">
                             <img src="{{ asset('assets/vendor/img/testi2.png') }}" alt="#" />
                             <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
+                                " Sangat nyaman konseling di bagikanceritamu.com, sebelumnya sempat bingung bagaimana bisa meluapkan cerita masalah pribadi pada siapa, setelah menikah saya mengalami depresi hebat karena terjadi miskomunikasi dengan suami. "
                             </p>
-                            <h4 class="name">Shakil Hossain</h4>
+                            <h4 class="name">Mba A*i, pasangan muda</h4>
                         </div>
 
                         <div class="single-testimonial">
                             <img src="{{ asset('assets/vendor/img/testi3.png') }}" alt="#" />
                             <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
+                                "Terima kasih sudah sabar menghadapi saya yang berubah jadwal dadakan dan tetap bisa terlayani untuk berkonsultasi dengan ahlinya. Karena sebagai wanit karir sebagai sekretaris aa banyak tekanan yang membuat sya stre dan saya harus mampu mengikuti mood Pak Bos.""
+                                
                             </p>
-                            <h4 class="name">Naimur Rahman</h4>
-                        </div>
-
-                        <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi1.png') }}" alt="#" />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
-                            </p>
-                            <h4 class="name">Ruhfayed Sakib</h4>
-                        </div>
-
-                        <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi2.png') }}" alt="#" />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
-                            </p>
-                            <h4 class="name">Shakil Hossain</h4>
-                        </div>
-
-                        <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi3.png') }}" alt="#" />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
-                            </p>
-                            <h4 class="name">Naimur Rahman</h4>
-                        </div>
-
-                        <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi1.png') }}" alt="#" />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
-                            </p>
-                            <h4 class="name">Ruhfayed Sakib</h4>
-                        </div>
-
-                        <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi2.png') }}" alt="#" />
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur eliet adipiscing.
-                                Aliquam nec suscipit turpis, vel pretium eros.
-                            </p>
-                            <h4 class="name">Naimur Rahman</h4>
+                            <h4 class="name">Mba Key*a, sekretaris perusahaan X</h4>
                         </div>
                     </div>
                 </div>
