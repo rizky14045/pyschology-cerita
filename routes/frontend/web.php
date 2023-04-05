@@ -3,7 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/psychologys', [HomeController::class, 'doctor'])->name('doctors');
 Route::get('/psychology-detail', [HomeController::class, 'doctor_detail'])->name('doctor_detail');
 Route::get('/blogs', [HomeController::class, 'blog'])->name('blogs');

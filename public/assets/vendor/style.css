@@ -1192,8 +1192,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.fun-facts .single-fun {}
-
 .fun-facts .single-fun i {
     position: absolute;
     left: 0;
@@ -1229,7 +1227,7 @@ body {
 .fun-facts .single-fun span {
     color: #fff;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 20px;
     position: relative;
     display: block;
     -webkit-transition: all 0.4s ease;
@@ -1252,6 +1250,7 @@ body {
 	Why choose CSS
 =====================*/
 
+
 .why-choose .choose-left h3 {
     font-size: 24px;
     font-weight: 600;
@@ -1261,7 +1260,26 @@ body {
     margin-bottom: 24px;
 }
 
+.why-choose .choose-left h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2C2D3F;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 18px;
+}
+
 .why-choose .choose-left h3:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: #20BBC7 !important;
+}
+
+.why-choose .choose-left h4:before {
     position: absolute;
     content: "";
     left: 0;
@@ -1308,11 +1326,11 @@ body {
 .why-choose .choose-right {
     height: 100%;
     width: 100%;
-    background-image: url('img/video-bg.jpg');
+    background-image: url('img/muslim-lady.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+    /* background-repeat: no-repeat; */
+    /* position: relative; */
 }
 
 .why-choose .choose-right .video {
@@ -1338,8 +1356,8 @@ body {
 
 .why-choose .video-image .waves-block .waves {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 2px;
+    height: 2px;
     background: #fff;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -1371,17 +1389,6 @@ body {
 	End Why choose CSS
 =========================*/
 
-/*===============================
-	Start Call to action CSS
-=================================*/
-
-.call-action {
-    background-image: url('img/call-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    background-repeat: no-repeat;
-}
 
 .call-action .content {
     text-align: center;
@@ -1389,57 +1396,91 @@ body {
 }
 
 .call-action .content h2 {
-    color: #fff;
+    color: #000;
     font-size: 32px;
     font-weight: 600;
     line-height: 46px;
 }
 
 .call-action .content p {
-    color: #fff;
+    color: #000;
     margin: 30px 0px;
     font-size: 15px;
 }
 
 .call-action .content .btn {
-    background: #fff;
+    background: #20BBC7;
     margin-right: 20px;
     font-weight: 500;
-    border: 1px solid #fff;
-    color: #20BBC7 !important;
+    color: #fff !important;
 }
 
-.call-action .content .btn:before {
-    background: #20BBC7 !important;
-}
-
-.call-action .content .btn:hover {
-    background: #20BBC7 !important;
-    color: #fff;
-}
 
 .call-action .content .btn:last-child {
     margin-right: 0px;
 }
 
 .call-action .content .second {
-    border: 1px solid #fff;
-    color: #fff;
-    background: transparent;
+    color: #fff !important;
+    background: #20BBC7;
     color: #fff !important;
 }
 
-.call-action .content .second:before {
-    background: #fff;
-}
-
-.call-action .content .second:hover {
-    color: #20BBC7 !important;
-    border-color: transparent;
-    background: #fff;
-}
 
 .call-action .content .second i {
+    margin-left: 10px;
+}
+
+/*===============================
+	Start Call to action CSS
+=================================*/
+
+.call-action-2 {
+    background-image: url('img/call-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.call-action-2 .content {
+    text-align: center;
+    padding: 100px 265px;
+}
+
+.call-action-2 .content h2 {
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+.call-action-2 .content p {
+    color: #000;
+    margin: 30px 0px;
+    font-size: 15px;
+}
+
+.call-action-2 .content .btn {
+    background: #20BBC7;
+    margin-right: 20px;
+    font-weight: 500;
+    color: #fff !important;
+}
+
+
+.call-action-2 .content .btn:last-child {
+    margin-right: 0px;
+}
+
+.call-action-2 .content .second {
+    color: #fff !important;
+    background: #20BBC7;
+    color: #fff !important;
+}
+
+
+.call-action-2 .content .second i {
     margin-left: 10px;
 }
 
@@ -1782,7 +1823,7 @@ body {
 ===============================*/
 
 .testimonials {
-    background-image: url('img/testi-bg.jpg');
+    background-image: url('img/young-chatting.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2489,7 +2530,7 @@ body {
     transition: all 0.3s ease;
     margin-top: 30px;
     text-align: center;
-    box-shadow: 0px 0px 10px #00000021;
+    /* box-shadow: 0px 0px 10px #00000021; */
     border-radius: 5px;
     overflow: hidden;
 }
@@ -2521,7 +2562,7 @@ body {
 }
 
 .topic .t-head img {
-    height: 180px;
+    height: 200px;
     position: relative;
 }
 
@@ -2547,7 +2588,7 @@ body {
     z-index: 99;
     margin: -23px 0 0 -75px;
     font-size: 15px;
-    background: #2889E4;
+    background: #20BBC7 !important;
     font-size: 13px;
     line-height: 46px;
     padding: 0;

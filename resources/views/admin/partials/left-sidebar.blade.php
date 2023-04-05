@@ -14,9 +14,9 @@
                 </li>
 
                 <li>
-                    <a href="{{route('admin.pyschology-order.index')}}" class="waves-effect">
+                    <a href="{{route('admin.psychology-order.index')}}" class="waves-effect">
                         <i class="fas fa-table"></i>
-                        <span>Pyschology Order</span>
+                        <span>Psychology Order</span>
                     </a>
                 </li>
                 <li>
@@ -38,7 +38,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li>
-                            <a href="{{route('admin.pyschology.index')}}"><i class="fas fa-users"></i>Pyschology</a>
+                            <a href="{{route('admin.psychology.index')}}"><i class="fas fa-users"></i>Psychology</a>
                         </li>
                         <li>
                             <a href="{{route('admin.testimony.index')}}"><i class="fas fa-clock
