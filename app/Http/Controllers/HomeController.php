@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -38,7 +39,9 @@ class HomeController extends Controller
 
     public function topic()
     {
-        return view('frontend.topics');
+        $data['topics'] = Topic::all();
+
+        return view('frontend.topics', $data);
     }
 
     public function services()
