@@ -14,7 +14,7 @@
             <div class="col-md-4">
                 <div class="float-end d-none d-md-block">
                     <div class="dropdown">
-                        <a class="btn btn-primary" href="{{route('admin.pyschology-order.create')}}">
+                        <a class="btn btn-primary" href="{{route('admin.psychology-order.create')}}">
                             <i class="fas fa-plus"></i> Add Pyschology Order</i>
                         </a>
                     </div>
@@ -32,8 +32,8 @@
                 <h4 class="card-title">Data Pyschology Order</h4>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered ">
-                        <thead>
-                        <tr>
+                        <thead style="background-color: #20BBC7;" class="text-center">
+                        <tr class="text-white">
                             <th>No</th>
                             <th>Session ID</th>
                             <th>Nama Client</th>
@@ -52,7 +52,7 @@
 
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                         <tr>
                             <td>1</td>
                             <td>8f5a0268-2bfa-4fdc-b22f-51cd4407b738</td>

@@ -31,7 +31,7 @@
             <div class="row pb-3">
                 <div class="form-group col-12">
                     <label>Client Image</label>
-                    <input class="form-control" name="client_image" type="file" required>
+                    <input class="form-control" name="client_image" type="file">
                     <small class="text-muted">File berformat Jpg,Jpeg, Png dan maksimal file 4MB</small>
                     @if($errors->has('client_image'))
                         <div class="error">{{ $errors->first('client_image') }}</div>
