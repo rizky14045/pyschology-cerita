@@ -23,110 +23,61 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="doctor-details-item doctor-details-left">
-                        <img src="{{ asset('assets/vendor/img/doctor-detail.jpg') }}" alt="#" />
-                        <div class="doctor-details-contact">
-                            <h3>Contact info</h3>
-                            <ul class="basic-info">
-                                <li>
-                                    <i class="fa-solid fa-phone"></i> Call : +07 554 332 322
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="83ebe6efefecc3eee6e7f0e6f5ade0ecee">[email&#160;protected]</a>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-map"></i> 4th Floor, 408 No
-                                    Chamber
-                                </li>
-                            </ul>
-
-                            <ul class="social">
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-google-plus"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-vimeo"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                                </li>
-                            </ul>
-
-                            <div class="doctor-details-work">
-                                <h3>Working hours</h3>
-                                <ul class="time-sidual">
-                                    <li class="day">
-                                        Monday - Fridayp <span>8.00-20.00</span>
-                                    </li>
-                                    <li class="day">Saturday <span>9.00-18.30</span></li>
-                                    <li class="day">
-                                        Monday - Thusday <span>9.00-15.00</span>
-                                    </li>
-                                    <li class="day">
-                                        Monday - Fridayp <span>8.00-20.00</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <img src="{{ asset('assets/vendor/img/foto2.jpg') }}" alt="#" />
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="doctor-details-item">
                         <div class="doctor-details-right">
                             <div class="doctor-name">
-                                <h3 class="name">Dr. Sarah Taylor</h3>
-                                <p class="deg">Neurosurgeon.</p>
-                                <p class="degree">MBBS in Neurology, PHD in Neurosurgeon.</p>
+                                <h3 class="name">Gouw Kelvin, M.Psi</h3>
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Biography</h3>
+                                <h3>Topik Masalah</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                                    commodo viverra maecenas accumsan lacus vel facilisis.Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt.
+                                    Adiksi atau ketergantungan, Karir, Depresi, Kecemasan
                                 </p>
                                 <br />
+                            </div>
+                            <div class="doctor-details-biography">
+                                <h3>Nomor Izin Praktek</h3>
                                 <p>
-                                    Risus commodo viverra maecenas accumsan lacus vel
-                                    facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt.
+                                     1111212
+                                </p>
+                                <br />
+                            </div>
+                            <div class="doctor-details-biography">
+                                <h3>Pendidikan</h3>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            S2 Magister Psikologi Profesi Klinis Universitas Indonesia
+
+                                        </li>
+                                        <li>
+                                            S1 Sarjana Psikologi Universitas Indonesia
+
+                                        </li>
+                                    </ul>
+                                </p>
+                                <br />
+                            </div>
+                            <div class="doctor-details-biography">
+                                <h3>Karakter Personal</h3>
+                                <p>
+                                    Humoris, senang melakukan kegiatan-kegiatan sosial yang bermanfaat bagi lingkungan sekitar
                                 </p>
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Education</h3>
-                                <ul>
-                                    <li>
-                                        PHD degree in Neorology at University of Mediserv (2006)
-                                    </li>
-                                    <li>
-                                        Master of Neoro Surgery at University of Mediserv (2002)
-                                    </li>
-                                    <li>
-                                        MBBS degree in Neurosciences at University of Mediserv
-                                        (2002)
-                                    </li>
-                                    <li>
-                                        Higher Secondary Certificate at Mediserv collage (1991)
-                                    </li>
-                                </ul>
+                                <h3>Motto</h3>
+                                <p>
+                                    Kenali diri dengan baik, bermanfaat kemudian
+                                </p>
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Biography</h3>
+                                <h3>Pengalaman</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                                    commodo viverra
+                                    Lebih dari 5 tahun menekuni bidang psikolog profesi dengan berbagai kasus yang pernah ditangani, seperti ketergantungan games, ketergantungan obat, kecemasan berlebih karena selalu gagal dalam berbagai hal
                                 </p>
                             </div>
                         </div>
