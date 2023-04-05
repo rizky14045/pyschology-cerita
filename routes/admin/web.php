@@ -13,8 +13,8 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TestimonyController;
-use App\Http\Controllers\Admin\PyschologyController;
-use App\Http\Controllers\Admin\PyschologyOrderController;
+use App\Http\Controllers\Admin\PsychologyController;
+use App\Http\Controllers\Admin\PsychologyOrderController;
 
 Route::prefix('admin')->group(function () {
     
@@ -30,14 +30,18 @@ Route::prefix('admin')->group(function () {
         //dashboard
         Route::get('/', DashboardController::class . '@index')->name('admin.dashboard.index');
 
-        // pyschology order
-        Route::get('/pyschology-order', PyschologyOrderController::class . '@index')->name('admin.pyschology-order.index');
-        Route::get('/pyschology-order-create', PyschologyOrderController::class . '@create')->name('admin.pyschology-order.create');
+        // psychology order
+        Route::get('/psychology-order', PsychologyOrderController::class . '@index')->name('admin.psychology-order.index');
+        Route::get('/psychology-order-create', PsychologyOrderController::class . '@create')->name('admin.psychology-order.create');
 
-        // pyschology
-        Route::get('/pyschology', PyschologyController::class . '@index')->name('admin.pyschology.index');
+        //Psychology
+        Route::get('/psychology', PsychologyController::class . '@index')->name('admin.psychology.index');
+        Route::get('/psychology/create', PsychologyController::class . '@create')->name('admin.psychology.create');
+        Route::post('/psychology/create', PsychologyController::class . '@store')->name('admin.psychology.store');
+        Route::get('/psychology/update/{id}', PsychologyController::class . '@edit')->name('admin.psychology.edit');
+        Route::patch('/psychology/update/{id}', PsychologyController::class . '@update')->name('admin.psychology.update');
+        Route::delete('/psychology/delete/{id}', PsychologyController::class . '@destroy')->name('admin.psychology.delete');
 
-       
         //Testimony
         Route::get('/testimony', TestimonyController::class . '@index')->name('admin.testimony.index');
         Route::get('/testimony/create', TestimonyController::class . '@create')->name('admin.testimony.create');
