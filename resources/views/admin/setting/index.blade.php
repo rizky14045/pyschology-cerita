@@ -8,7 +8,7 @@
                 <h6 class="page-title">User</h6>
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{url('admin')}}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
+                    <li class="breadcrumb-item active" aria-current="page">Setting</li>
                 </ol>
             </div>
         </div> 
@@ -87,6 +87,9 @@
                                                 <br>
                                                 <label for="">Twitter</label>
                                                 <input type="text" class="form-control" name="setting[twitter]" value="{{$setting->where('key','twitter')->first()->value}}">
+                                                <br>
+                                                <label for="">Email</label>
+                                                <input type="email" class="form-control" name="setting[email]" value="{{$setting->where('key','email')->first()->value}}">
                                                 <br>
                                                 <button class="btn btn-primary">Save</button>
                                                 </div>   

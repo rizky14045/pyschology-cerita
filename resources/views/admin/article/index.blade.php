@@ -31,14 +31,14 @@
                 <h4 class="card-title">Data Article</h4>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered ">
-                        <thead>
-                        <tr>
+                        <thead style="background-color: #20BBC7;">
+                        <tr class="text-white">
                             <th>No</th>
-                            <th>Data</th>
+                            <th>Date</th>
                             <th>Created By</th>
                             <th>Title</th>
                             <th>Banner</th>
-                            <th>Description</th>
+                            {{-- <th>Description</th> --}}
                             <th>Body</th>
                             <th>Action</th>
                         </tr>
@@ -53,7 +53,7 @@
                                 <td>
                                     <img src="{{asset('uploads/banner_image/'.$article->banner_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
                                 </td>
-                                <td>{{$article->description}}</td>
+                                {{-- <td>{{$article->description}}</td> --}}
                                 <td>{!!$article->body!!}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary text-white" href="{{route('admin.article.edit',['id'=>$article->id])}}">Edit</a>
@@ -69,7 +69,7 @@
                         </tbody>
                     </table>
                 </div>
-
+                {{$articles->links()}}
             </div>
         </div>
     </div> <!-- end col -->
