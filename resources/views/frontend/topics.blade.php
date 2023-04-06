@@ -27,11 +27,11 @@
                             <div class="t-head">
                                 <img src="{{ url('uploads/topic_image/', $topic->topic_image) }}" alt="#" height="50" />
                                 <div class="t-icon">
-                                    <a href="appointment.html" class="btn">Konsultasi</a>
+                                    <a href="{{ route('doctors') }}" class="btn">Konsultasi</a>
                                 </div>
                             </div>
                             <div class="t-bottom">
-                                <p><a href="{{ route('doctor_detail') }}">Adiksi atau Ketergantungan</a></p>
+                                <p><a href="{{ route('doctors') }}">{{$topic->topic_name}}</a></p>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                         <div class="t-head">
                             <img src="{{ url('uploads/topic_image/other.png') }}" alt="#" />
                             <div class="t-icon">
-                                <a href="appointment.html" class="btn">Konsultasi</a>
+                                <a href="{{ route('doctors') }}" class="btn">Konsultasi</a>
                             </div>
                         </div>
 

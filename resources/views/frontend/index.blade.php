@@ -486,37 +486,17 @@
             <div class="row">
                 <div class="col-lg-12 col-12">
                     <div class="owl-carousel portfolio-slider">
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf1.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        <div class="">
+                            <img src="{{ asset('assets/vendor/img/album3.jpg') }}" alt="#" />
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf2.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        <div class="">
+                            <img src="{{ asset('assets/vendor/img/album5.jpg') }}" alt="#" />
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf3.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        <div class="">
+                            <img src="{{ asset('assets/vendor/img/album6.jpg') }}" alt="#" />
                         </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf4.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
-                        </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf1.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
-                        </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf2.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
-                        </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf3.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
-                        </div>
-                        <div class="single-pf">
-                            <img src="{{ asset('assets/vendor/img/pf4.jpg') }}" alt="#" />
-                            <a href="portfolio-details.html" class="btn">View Details</a>
+                        <div class="">
+                            <img src="{{ asset('assets/vendor/img/album7.jpg') }}" alt="#" />
                         </div>
                     </div>
                 </div>
