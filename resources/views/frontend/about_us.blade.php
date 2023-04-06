@@ -23,9 +23,7 @@
         <div class="container-fluid p-0">
             <div class="row m-0">
                 <div class="col-lg-6 col-md-12 p-0">
-                    <div class="about-image">
-                        <img src="{{ asset('assets/vendor/img/about-img.jpg') }}" alt="image">
-                    </div>
+                    <img src="{{ asset('assets/vendor/img/album1.jpg') }}" alt="image">
                 </div>
                 <div class="col-lg-6 col-md-12 p-0">
                     <div class="about-content">
@@ -119,9 +117,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 p-0">
-                    <div class="our-mission-image">
-                        <img src="assets/img/mission-img1.jpg" alt="image">
-                    </div>
+                    <img src="{{ asset('assets/vendor/img/album3.jpg') }}" alt="image">
                 </div>
             </div>
         </div>
