@@ -438,7 +438,7 @@
                 <div class="col-lg-12 col-12">
                     <div class="owl-carousel testimonial-slider">
                         <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi1.png') }}" alt="#" />
+                            <img src="{{ asset('assets/vendor/img/foto13.jpg') }}" alt="#" />
                             <p>
                                 "Admin benar-benar responsif, saya langsung dapat terjadwalkan konsultasi dengan cepat"
                             </p>
@@ -446,7 +446,7 @@
                         </div>
 
                         <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi2.png') }}" alt="#" />
+                            <img src="{{ asset('assets/vendor/img/foto14.jpg') }}" alt="#" />
                             <p>
                                 " Sangat nyaman konseling di bagikanceritamu.com, sebelumnya sempat bingung bagaimana bisa meluapkan cerita masalah pribadi pada siapa, setelah menikah saya mengalami depresi hebat karena terjadi miskomunikasi dengan suami. "
                             </p>
@@ -454,7 +454,7 @@
                         </div>
 
                         <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/testi3.png') }}" alt="#" />
+                            <img src="{{ asset('assets/vendor/img/foto15.jpg') }}" alt="#" />
                             <p>
                                 "Terima kasih sudah sabar menghadapi saya yang berubah jadwal dadakan dan tetap bisa terlayani untuk berkonsultasi dengan ahlinya. Karena sebagai wanit karir sebagai sekretaris aa banyak tekanan yang membuat sya stre dan saya harus mampu mengikuti mood Pak Bos.""
                                 
@@ -487,16 +487,16 @@
                 <div class="col-lg-12 col-12">
                     <div class="owl-carousel portfolio-slider">
                         <div class="">
-                            <img src="{{ asset('assets/vendor/img/album3.jpg') }}" alt="#" />
+                            <img src="{{ asset('assets/vendor/img/album16.jpg') }}" alt="#" />
                         </div>
                         <div class="">
                             <img src="{{ asset('assets/vendor/img/album5.jpg') }}" alt="#" />
                         </div>
                         <div class="">
-                            <img src="{{ asset('assets/vendor/img/album6.jpg') }}" alt="#" />
+                            <img src="{{ asset('assets/vendor/img/album13.jpg') }}" alt="#" />
                         </div>
                         <div class="">
-                            <img src="{{ asset('assets/vendor/img/album7.jpg') }}" alt="#" />
+                            <img src="{{ asset('assets/vendor/img/album14.jpg') }}" alt="#" />
                         </div>
                     </div>
                 </div>
