@@ -22,7 +22,7 @@
         <div class="container">
             <div class="single-main">
                 <div class="news-head">
-                    <img src="{{ asset('assets/vendor/img/blog1.jpg') }}" alt="#" />
+                    <img src="{{ asset('assets/vendor/img/album7.jpg') }}" alt="#" />
                 </div>
 
                 <h1 class="service-title">
@@ -68,7 +68,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-image">
-                                    <img src="{{ asset('assets/vendor/img/blog2.jpg') }}" alt="#" />
+                                    <img src="{{ asset('assets/vendor/img/album3.jpg') }}" alt="#" />
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
@@ -107,7 +107,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-image">
-                                    <img src="{{ asset('assets/vendor/img/blog2.jpg') }}" alt="#" />
+                                    <img src="{{ asset('assets/vendor/img/album1.jpg') }}" alt="#" />
                                 </div>
                             </div>
                         </div>
