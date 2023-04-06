@@ -26,22 +26,14 @@
                 </div>
 
                 <h1 class="service-title">
-                    <a href="news-single.html">Our Psycholog always provide good services</a>
+                    Ceritakan Masalahmu Tanpa Batas, Psikolog Profesional Kami akan menjadi Temanmu Bercerita dengan Memberikan Pelayanan Konseling Sepenuh Hati. 
                 </h1>
 
                 <div class="news-text">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse facilisis ultricies tortor, nec sollicitudin
-                        lorem sagittis vitae. Curabitur rhoncus commodo rutrum.
-                        Pellentesque habitant morbi tristique senectus et netus et
-                        malesuada fames ac turpis egestas. Aliquam nec lacus
-                        pulvinar, laoreet dolor quis, pellentesque ante. Cras
-                        nulla orci, pharetra at dictum consequat, pretium pretium
-                        nulla. Suspendisse porttitor nunc a sodales tempor. Mauris
-                        sed felis maximus, interdum metus vel, tincidunt diam.
+                        Para Psikolog yang tergabung di bagikanceritamu adalah mereka yang memiliki pengalaman dan wawasan sesuai topik permasalahan. Ketika kamu datang pada kami dengan masalah yang sedang dialami, psikolog kami akan melakukan observasi yang kemudian melakukan pendalaman untuk memahami masalahmu. Sikap yang terbuka, ramah, pendengar dan tutur kata yang baik menjadi prioritas dalam memberikan layanan konseling. 
                     </p>
-                    <blockquote class="overlay">
+                    {{-- <blockquote class="overlay">
                         <p>
                             Aliquam nec lacus pulvinar, laoreet dolor quis,
                             pellentesque ante. Cras nulla orci, pharetra at dictum
@@ -52,8 +44,8 @@
                             commodo et, sodales
 
                         </p>
-                    </blockquote>
-                    <p>
+                    </blockquote> --}}
+                    {{-- <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Suspendisse facilisis ultricies tortor, nec sollicitudin
                         lorem sagittis vitae. Curabitur rhoncus commodo rutrum.
@@ -63,27 +55,22 @@
                         nulla orci, pharetra at dictum consequat, pretium pretium
                         nulla. Suspendisse porttitor nunc a sodales tempor. Mauris
                         sed felis maximus, interdum metus vel, tincidunt diam.
-                    </p>
+                    </p> --}}
                     <div class="image-gallery">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-image">
-                                    <img src="{{ asset('assets/vendor/img/album3.jpg') }}" alt="#" />
+                                    <img src="{{ asset('assets/vendor/img/album30.jpg') }}" alt="#" />
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <span class="ver-line"></span>
                                 <h2 class="service-sub-title-l">Offline Consultation</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Suspendisse facilisis ultricies tortor, nec sollicitudin
-                                    lorem sagittis vitae. Curabitur rhoncus commodo rutrum.
-                                    Pellentesque habitant morbi tristique senectus et netus et
-                                    malesuada fames ac turpis egestas. Aliquam nec lacus
-                                    pulvinar, laoreet dolor quis, pellentesque ante. Cras
-                                    nulla orci, pharetra at dictum consequat, pretium pretium
-                                    nulla. Suspendisse porttitor nunc a sodales tempor. Mauris
-                                    sed felis maximus, interdum metus vel, tincidunt diam.
+                                <p align="justify">
+                                    Dimana saja kamu bisa memulai melakukan konseling dengan psikolog. Jika kamu merasakan sebuah ketidaknyamanan mental yang sampai cukup mengganggu aktivitasmu, namun kamu tidak punya banyak waktu untuk berkonsultasi secara tatap muka, kami memberikan layanan konsultasi daring sesuai waktu yang telah disepakati bersama. 
+                                </p>
+                                <p align="justify">
+                                    Kami memberikan sebuah gambaran jika kamu mengalami perasaan seperti sedih berlebihan, stres, trauma, dan perilaku menyimpang bermunculan, jangan ditunda untuk berkonsultasi karena hal itu bisa mengurangi produktivitasmu, segeralah melakukan konseling dengan ahlinya, yang dapat memberikanmu sebuah pencerahan.
                                 </p>
                             </div>
                         </div>
@@ -93,21 +80,13 @@
                             <div class="col-lg-6 col-md-6 col-12">
                                 <span class="ver-line-right"></span>
                                 <h2 class="service-sub-title-r">Online Consultation</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Suspendisse facilisis ultricies tortor, nec sollicitudin
-                                    lorem sagittis vitae. Curabitur rhoncus commodo rutrum.
-                                    Pellentesque habitant morbi tristique senectus et netus et
-                                    malesuada fames ac turpis egestas. Aliquam nec lacus
-                                    pulvinar, laoreet dolor quis, pellentesque ante. Cras
-                                    nulla orci, pharetra at dictum consequat, pretium pretium
-                                    nulla. Suspendisse porttitor nunc a sodales tempor. Mauris
-                                    sed felis maximus, interdum metus vel, tincidunt diam.
+                                <p align="justify">
+                                    Konseling tatap muka dengan para psikolog profesional kami, dapat menciptakan komunikasi yang lebih private dan bercerita dari hati ke hati. Proses konseling dilakukan di tempat yang telah kami sediakan dengan waktu yang sudah disepakati bersama. Kami akan menyambut kedatanganmu dengan senang hati.
                                 </p>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="single-image">
-                                    <img src="{{ asset('assets/vendor/img/album1.jpg') }}" alt="#" />
+                                    <img src="{{ asset('assets/vendor/img/album29.jpg') }}" alt="#" />
                                 </div>
                             </div>
                         </div>
