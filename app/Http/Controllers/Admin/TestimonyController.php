@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Testimony;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class TestimonyController extends Controller
@@ -53,11 +54,12 @@ class TestimonyController extends Controller
                 'client_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
             $file= $request->file('client_image');
+            
+            $image_name = 'bagikan-cerita-testimony-' . time() .'.'. $file->getClientOriginalExtension();
 
-
-            $image_name = $file->getClientOriginalName();
-
-            $file->move(public_path('uploads/testimony_image/'),$image_name);
+            Image::make($request->file('testimony_image'))->resize(1080, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save('uploads/testimony_image/'.$image_name);
             
             $requestData['client_image'] = $image_name;
         }
@@ -110,14 +112,27 @@ class TestimonyController extends Controller
             $this->validate($request, [
                 'client_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
+
             $file= $request->file('client_image');
-            $image_name = $file->getClientOriginalName();
+
+            $image_name = 'bagikan-cerita-testimony-' . time() .'.'. $file->getClientOriginalExtension();
+
             if($testimony->client_image){
                 
                 unlink(public_path('uploads/testimony_image/'.$testimony->client_image));
-                $file->move(public_path('uploads/testimony_image/'),$image_name);
+
+                $image_name = 'bagikan-cerita-testimony-' . time() .'.'. $file->getClientOriginalExtension();
+
+                Image::make($request->file('testimony_image'))->resize(1080, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/testimony_image/'.$image_name);
+
             }else{
-                $file->move(public_path('uploads/testimony_image/'),$image_name);
+
+                Image::make($request->file('testimony_image'))->resize(1080, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/testimony_image/'.$image_name);
+
             }
             $requestData['client_image'] = $image_name;
         }

@@ -1,4 +1,7 @@
 @extends('frontend.layouts.master')
+@php
+    $setting = App\Models\Setting::get();
+@endphp
 
 @section('content')
     <section class="slider">
@@ -360,69 +363,36 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($products as $product)
+                @php
+                $list = json_decode($product->list_product);  
+                @endphp
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="single-table">
                         <div class="table-head">
                             <div class="icon">
-                                <i class="fa-solid fa-chain-broken"></i>
+                                <img src="{{asset('uploads/product_image/'.$product->product_image)}}" alt="#" style="height:75px;"/>
                             </div>
-                            <h4 class="title">Konseling Offline/Tatap Muka</h4>
+                            <h4 class="title">{{$product->title}}</h4>
                             <div class="price">
-                                <p class="amount">Rp 349.000<span>/ Sesi</span></p>
+                                <p class="amount">Rp .{{number_format($product->price)}}<span>/ Sesi</span></p>
                             </div>
                         </div>
                         <ul class="table-list">
-                            <li>
-                                <i class="fa fa-check"></i>Berlokasi di wilayah Jakarta
-                            </li>
-                            <li>
-                                <i class="fa fa-check"></i>Bertemu langsung tatap muka dengan psikolog
-                            </li>
-                            <li class="cross">
-                                <i class="fa fa-check"></i>Waktu berkonsultasi 45-60 menit
-                            </li>
-                            <li class="cross">
-                                <i class="fa fa-check"></i>Tempat konseling yang nyaman
-                            </li>
+                            @foreach ($list as $item)
+                                @if ($list)
+                                <li>
+                                    <i class="fa fa-check"></i>{{$item}}
+                                </li>
+                                @endif
+                            @endforeach
                         </ul>
                         <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
+                            <a class="btn" href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text={{urlencode($product->title)}}" target="_blank">Book Now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-6 col-md-12 col-12">
-                    <div class="single-table">
-                        <div class="table-head">
-                            <div class="icon">
-                                <i class="fa-solid fa-wifi"></i>
-                            </div>
-                            <h4 class="title">Konseling Online/Daring</h4>
-                            <div class="price">
-                                <p class="amount">Rp 239.000<span>/ Sesi</span></p>
-                            </div>
-                        </div>
-
-                        <ul class="table-list">
-                            <li>
-                                <i class="fa fa-check"></i>Dilakukan via google meet
-                            </li>
-                            <li>
-                                <i class="fa fa-check"></i>Tempat dan waktu fleksibel
-                            </li>
-                            <li>
-                                <i class="fa fa-check"></i>Melakukan konsultasi di tempat ternyaman kamu
-                            </li>
-                            <li class="cross">
-                                <i class="fa fa-check"></i>Bisa on cam atau off cam sesuai keinginan
-                            </li>
-                        </ul>
-                        <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
     </section>
@@ -440,30 +410,15 @@
             <div class="row">
                 <div class="col-lg-12 col-12">
                     <div class="owl-carousel testimonial-slider">
+                        @foreach ($testimonies as $testimony)
                         <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/foto13.jpg') }}" alt="#" />
+                            <img src="{{asset('uploads/testimony_image/'.$testimony->client_image ?? 'default.png')}}" alt="#" />
                             <p>
-                                "Admin benar-benar responsif, saya langsung dapat terjadwalkan konsultasi dengan cepat"
+                                "{{$testimony->description}}"
                             </p>
-                            <h4 class="name">Mahasiswa</h4>
+                            <h4 class="name">{{$testimony->client_name}}</h4>
                         </div>
-
-                        <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/foto14.jpg') }}" alt="#" />
-                            <p>
-                                " Sangat nyaman konseling di bagikanceritamu.com, sebelumnya sempat bingung bagaimana bisa meluapkan cerita masalah pribadi pada siapa, setelah menikah saya mengalami depresi hebat karena terjadi miskomunikasi dengan suami. "
-                            </p>
-                            <h4 class="name">Mba A*i, pasangan muda</h4>
-                        </div>
-
-                        <div class="single-testimonial">
-                            <img src="{{ asset('assets/vendor/img/foto15.jpg') }}" alt="#" />
-                            <p>
-                                "Terima kasih sudah sabar menghadapi saya yang berubah jadwal dadakan dan tetap bisa terlayani untuk berkonsultasi dengan ahlinya. Karena sebagai wanit karir sebagai sekretaris aa banyak tekanan yang membuat sya stre dan saya harus mampu mengikuti mood Pak Bos.""
-
-                            </p>
-                            <h4 class="name">Mba Key*a, sekretaris perusahaan X</h4>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -489,18 +444,9 @@
             <div class="row">
                 <div class="col-lg-12 col-12">
                     <div class="owl-carousel portfolio-slider">
-                        <div class="">
-                            <img src="{{ asset('assets/vendor/img/album16.jpg') }}" alt="#" />
-                        </div>
-                        <div class="">
-                            <img src="{{ asset('assets/vendor/img/album5.jpg') }}" alt="#" />
-                        </div>
-                        <div class="">
-                            <img src="{{ asset('assets/vendor/img/album13.jpg') }}" alt="#" />
-                        </div>
-                        <div class="">
-                            <img src="{{ asset('assets/vendor/img/album14.jpg') }}" alt="#" />
-                        </div>
+                        @foreach ($albums as $album)
+                        <img src="{{asset('uploads/album_image/'.$album->album_image)}}" alt="#" />
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@ class ProductController extends Controller
             $file= $request->file('product_image');
 
 
-            $image_name = $file->getClientOriginalName();
+            $image_name = 'bagikan-cerita-product-' . time() .'.'. $file->getClientOriginalExtension();
 
             $file->move(public_path('uploads/product_image/'),$image_name);
             
@@ -113,7 +113,7 @@ class ProductController extends Controller
                 'product_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
             $file= $request->file('product_image');
-            $image_name = $file->getClientOriginalName();
+            $image_name = 'bagikan-cerita-product-' . time() .'.'. $file->getClientOriginalExtension();
             if($product->product_image){        
                 unlink(public_path('uploads/product_image/'.$product->product_image));
                 $file->move(public_path('uploads/product_image/'),$image_name);

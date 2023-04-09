@@ -24,8 +24,17 @@
                     <label>Title</label>
                     <input type="text" class="form-control" name="title" required>
                     @if($errors->has('title'))
-                    <div class="error">{{ $errors->first('title') }}</div>
-                @endif
+                        <div class="error">{{ $errors->first('title') }}</div>
+                    @endif
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="form-group col-12">
+                    <label>Type</label>
+                    <input type="text" class="form-control" name="type" required>
+                    @if($errors->has('type'))
+                        <div class="error">{{ $errors->first('type') }}</div>
+                    @endif
                 </div>
             </div>
             <div class="row pb-3">
@@ -33,8 +42,8 @@
                     <label>Price</label>
                     <input type="number" class="form-control" name="price" required>
                     @if($errors->has('price'))
-                    <div class="error">{{ $errors->first('price') }}</div>
-                @endif
+                        <div class="error">{{ $errors->first('price') }}</div>
+                    @endif
                 </div>
             </div>
             <div class="form-group" align="right">
