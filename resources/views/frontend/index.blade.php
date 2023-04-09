@@ -381,6 +381,9 @@
                             <li class="cross">
                                 <i class="fa fa-check"></i>Waktu berkonsultasi 45-60 menit
                             </li>
+                            <li class="cross">
+                                <i class="fa fa-check"></i>Tempat konseling yang nyaman
+                            </li>
                         </ul>
                         <div class="table-bottom">
                             <a class="btn" href="#">Book Now</a>
@@ -457,7 +460,7 @@
                             <img src="{{ asset('assets/vendor/img/foto15.jpg') }}" alt="#" />
                             <p>
                                 "Terima kasih sudah sabar menghadapi saya yang berubah jadwal dadakan dan tetap bisa terlayani untuk berkonsultasi dengan ahlinya. Karena sebagai wanit karir sebagai sekretaris aa banyak tekanan yang membuat sya stre dan saya harus mampu mengikuti mood Pak Bos.""
-                                
+
                             </p>
                             <h4 class="name">Mba Key*a, sekretaris perusahaan X</h4>
                         </div>
