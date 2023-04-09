@@ -32,7 +32,7 @@
                             </div>
                             <div class="t-bottom">
                                 <p><a href="{{ route('doctors') }}">{{$topic->topic_name}}</a></p>
-                                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias incidunt reiciendis iusto, necessitatibus qui dolor animi adipisci, sed voluptatibus exercitationem maiores, quos minus vel? Non cum incidunt fuga illum. Perspiciatis!</span>
+                                <span>{{$topic->description}}</span>
                             </div>
                         </div>
                     </div>
