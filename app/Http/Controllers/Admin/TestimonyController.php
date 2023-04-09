@@ -57,7 +57,7 @@ class TestimonyController extends Controller
             
             $image_name = 'bagikan-cerita-testimony-' . time() .'.'. $file->getClientOriginalExtension();
 
-            Image::make($request->file('testimony_image'))->resize(1080, null, function ($constraint) {
+            Image::make($file)->resize(1080, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('uploads/testimony_image/'.$image_name);
             
@@ -123,13 +123,13 @@ class TestimonyController extends Controller
 
                 $image_name = 'bagikan-cerita-testimony-' . time() .'.'. $file->getClientOriginalExtension();
 
-                Image::make($request->file('testimony_image'))->resize(1080, null, function ($constraint) {
+                Image::make($file)->resize(1080, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save('uploads/testimony_image/'.$image_name);
 
             }else{
 
-                Image::make($request->file('testimony_image'))->resize(1080, null, function ($constraint) {
+                Image::make($file)->resize(1080, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save('uploads/testimony_image/'.$image_name);
 
