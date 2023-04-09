@@ -12,9 +12,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $data['albums'] = Album::latest()->limit(9);
-        $data['testimonies'] = Testimony::latest()->limit(10);
+        $data['albums'] = Album::latest()->limit(9)->get();
+        $data['testimonies'] = Testimony::latest()->limit(10)->get();
         $data['products'] = Product::all();
+
 
         return view('frontend.index',$data);
     }
