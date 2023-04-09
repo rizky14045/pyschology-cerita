@@ -35,6 +35,7 @@
                         <tr class="text-white">
                             <th>No</th>
                             <th>Title</th>
+                            <th>Type</th>
                             <th>Price</th>
                             <th>Action</th>
                         </tr>
@@ -44,6 +45,7 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$price->title}}</td>
+                                <td>{{$price->type}}</td>
                                 <td>Rp. {{number_format($price->price)}}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary text-white" href="{{route('admin.price.edit',['id'=>$price->id])}}">Edit</a>

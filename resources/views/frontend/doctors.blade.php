@@ -21,7 +21,7 @@
     <section id="team" class="section single-page">
         <div class="container-doctor">
             <div class="row">
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto2.jpg') }}" alt="#" />
                         <div class="">
@@ -34,7 +34,7 @@
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
                         <div class="">
@@ -47,7 +47,7 @@
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto3.jpg') }}" alt="#" />
                         <div class="">
@@ -60,7 +60,7 @@
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
                         <div class="">
@@ -73,7 +73,7 @@
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
                         <div class="">
@@ -86,7 +86,7 @@
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
                         <div class="">
@@ -99,7 +99,7 @@
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
                         <div class="">
@@ -112,7 +112,7 @@
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="custom-single-team col-md-4">
+                <div class="custom-single-team">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto3.jpg') }}" alt="#" />
                         <div class="">

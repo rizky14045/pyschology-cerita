@@ -40,15 +40,6 @@
             </div>
             <div class="row pb-3">
                 <div class="form-group col-12">
-                    <label>Link</label>
-                    <input type="text" class="form-control" name="link" required value="{{$product->link}}">
-                    @if($errors->has('link'))
-                    <div class="error">{{ $errors->first('link') }}</div>
-                @endif
-                </div>
-            </div>
-            <div class="row pb-3">
-                <div class="form-group col-12">
                     <label>Product Image</label>
                     <br>
                     <img src="{{asset('uploads/product_image/'.$product->product_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">

@@ -39,15 +39,6 @@
             </div>
             <div class="row pb-3">
                 <div class="form-group col-12">
-                    <label>Link</label>
-                    <input type="text" class="form-control" name="link" required>
-                    @if($errors->has('link'))
-                    <div class="error">{{ $errors->first('link') }}</div>
-                @endif
-                </div>
-            </div>
-            <div class="row pb-3">
-                <div class="form-group col-12">
                     <label>Product Image</label>
                     <input class="form-control" name="product_image" type="file" required>
                     <small class="text-muted">File berformat Jpg,Jpeg, Png dan maksimal file 4MB</small>

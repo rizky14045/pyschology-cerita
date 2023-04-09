@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Album;
 use App\Models\Topic;
+use App\Models\Product;
+use App\Models\Testimony;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $data['albums'] = Album::latest()->limit(9);
+        $data['testimonies'] = Testimony::latest()->limit(10);
+        $data['products'] = Product::all();
+
+        return view('frontend.index',$data);
     }
 
     public function about_us()
