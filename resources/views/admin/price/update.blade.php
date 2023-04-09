@@ -38,6 +38,15 @@
                 @endif
                 </div>
             </div>
+            <div class="row pb-3">
+                <div class="form-group col-12">
+                    <label>Type</label>
+                    <input type="number" class="form-control" name="type" required value="{{$type->type}}">
+                    @if($errors->has('type'))
+                    <div class="error">{{ $errors->first('type') }}</div>
+                @endif
+                </div>
+            </div>
             <div class="form-group" align="right">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-success">Reset</button>

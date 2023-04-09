@@ -6,6 +6,7 @@ use App\Models\Topic;
 use App\Models\Psychology;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class PsychologyController extends Controller
@@ -68,11 +69,12 @@ class PsychologyController extends Controller
         {
             $file= $request->file('psychology_image');
 
+            $image_name = 'bagikan-cerita-psychology-' . time() .'.'. $file->getClientOriginalExtension();
 
-            $image_name = $file->getClientOriginalName();
+            Image::make($request->file('psychology_image'))->resize(1080, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save('uploads/psychology_image/'.$image_name);
 
-            $file->move(public_path('uploads/psychology_image/'),$image_name);
-            
             $requestData['psychology_image'] = $image_name;
         }
         
@@ -125,13 +127,25 @@ class PsychologyController extends Controller
             $this->validate($request, [
                 'psychology_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
+
             $file= $request->file('psychology_image');
-            $image_name = $file->getClientOriginalName();
-            if($psychology->psychology_image){        
+
+            $image_name = 'bagikan-cerita-psychology-' . time() .'.'. $file->getClientOriginalExtension();
+
+            if($psychology->psychology_image){      
+
                 unlink(public_path('uploads/psychology_image/'.$psychology->psychology_image));
-                $file->move(public_path('uploads/psychology_image/'),$image_name);
+
+                Image::make($request->file('psychology_image'))->resize(1080, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/psychology_image/'.$image_name);
+
             }else{
-                $file->move(public_path('uploads/psychology_image/'),$image_name);
+
+                Image::make($request->file('psychology_image'))->resize(1080, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/psychology_image/'.$image_name);
+                
             }
             $requestData['psychology_image'] = $image_name;
         }

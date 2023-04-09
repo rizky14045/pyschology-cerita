@@ -14,10 +14,13 @@ class CreatePricesTable extends Migration
     public function up()
     {
         Schema::create('prices', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->integer('price');
-            $table->timestamps();
+            Schema::create('prices', function (Blueprint $table) {
+                $table->id();
+                $table->string('title');
+                $table->string('type');
+                $table->integer('price');
+                $table->timestamps();
+            });
         });
     }
 

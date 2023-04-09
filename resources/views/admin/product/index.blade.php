@@ -36,7 +36,6 @@
                             <th>No</th>
                             <th>Title</th>
                             <th>Price</th>
-                            <th>Link</th>
                             <th>Image</th>
                             <th>List</th>
                             <th>Action</th>
@@ -51,7 +50,6 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$product->title}}</td>
                                 <td>{{$product->price}}</td>
-                                <td>{{$product->link}}</td>
                                 <td>
                                     <img src="{{asset('uploads/product_image/'.$product->product_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
                                 </td>

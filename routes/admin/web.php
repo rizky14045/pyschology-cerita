@@ -32,8 +32,17 @@ Route::prefix('admin')->group(function () {
 
         // psychology order
         Route::get('/psychology-order', PsychologyOrderController::class . '@index')->name('admin.psychology-order.index');
-        Route::get('/psychology-order-create', PsychologyOrderController::class . '@create')->name('admin.psychology-order.create');
-
+        Route::get('/psychology-order-create', PsychologyOrderController::class . '@create')->name('admin.psychology-order.create');  
+        Route::post('/psychology-order-create', PsychologyOrderController::class . '@store')->name('admin.psychology-order.store');
+        Route::get('/psychology-order-update/{session}', PsychologyOrderController::class . '@edit')->name('admin.psychology-order.edit');  
+        Route::patch('/psychology-order-update/{session}', PsychologyOrderController::class . '@update')->name('admin.psychology-order.update');  
+        Route::get('/psychology-order-reschedule/{session}', PsychologyOrderController::class . '@reschedule')->name('admin.psychology-order.reschedule');  
+        Route::patch('/psychology-order-reschedule/{session}', PsychologyOrderController::class . '@rescheduleSave')->name('admin.psychology-order.reschedule-save');  
+        Route::get('/psychology-order-extended/{session}', PsychologyOrderController::class . '@extended')->name('admin.psychology-order.extended');   
+        Route::patch('/psychology-order-extended/{session}', PsychologyOrderController::class . '@extendedSave')->name('admin.psychology-order.extended-save');
+        Route::patch('/psychology-order-finish/{session}', PsychologyOrderController::class . '@finish')->name('admin.psychology-order.finish');
+        Route::delete('/psychology-order-delete/{session}', PsychologyOrderController::class . '@destroy')->name('admin.psychology-order.delete');
+        
         //Psychology
         Route::get('/psychology', PsychologyController::class . '@index')->name('admin.psychology.index');
         Route::get('/psychology/create', PsychologyController::class . '@create')->name('admin.psychology.create');

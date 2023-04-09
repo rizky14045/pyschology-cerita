@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Album;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AlbumController extends Controller
@@ -50,10 +51,13 @@ class AlbumController extends Controller
         {
             $file= $request->file('album_image');
 
+            $image_name = 'bagikan-cerita-album-' . time() .'.'. $file->getClientOriginalExtension();
 
-            $image_name = $file->getClientOriginalName();
+            Image::make($request->file('album_image'))->resize(1080, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save('uploads/album_image/'.$image_name);
 
-            $file->move(public_path('uploads/album_image/'),$image_name);
+            // $file->move(public_path('uploads/album_image/'),$image_name);
             
             $requestData['album_image'] = $image_name;
         }
@@ -105,13 +109,25 @@ class AlbumController extends Controller
             $this->validate($request, [
                 'album_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
+
             $file= $request->file('album_image');
-            $image_name = $file->getClientOriginalName();
-            if($album->album_image){        
+
+            $image_name = 'bagikan-cerita-album-' . time() .'.'. $file->getClientOriginalExtension();
+
+            if($album->album_image){   
+
                 unlink(public_path('uploads/album_image/'.$album->album_image));
-                $file->move(public_path('uploads/album_image/'),$image_name);
+
+                Image::make($request->file('album_image'))->resize(1080, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/album_image/'.$image_name);
+
             }else{
-                $file->move(public_path('uploads/album_image/'),$image_name);
+
+                Image::make($request->file('album_image'))->resize(1080, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/album_image/'.$image_name);
+
             }
             $requestData['album_image'] = $image_name;
         }
@@ -128,7 +144,7 @@ class AlbumController extends Controller
      * @param  \App\Models\Album  $album
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Album $album)
+    public function destroy($id)
     {
         $album = Album::where('id',$id)->first();
 
