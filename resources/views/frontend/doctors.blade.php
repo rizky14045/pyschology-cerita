@@ -18,88 +18,113 @@
         </div>
     </div>
 
-    <section id="team" class="team section single-page">
-        <div class="container">
+    <section id="team" class="section single-page">
+        <div class="container-doctor">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-team">
-                        <div class="t-head">
-                            <img src="{{ asset('assets/vendor/img/foto2.jpg') }}" alt="#" />
-                            <div class="t-icon">
-                                <a href="{{ route('doctor_detail') }}" class="btn">Lihat Profil</a>
-                            </div>
-                        </div>
-                        <div class="t-bottom">
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto2.jpg') }}" alt="#" />
+                        <div class="">
                             <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-team">
-                        <div class="t-head">
-                            <img src="{{ asset('assets/vendor/img/foto3.jpg') }}" alt="#" />
-                            <div class="t-icon">
-                                <a href="{{ route('doctor_detail') }}" class="btn">Lihat Profil</a>
-                            </div>
-                        </div>
-                        <div class="t-bottom">
-                            <h2><a href="{{ route('doctor_detail') }}">Leny, M. Psi</a></h2>
-                        </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-team">
-                        <div class="t-head">
-                            <img src="{{ asset('assets/vendor/img/foto6.jpg') }}" alt="#" />
-                            <div class="t-icon">
-                                <a href="{{ route('doctor_detail') }}" class="btn">Lihat Profil</a>
-                            </div>
-                        </div>
-                        <div class="t-bottom">
-                            <h2><a href="{{ route('doctor_detail') }}">Adrian, M, Psi</a></h2>
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
+                        <div class="">
+                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-team">
-                        <div class="t-head">
-                            <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
-                            <div class="t-icon">
-                                <a href="{{ route('doctor_detail') }}" class="btn">Lihat Profil</a>
-                            </div>
-                        </div>
-                        <div class="t-bottom">
-                            <h2><a href="{{ route('doctor_detail') }}">Putri Laila Ramadhan, M, Psi</a></h2>
-                        </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-team">
-                        <div class="t-head">
-                            <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
-                            <div class="t-icon">
-                                <a href="{{ route('doctor_detail') }}" class="btn">Lihat Profil</a>
-                            </div>
-                        </div>
-                        <div class="t-bottom">
-                            <h2><a href="{{ route('doctor_detail') }}">Mey Andini, M. Psi</a></h2>
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto3.jpg') }}" alt="#" />
+                        <div class="">
+                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="single-team">
-                        <div class="t-head">
-                            <img src="{{ asset('assets/vendor/img/foto7.jpg') }}" alt="#" />
-                            <div class="t-icon">
-                                <a href="{{ route('doctor_detail') }}" class="btn">Lihat Profil</a>
-                            </div>
-                        </div>
-                        <div class="t-bottom">
-                            <h2><a href="{{ route('doctor_detail') }}">Riana Dwi M. Psi</a></h2>
-                        </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
                     </div>
                 </div>
-               
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
+                        <div class="">
+                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
+                        </div>
+                    </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
+                    </div>
+                </div>
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
+                        <div class="">
+                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
+                        </div>
+                    </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
+                    </div>
+                </div>
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
+                        <div class="">
+                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
+                        </div>
+                    </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
+                    </div>
+                </div>
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
+                        <div class="">
+                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
+                        </div>
+                    </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
+                    </div>
+                </div>
+                <div class="custom-single-team">
+                    <div class="st-header">
+                        <img src="{{ asset('assets/vendor/img/foto3.jpg') }}" alt="#" />
+                        <div class="">
+                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
+                        </div>
+                    </div>
+                    <div class="ct-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

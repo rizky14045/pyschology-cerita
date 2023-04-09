@@ -48,34 +48,51 @@
                             <th>Reschedule</th>
                             <th>Extends</th>
                             <th>Extends Minute</th>
+                            <th>Status</th>
                             <th>Action</th>
 
                         </tr>
                         </thead>
                         <tbody class="text-center">
+                        @foreach ($orders as $order)
                         <tr>
-                            <td>1</td>
-                            <td>8f5a0268-2bfa-4fdc-b22f-51cd4407b738</td>
-                            <td>Adam</td>
-                            <td>628788293xxxx</td>
-                            <td>Dokter Pyschology</td>
-                            <td>23-03-2023</td>
-                            <td>10:00</td>
-                            <td>12:00</td>
-                            <td>Web Admin</td>
-                            <td>1</td>
-                            <td>Online</td>
-                            <td>false</td>
-                            <td>false</td>
-                            <td>0</td>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$order->session_id}}</td>
+                            <td>{{$order->client_name}}</td>
+                            <td>{{$order->client_phone}}</td>
+                            <td>{{$order->psychology->name}}</td>
+                            <td>{{$order->date}}</td>
+                            <td>{{$order->time_start}}</td>
+                            <td>{{$order->time_end}}</td>
+                            <td>{{$order->source}}</td>
+                            <td>{{$order->number_counseling_session}}</td>
+                            <td>{{$order->price->title}} - {{$order->price->type}} - {{$order->price->price}}</td>
+                            <td>{{($order->reschedule == false ) ? 'False' :'True'}}</td>
+                            <td>{{($order->extended == false ) ? 'False' :'True'}}</td>
+                            <td>{{$order->extended_counseling_minute}}</td>
+                            <td>{{$order->status}}</td>
                             <td>
-                                <a class="btn btn-sm btn-success text-white" href="#">Reschedule</a>
-                                <a class="btn btn-sm btn-warning text-white" href="#">Extended</a>
-                                <a class="btn btn-sm btn-primary text-white" href="#">Edit</a>
-                                <a class="btn btn-sm btn-danger text-white" href="#">Delete</a>
-                                <a class="btn btn-sm btn-info text-white" href="#">Finish</a>
+                                <a class="btn btn-sm btn-success text-white" href="{{route('admin.psychology-order.reschedule',['session'=>$order->session_id])}}">Reschedule</a>
+
+                                <a class="btn btn-sm btn-warning text-white" href="{{route('admin.psychology-order.extended',['session'=>$order->session_id])}}">Extend</a>
+
+                                <a class="btn btn-sm btn-primary text-white" href="{{route('admin.psychology-order.edit',['session'=>$order->session_id])}}">Edit</a>
+
+                                <form action="{{route('admin.psychology-order.delete',['session'=>$order->session_id])}}" class="d-inline" method="POST">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-sm btn-danger text-white" >Delete</button>
+                                </form>
+
+                                <form action="{{route('admin.psychology-order.finish',['session'=>$order->session_id])}}" class="d-inline" method="POST">
+                                    @csrf
+                                    @method('patch')
+                                    <button type="submit" class="btn btn-sm btn-info text-white" >Finish</button>
+                                </form>
                             </td>
                         </tr>
+                        @endforeach
+                       
                         </tbody>
                     </table>
                 </div>
