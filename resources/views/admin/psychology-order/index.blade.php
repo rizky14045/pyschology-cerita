@@ -1,5 +1,6 @@
 @extends('admin.layout.app')
 @section('styles')
+
 @stop
 @section('content')
 <div class="page-title-box">
@@ -14,7 +15,7 @@
             <div class="col-md-4">
                 <div class="float-end d-none d-md-block">
                     <div class="dropdown">
-                        <a class="btn btn-primary" href="{{route('admin.psychology-order.create')}}">
+                        <a class="btn btn-primary" href="{{route('admin.psychology-order.choose')}}">
                             <i class="fas fa-plus"></i> Add Pyschology Order</i>
                         </a>
                     </div>
@@ -48,6 +49,7 @@
                             <th>Reschedule</th>
                             <th>Extends</th>
                             <th>Extends Minute</th>
+                            <th>Harga</th>
                             <th>Status</th>
                             <th>Action</th>
 
@@ -70,6 +72,7 @@
                             <td>{{($order->reschedule == false ) ? 'False' :'True'}}</td>
                             <td>{{($order->extended == false ) ? 'False' :'True'}}</td>
                             <td>{{$order->extended_counseling_minute}}</td>
+                            <td>Rp .{{number_format($order->total_price)}}</td>
                             <td>{{$order->status}}</td>
                             <td>
                                 <a class="btn btn-sm btn-success text-white" href="{{route('admin.psychology-order.reschedule',['session'=>$order->session_id])}}">Reschedule</a>
@@ -96,7 +99,6 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </div> <!-- end col -->

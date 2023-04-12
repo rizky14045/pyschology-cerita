@@ -51,7 +51,8 @@ class HeaderController extends Controller
             $file= $request->file('header_image');
 
 
-            $image_name = $file->getClientOriginalName();
+            $image_name = 'bagikan-cerita-header-' . time() .'.'. $file->getClientOriginalExtension();
+
 
             $file->move(public_path('uploads/header_image/'),$image_name);
             
@@ -107,7 +108,8 @@ class HeaderController extends Controller
                 'header_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
             $file= $request->file('header_image');
-            $image_name = $file->getClientOriginalName();
+            $image_name = 'bagikan-cerita-header-' . time() .'.'. $file->getClientOriginalExtension();
+
             if($header->header_image){        
                 unlink(public_path('uploads/header_image/'.$header->header_image));
                 $file->move(public_path('uploads/header_image/'),$image_name);

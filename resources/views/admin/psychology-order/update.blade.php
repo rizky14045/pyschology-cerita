@@ -79,23 +79,33 @@
                             </div>
                         </div>
                         <div class="row pb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <i class="fa fa-clock"></i>
                                     <label class="form-label">Jam Mulai</label>
-                                    <input class="form-control" type="time" name="time_start" value="{{$order->time_start}}" required />
+                                    <input class="form-control time-start" type="time" name="time_start" value="{{$order->time_start}}" required />
                                     @if($errors->has('time_start'))
                                         <div class="error">{{ $errors->first('time_start') }}</div>
                                     @endif
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <i class="fa fa-clock"></i>
                                     <label class="form-label">Jam Selesai</label>
-                                    <input class="form-control" type="time" name="time_end" value="{{$order->time_start}}" required />
+                                    <input class="form-control time-end" type="time" name="time_end" value="{{$order->time_start}}" required />
                                     @if($errors->has('time_end'))
                                         <div class="error">{{ $errors->first('time_end') }}</div>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <i class="fa fa-calendar"></i>
+                                    <label class="form-label">Jumlah Sesi Konseling</label>
+                                    <input class="form-control number-counseling-session" type="number" name="number_counseling_session" value="{{$order->number_counseling_session}}" readonly />
+                                    @if($errors->has('number_counseling_session'))
+                                        <div class="error">{{ $errors->first('number_counseling_session') }}</div>
                                     @endif
                                 </div>
                             </div>
@@ -105,7 +115,17 @@
                                 <div class="form-group">
                                     <i class="fa fa-calendar"></i>
                                     <label class="form-label">Sumber</label>
-                                    <input class="form-control" type="text" name="source" value="{{$order->source}}" required placeholder="Sumber"/>
+                                    <select class="form-select source" name="">
+                                        <option selected disabled>Pilih Sumber</option>
+                                        <option value="Facebook" {{($order->source == 'Facebook' ) ? 'Selected' :''}}>Facebook</option>
+                                        <option value="Instagram" {{($order->source == 'Instagram' ) ? 'Selected' :''}}>Instagram</option>
+                                        <option value="Tiktok" {{($order->source == 'Tiktok' ) ? 'Selected' :''}}>Tiktok</option>
+                                        <option value="Linkedin" {{($order->source == 'Linkedin' ) ? 'Selected' :''}}>Linkedin</option>
+                                        <option value="Facebook" {{($order->source == 'Facebook' ) ? 'Selected' :''}}>Facebook</option>
+                                        <option value="GoogleAds" {{($order->source == 'GoogleAds' ) ? 'Selected' :''}}>GoogleAds</option>
+                                        <option value="other" {{($order->source != 'Facebook' || $order->source != 'Instagram' || $order->source != 'Tiktok' || $order->source != 'Linkedin' || $order->source != 'Facebook' ||$order->source != 'GoogleAds' ) ? '' :'Selected'}}>lainnya...</option>
+                                    </select>
+                                    <input class="form-control mt-3 source-get" type="{{($order->source != 'Facebook' || $order->source != 'Instagram' || $order->source != 'Tiktok' || $order->source != 'Linkedin' || $order->source != 'Facebook' ||$order->source != 'GoogleAds' ) ? 'hidden' :'text'}}" name="source" value="{{$order->source}}" required placeholder="Sumber"/>
                                     @if($errors->has('source'))
                                         <div class="error">{{ $errors->first('source') }}</div>
                                     @endif
@@ -114,18 +134,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <i class="fa fa-calendar"></i>
-                                    <label class="form-label">Jumlah Sesi Konseling</label>
-                                    <input class="form-control" type="number" name="number_counseling_session" value="{{$order->number_counseling_session}}" required />
-                                    @if($errors->has('number_counseling_session'))
-                                        <div class="error">{{ $errors->first('number_counseling_session') }}</div>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <i class="fa fa-calendar"></i>
                                     <label class="form-label">Medium Konseling</label>
-                                    <select class="form-select" name="price_id">
+                                    <select class="form-select price-id" name="price_id">
                                         <option selected disabled>Pilih Medium Konseling</option>
                                         @foreach ($prices as $price)
                                             <option {{($order->price_id == $price->id ) ? 'Selected' :''}} value="{{$price->id}}">{{$price->title}} - {{$price->type}} - Rp. {{number_format($price->price)}}</option>
@@ -136,11 +146,18 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <i class="fa fa-calendar"></i>
+                                    <label class="form-label">Total Harga</label>
+                                    <input class="form-control total-price" type="text" value="{{'Rp .'.$order->total_price}}" readonly />
+                                </div>
+                            </div>
                         </div>
-                        <div class="row">
-                            <button class="btn btn-primary btn-sm" type="submit">
-                                Submit
-                            </button>
+                        <div class="form-group" align="right">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-success">Reset</button>
+                            <a href="javascript:history.go(-1)" class="btn btn-danger">Back</a>
                         </div>
                     </div>
                 </form>
@@ -160,5 +177,73 @@
     });
 });
 
+</script>
+<script>
+    $('.time-start').on('change', function(){
+       var start = $(this).val();
+       var end = $('.time-end').val();
+
+           $.ajax({
+                   type: "GET",
+                   url: "{{ url('/admin/psychology-order-get-minute') . '/' }}" +start+'/' + end,
+                   success: function(res) {
+                       $('.number-counseling-session').val(res)
+                       var id = $('.price-id').val();
+                        $.ajax({
+                            type: "GET",
+                            url: "{{ url('/admin/psychology-order-get-price') . '/' }}" +id+'/' + res,
+                            success: function(data) {
+                                $('.total-price').val(data)
+                            }
+                        })
+                   }
+               });
+           })
+    $('.time-end').on('change', function(){
+       var start = $('.time-start').val();
+       var end = $(this).val();
+
+           $.ajax({
+                   type: "GET",
+                   url: "{{ url('/admin/psychology-order-get-minute') . '/' }}" +start+'/' + end,
+                   success: function(res) {
+                       $('.number-counseling-session').val(res)
+                       var id = $('.price-id').val();
+                        $.ajax({
+                            type: "GET",
+                            url: "{{ url('/admin/psychology-order-get-price') . '/' }}" +id+'/' + res,
+                            success: function(data) {
+                                $('.total-price').val(data)
+                            }
+                        })
+                   }
+               });
+       })
+</script>
+<script>
+    $('.source').on('change', function(){
+      var value = $(this).val();
+      if(value == 'other'){
+          $('.source-get').val('{{$order->source}}');
+          $('.source-get').attr('type', 'text');
+      }else{
+          $('.source-get').val(value);
+          $('.source-get').attr('type', 'hidden');
+      }
+      })
+</script>
+<script>
+     $('.price-id').on('change', function(){
+        var id = $(this).val();
+        var number = $('.number-counseling-session').val();
+
+           $.ajax({
+                   type: "GET",
+                   url: "{{ url('/admin/psychology-order-get-price') . '/' }}" +id+'/' + number,
+                   success: function(res) {
+                       $('.total-price').val(res)
+                   }
+               });
+           })
 </script>
 @stop
