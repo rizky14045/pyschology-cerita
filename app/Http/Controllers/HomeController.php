@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Album;
 use App\Models\Topic;
+use App\Models\Header;
 use App\Models\Product;
 use App\Models\Testimony;
 use Illuminate\Http\Request;
+use App\Models\TermCondition;
 
 class HomeController extends Controller
 {
@@ -15,6 +18,7 @@ class HomeController extends Controller
         $data['albums'] = Album::latest()->limit(9)->get();
         $data['testimonies'] = Testimony::latest()->limit(10)->get();
         $data['products'] = Product::all();
+        $data['header'] = Header::where('position','Homepage')->first();
 
 
         return view('frontend.index',$data);
@@ -55,5 +59,15 @@ class HomeController extends Controller
     public function services()
     {
         return view('frontend.service');
+    }
+    public function faq()
+    {
+        $data['faqs'] = Faq::all();
+        return view('frontend.faq',$data);
+    }
+    public function termCondition()
+    {
+        $data['termConditions'] = TermCondition::all();
+        return view('frontend.term-condition',$data);
     }
 }

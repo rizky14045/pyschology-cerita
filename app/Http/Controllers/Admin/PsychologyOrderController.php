@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Carbon\Carbon;
 use App\Models\Price;
 use Ramsey\Uuid\Uuid;
 use App\Models\Psychology;
@@ -28,9 +29,17 @@ class PsychologyOrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+
+    public function choose(){
+
         $data['psychologies'] = Psychology::all();
+        $data['prices'] = Price::all();
+        return view('admin.psychology-order.choose',$data);
+
+    }
+    public function create($id)
+    {
+        $data['psychology'] = Psychology::where('id',$id)->first();
         $data['prices'] = Price::all();
         return view('admin.psychology-order.create',$data);
     }
@@ -51,12 +60,20 @@ class PsychologyOrderController extends Controller
             'time_start' => 'required',
             'time_end' => 'required',
             'source' => 'required',
-            'number_counseling_session' => 'required',
             'price_id' => 'required',
         ]);
-
         $requestData = $request->all();
-     
+
+        // get number counseling session from minutes , 60 minutes = 1 number counsling session
+        $start = Carbon::parse($request->time_start);
+        $end = Carbon::parse($request->time_end);
+        $diffInMinutes = $start->diffInMinutes($end);
+
+        //get price
+        $price = Price::where('id',$request->price_id)->first();
+
+        $requestData['number_counseling_session'] = number_format(($diffInMinutes * 1 / 60),1);
+        $requestData['total_price'] = $price->price * $requestData['number_counseling_session'];
         $requestData['session_id'] = Uuid::uuid4();
         $requestData['status'] = 'Belum Selesai';
 
@@ -108,13 +125,22 @@ class PsychologyOrderController extends Controller
             'time_start' => 'required',
             'time_end' => 'required',
             'source' => 'required',
-            'number_counseling_session' => 'required',
             'price_id' => 'required',
         ]);
 
+        $requestData = $request->all();
+
         $order = PsychologyOrder::where('session_id',$session)->first();
 
-        $requestData = $request->all();
+        $start = Carbon::parse($request->time_start);
+        $end = Carbon::parse($request->time_end);
+        $diffInMinutes = $start->diffInMinutes($end);
+
+        //get total price
+        $price = Price::where('id',$request->price_id)->first();
+
+        $requestData['number_counseling_session'] = number_format(($diffInMinutes * 1 / 60),1);
+        $requestData['total_price'] =  $price->price * $requestData['number_counseling_session'];
 
         $order->update($requestData);
 
@@ -141,6 +167,7 @@ class PsychologyOrderController extends Controller
     public function reschedule($session)
     {
         $data['order'] = PsychologyOrder::where('session_id',$session)->first();
+        $data['psychologies'] = Psychology::all();
         return view('admin.psychology-order.reschedule',$data);
     }
 
@@ -153,12 +180,25 @@ class PsychologyOrderController extends Controller
             'number_counseling_session' => 'required',
         ]);
 
+        $start = Carbon::parse($request->time_start);
+        $end = Carbon::parse($request->time_end);
+        $diffInMinutes = $start->diffInMinutes($end);
+
+        $number_counseling_session = number_format(($diffInMinutes * 1 / 60),1);
+
         $order = PsychologyOrder::where('session_id',$session)->first();
+
+        //get total price
+        $price = Price::where('id',$order->price_id)->first();
+        $totalPrice = $price->price * $number_counseling_session;
+
         $order->date = $request->date;
+        $order->psychology_id = $request->psychology_id;
         $order->time_start = $request->time_start;
         $order->time_end = $request->time_end;
-        $order->number_counseling_session = $request->number_counseling_session;
+        $order->number_counseling_session = $number_counseling_session;
         $order->reschedule = true;
+        $order->total_price = $totalPrice;
         $order->save();
 
         Alert::success('Success', 'Psychology Order Has been reschedule successfully');
@@ -178,8 +218,21 @@ class PsychologyOrderController extends Controller
         ]);
 
         $order = PsychologyOrder::where('session_id',$session)->first();
+
+        $start = Carbon::parse($order->time_start);
+        $end = Carbon::parse($order->time_end);
+        $timeExtended = $end->addMinutes($request->extended_counseling_minute);
+        $diffInMinutes = $start->diffInMinutes($timeExtended);
+        $number_counseling_session = number_format(($diffInMinutes * 1 / 60),1);
+
+         //get total price
+        $price = Price::where('id',$order->price_id)->first();
+        $totalPrice = $price->price * $number_counseling_session;
+ 
+        $order->number_counseling_session = $number_counseling_session;
         $order->extended_counseling_minute = $request->extended_counseling_minute;
         $order->extended = true;
+        $order->total_price = $totalPrice;
         $order->save();
 
         Alert::success('Success', 'Psychology Order Has been extend successfully');
@@ -195,6 +248,26 @@ class PsychologyOrderController extends Controller
 
         Alert::success('Success', 'Psychology Order Has been finish successfully');
         return redirect()->route('admin.psychology-order.index');
+    }
+
+    public function getMinute($time_start,$time_end){
+
+        $start = Carbon::parse($time_start);
+        $end = Carbon::parse($time_end);
+        $diffInMinutes = $start->diffInMinutes($end);
+        
+        $counseling = number_format(($diffInMinutes * 1 / 60),1);
+
+        return $counseling;
+    }
+
+    public function getPrice($price_id,$number_counseling_session){
+
+        $price = Price::where('id',$price_id)->first();
+        
+        $total_price = $price->price * $number_counseling_session;
+
+        return 'Rp .'.number_format($total_price);
     }
 
     

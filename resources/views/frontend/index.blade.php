@@ -6,18 +6,18 @@
 @section('content')
     <section class="slider">
         {{-- <div class="single-slider" style="background-image: url('assets/vendor/img/slider2.jpg')"> --}}
-        <div class="single-slider" style="background-image: url('assets/images/header3.jpeg')">
+            
+        {{-- <div class="single-slider" style="background-image: url('assets/images/header3.jpeg')"> --}}
+        <div class="single-slider" style="background-image: url('{{asset('uploads/header_image/'.$header->header_image)}}')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
-                        <div class="text">
-                            <h1>
-                                Yuk, Ceritakan <span>Kegelisahanmu</span> Dapatkan Solusi Terbaik dari Para Psikolog
-                                Professional
-                            </h1>
+                        <div class="text mr-5">
+                            <h2>
+                               {!!$header->description!!}
+                            </h2>
                             <p class="hero_desc">
-                                Kami memberikan layanan psikolog profesional secara online counseling dan
-                                offline counseling untuk menjadi teman berbagi cerita atas solusi setiap masalahmu.
+                                {{$header->sub_description}}
                             </p>
                         </div>
                     </div>
@@ -356,8 +356,7 @@
                         <h2>Paket Harga</h2>
                         <img src="{{ asset('assets/vendor/img/section-img.png') }}" alt="#" />
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
-                            aliquet. pretiumts
+                            Selalu Ada Jalan Keluar dari Setiap Masalah
                         </p>
                     </div>
                 </div>

@@ -11,5 +11,7 @@ Route::get('/blog-detail', [HomeController::class, 'blog_detail'])->name('blog_d
 Route::get('/topics', [HomeController::class, 'topic'])->name('topics');
 Route::get('/about-us', [HomeController::class, 'about_us'])->name('about-us');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/syarat-ketentuan', [HomeController::class, 'termCondition'])->name('syarat-ketentuan');
 
 
