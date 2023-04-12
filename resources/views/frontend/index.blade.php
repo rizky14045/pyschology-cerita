@@ -361,33 +361,72 @@
                     </div>
                 </div>
             </div>
+            <div class="section-title">
+                <h3>Individu</h3>
+            </div>
             <div class="row">
-                @foreach ($products as $product)
+                @foreach ($individu as $item)
                 @php
-                $list = json_decode($product->list_product);  
+                $list = json_decode($item->list_product);  
                 @endphp
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="single-table">
                         <div class="table-head">
                             <div class="icon">
-                                <img src="{{asset('uploads/product_image/'.$product->product_image)}}" alt="#" style="height:75px;"/>
+                                <img src="{{asset('uploads/product_image/'.$item->product_image)}}" alt="#" style="height:75px;"/>
                             </div>
-                            <h4 class="title">{{$product->title}}</h4>
+                            <h4 class="title">{{$item->title}}</h4>
                             <div class="price">
-                                <p class="amount">Rp .{{number_format($product->price)}}<span>/ Sesi</span></p>
+                                <p class="amount">Rp .{{number_format($item->price)}}<span>/ Sesi</span></p>
                             </div>
                         </div>
                         <ul class="table-list">
-                            @foreach ($list as $item)
+                            @foreach ($list as $block)
                                 @if ($list)
                                 <li>
-                                    <i class="fa fa-check"></i>{{$item}}
+                                    <i class="fa fa-check"></i>{{$block}}
                                 </li>
                                 @endif
                             @endforeach
                         </ul>
                         <div class="table-bottom">
-                            <a class="btn" href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text={{urlencode($product->title)}}" target="_blank">Book Now</a>
+                            <a class="btn" href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text={{urlencode($item->title ?? '')}}" target="_blank">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+            <div class="section-title mt-3">
+                <h3>Berpasangan</h3>
+            </div>
+            <div class="row">
+                @foreach ($pasangan as $item)
+                @php
+                $list = json_decode($item->list_product);  
+                @endphp
+                <div class="col-lg-6 col-md-12 col-12">
+                    <div class="single-table">
+                        <div class="table-head">
+                            <div class="icon">
+                                <img src="{{asset('uploads/product_image/'.$item->product_image)}}" alt="#" style="height:75px;"/>
+                            </div>
+                            <h4 class="title">{{$item->title}}</h4>
+                            <div class="price">
+                                <p class="amount">Rp .{{number_format($item->price)}}<span>/ Sesi</span></p>
+                            </div>
+                        </div>
+                        <ul class="table-list">
+                            @foreach ($list as $block)
+                                @if ($list)
+                                <li>
+                                    <i class="fa fa-check"></i>{{$block}}
+                                </li>
+                                @endif
+                            @endforeach
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text={{urlencode($item->title ?? '')}}" target="_blank">Book Now</a>
                         </div>
                     </div>
                 </div>
