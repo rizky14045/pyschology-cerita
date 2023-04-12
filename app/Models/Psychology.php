@@ -13,6 +13,7 @@ class Psychology extends Model
 
     protected $fillable =[
         'name',
+        'biography',
         'code',
         'number_license',
         'psychology_image',

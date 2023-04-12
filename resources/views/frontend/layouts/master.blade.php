@@ -70,10 +70,11 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-5 col-12">
                         <ul class="top-link">
-                            <li><a href="#">Tentang Kami</a></li>
-                            <li><a href="#">Psikolog</a></li>
+                            <li><a href="{{ route('about-us') }}">Tentang Kami</a></li>
+                            <li><a href="{{ route('doctors') }}">Psikolog</a></li>
                             <li><a href="#">Kontak</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="{{ route('faq') }}">FAQ</a></li>
+                            <li><a href="{{ route('syarat-ketentuan') }}">Syarat dan Ketentuan</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-7 col-12">
@@ -168,9 +169,8 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="single-footer">
                             <h2>About Us</h2>
-                            <p>
-                                Lorem ipsum dolor sit am consectetur adipisicing elit do
-                                eiusmod tempor incididunt ut labore dolore magna.
+                            <p align="justify">
+                                Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.
                             </p>
                         </div>
                     </div>

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TestimonyController;
 use App\Http\Controllers\Admin\PsychologyController;
+use App\Http\Controllers\Admin\TermConditionController;
 use App\Http\Controllers\Admin\PsychologyOrderController;
 
 Route::prefix('admin')->group(function () {
@@ -32,7 +33,8 @@ Route::prefix('admin')->group(function () {
 
         // psychology order
         Route::get('/psychology-order', PsychologyOrderController::class . '@index')->name('admin.psychology-order.index');
-        Route::get('/psychology-order-create', PsychologyOrderController::class . '@create')->name('admin.psychology-order.create');  
+        Route::get('/psychology-order-choose', PsychologyOrderController::class . '@choose')->name('admin.psychology-order.choose');  
+        Route::get('/psychology-order-create/{id}', PsychologyOrderController::class . '@create')->name('admin.psychology-order.create');  
         Route::post('/psychology-order-create', PsychologyOrderController::class . '@store')->name('admin.psychology-order.store');
         Route::get('/psychology-order-update/{session}', PsychologyOrderController::class . '@edit')->name('admin.psychology-order.edit');  
         Route::patch('/psychology-order-update/{session}', PsychologyOrderController::class . '@update')->name('admin.psychology-order.update');  
@@ -58,6 +60,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/testimony/update/{id}', TestimonyController::class . '@edit')->name('admin.testimony.edit');
         Route::patch('/testimony/update/{id}', TestimonyController::class . '@update')->name('admin.testimony.update');
         Route::delete('/testimony/delete/{id}', TestimonyController::class . '@destroy')->name('admin.testimony.delete');
+
         //faq
         Route::get('/faq', FaqController::class . '@index')->name('admin.faq.index');
         Route::get('/faq/create', FaqController::class . '@create')->name('admin.faq.create');
@@ -65,6 +68,14 @@ Route::prefix('admin')->group(function () {
         Route::get('/faq/update/{id}', FaqController::class . '@edit')->name('admin.faq.edit');
         Route::patch('/faq/update/{id}', FaqController::class . '@update')->name('admin.faq.update');
         Route::delete('/faq/delete/{id}', FaqController::class . '@destroy')->name('admin.faq.delete');
+
+        //termcondition
+        Route::get('/term-condition', TermConditionController::class . '@index')->name('admin.term-condition.index');
+        Route::get('/term-condition/create', TermConditionController::class . '@create')->name('admin.term-condition.create');
+        Route::post('/term-condition/create', TermConditionController::class . '@store')->name('admin.term-condition.store');
+        Route::get('/term-condition/update/{id}', TermConditionController::class . '@edit')->name('admin.term-condition.edit');
+        Route::patch('/term-condition/update/{id}', TermConditionController::class . '@update')->name('admin.term-condition.update');
+        Route::delete('/term-condition/delete/{id}', TermConditionController::class . '@destroy')->name('admin.term-condition.delete');
 
         //Topic
         Route::get('/topic', TopicController::class . '@index')->name('admin.topic.index');
@@ -131,6 +142,12 @@ Route::prefix('admin')->group(function () {
         Route::post('/settings/general', SettingController::class . '@generalStore')->name('admin.settings.general.store');
         Route::get('/settings/social-link', SettingController::class . '@socialLink')->name('admin.settings.social-link.index');
         Route::post('/settings/social-link', SettingController::class . '@socialLinkStore')->name('admin.settings.social-link.store');
+
+
+        //Ajax
+
+        Route::get('/psychology-order-get-minute/{start}/{end}', PsychologyOrderController::class . '@getMinute')->name('admin.psychology-order.get-minute');   
+        Route::get('/psychology-order-get-price/{id}/{number}', PsychologyOrderController::class . '@getPrice')->name('admin.psychology-order.get-price');   
         
     });
    

@@ -40,7 +40,7 @@ return array(
     'App\\Models\\Price' => $baseDir . '/app/Models/Price.php',
     'App\\Models\\Product' => $baseDir . '/app/Models/Product.php',
     'App\\Models\\Psychology' => $baseDir . '/app/Models/Psychology.php',
-    'App\\Models\\PyschologyOrder' => $baseDir . '/app/Models/PyschologyOrder.php',
+    'App\\Models\\PsychologyOrder' => $baseDir . '/app/Models/PsychologyOrder.php',
     'App\\Models\\Setting' => $baseDir . '/app/Models/Setting.php',
     'App\\Models\\Testimony' => $baseDir . '/app/Models/Testimony.php',
     'App\\Models\\Topic' => $baseDir . '/app/Models/Topic.php',
