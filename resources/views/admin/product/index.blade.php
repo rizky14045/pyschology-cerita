@@ -35,6 +35,7 @@
                         <tr class="text-white">
                             <th>No</th>
                             <th>Title</th>
+                            <th>Type</th>
                             <th>Price</th>
                             <th>Image</th>
                             <th>List</th>
@@ -49,6 +50,7 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$product->title}}</td>
+                                <td>{{$product->type}}</td>
                                 <td>{{$product->price}}</td>
                                 <td>
                                     <img src="{{asset('uploads/product_image/'.$product->product_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">

@@ -30,6 +30,19 @@
             </div>
             <div class="row pb-3">
                 <div class="form-group col-12">
+                    <label>Type</label>
+                    <select class="form-select" aria-label="Default select example" name="type">
+                        <option selected disabled>Open this select menu</option>
+                        <option>Individu</option>
+                        <option>Berpasangan</option>
+                    </select>
+                    @if($errors->has('type'))
+                    <div class="error">{{ $errors->first('type') }}</div>
+                @endif
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="form-group col-12">
                     <label>Price</label>
                     <input type="text" class="form-control" name="price" required>
                     @if($errors->has('price'))

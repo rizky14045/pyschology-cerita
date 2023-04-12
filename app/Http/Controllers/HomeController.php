@@ -17,9 +17,9 @@ class HomeController extends Controller
     {
         $data['albums'] = Album::latest()->limit(9)->get();
         $data['testimonies'] = Testimony::latest()->limit(10)->get();
-        $data['products'] = Product::all();
+        $data['individu'] = Product::where('type','Individu')->latest()->get();
+        $data['pasangan'] = Product::where('type','Berpasangan')->latest()->get();
         $data['header'] = Header::where('position','Homepage')->first();
-
 
         return view('frontend.index',$data);
     }
