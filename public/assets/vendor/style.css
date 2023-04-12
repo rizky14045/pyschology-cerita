@@ -6,6 +6,7 @@ Description: Medikit - Medical & Doctor HTML Template.
 Version:	1.1
 ========================================*/
 
+
 /*======================================
 [ CSS Table of contents ]
 * Global CSS
@@ -46,6 +47,7 @@ Version:	1.1
 * About Us CSS
 * Footer CSS
 ========================================*/
+
 
 /*=============================
 	Global CSS
@@ -104,8 +106,6 @@ Version:	1.1
     color: white;
     transform: scale(1.5);
 }
-
-
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -261,9 +261,11 @@ body {
     background: #44ce6f;
 }
 
+
 /*=============================
 	End Global CSS
 ===============================*/
+
 
 /*===================
 	Start Header CSS
@@ -277,6 +279,7 @@ body {
 .header .navbar-collapse {
     padding: 0;
 }
+
 
 /* Topbar */
 
@@ -433,6 +436,7 @@ body {
     font-size: 13px;
 }
 
+
 /* Middle Header */
 
 .header.style2 .header-inner {
@@ -500,6 +504,7 @@ body {
 .header .single-widget.btn {
     margin-left: 0;
 }
+
 
 /* Dropdown Menu */
 
@@ -696,6 +701,7 @@ body {
     font-size: 15px;
 }
 
+
 /* Search */
 
 .header .search-form {
@@ -753,6 +759,7 @@ body {
     border-color: #e6e6e6;
 }
 
+
 /* Header Sticky */
 
 .header.sticky .header-inner {
@@ -768,9 +775,11 @@ body {
     box-shadow: 0px 0px 13px #00000054;
 }
 
+
 /*=========================
 	End Header CSS
 ===========================*/
+
 
 /*===========================
 	Start Hero Area CSS
@@ -878,6 +887,7 @@ body {
     right: 20px;
 }
 
+
 /* Slider Animation */
 
 .owl-item.active .single-slider h1 {
@@ -892,9 +902,11 @@ body {
     animation: fadeInDown 1s both 1.5s;
 }
 
+
 /*===========================
 	End Hero Area CSS
 =============================*/
+
 
 /*=============================
 	Start Schedule CSS
@@ -1055,9 +1067,11 @@ body {
     float: right;
 }
 
+
 /*=============================
 	End Schedule CSS
 ===============================*/
+
 
 /*=============================
 	Start Feautes CSS
@@ -1170,9 +1184,11 @@ body {
     margin-top: 20px;
 }
 
+
 /*=============================
 	End Feautes CSS
 ===============================*/
+
 
 /*=======================
 	Start Fun Facts CSS
@@ -1242,14 +1258,15 @@ body {
     font-size: 15px;
 }
 
+
 /*===================
 	End Fun Facts
 =====================*/
 
+
 /*===================
 	Why choose CSS
 =====================*/
-
 
 .why-choose .choose-left h3 {
     font-size: 24px;
@@ -1316,6 +1333,7 @@ body {
     padding-left: 2px;
     margin-right: 16px;
 }
+
 
 /* Start Faq CSS */
 
@@ -1385,10 +1403,10 @@ body {
     animation-delay: 2s;
 }
 
+
 /*=======================
 	End Why choose CSS
 =========================*/
-
 
 .call-action .content {
     text-align: center;
@@ -1415,7 +1433,6 @@ body {
     color: #fff !important;
 }
 
-
 .call-action .content .btn:last-child {
     margin-right: 0px;
 }
@@ -1426,10 +1443,10 @@ body {
     color: #fff !important;
 }
 
-
 .call-action .content .second i {
     margin-left: 10px;
 }
+
 
 /*===============================
 	Start Call to action CSS
@@ -1468,7 +1485,6 @@ body {
     color: #fff !important;
 }
 
-
 .call-action-2 .content .btn:last-child {
     margin-right: 0px;
 }
@@ -1479,14 +1495,15 @@ body {
     color: #fff !important;
 }
 
-
 .call-action-2 .content .second i {
     margin-left: 10px;
 }
 
+
 /*===============================
 	Start Call to action CSS
 =================================*/
+
 
 /*==========================
 	Start Portfolio CSS
@@ -1563,6 +1580,7 @@ body {
 .portfolio .owl-nav {
     display: none;
 }
+
 
 /* Slider Nav */
 
@@ -1695,9 +1713,11 @@ body {
     background: #20BBC7 !important;
 }
 
+
 /*==========================
 	End Portfolio CSS
 ============================*/
+
 
 /*=========================
 	Srart service CSS
@@ -1738,6 +1758,7 @@ body {
 .services .single-service p {
     color: #868686;
 }
+
 
 /*-- Service Details --*/
 
@@ -1814,9 +1835,11 @@ body {
     margin-bottom: 0;
 }
 
+
 /*=========================
 	End service CSS
 ===========================*/
+
 
 /*=============================
 	Start Testimonials CSS
@@ -1918,9 +1941,11 @@ body {
     width: 20px;
 }
 
+
 /*=============================
 	End Testimonials CSS
 ===============================*/
+
 
 /*==========================
 	Start Departments CSS
@@ -2053,9 +2078,11 @@ body {
     margin-top: 10px;
 }
 
+
 /*==========================
 	End Departments CSS
 ============================*/
+
 
 /*=============================
 	Start Pricing Table CSS
@@ -2075,6 +2102,7 @@ body {
     margin: 15px 0;
     padding: 45px 35px 30px 35px;
 }
+
 
 /* Table Head */
 
@@ -2107,6 +2135,7 @@ body {
     color: #868686;
     margin-left: 8px;
 }
+
 
 /* Table List */
 
@@ -2148,6 +2177,7 @@ body {
     padding-left: 1px;
 }
 
+
 /* Table Bottom */
 
 .pricing-table .table-bottom {
@@ -2173,9 +2203,11 @@ body {
     margin-right: 10px;
 }
 
+
 /*=============================
 	End Pricing Table CSS
 ===============================*/
+
 
 /*========================
 	Start Clients CSS
@@ -2199,9 +2231,11 @@ body {
     padding: 0 35px;
 }
 
+
 /*========================
 	End Clients CSS
 ==========================*/
+
 
 /*====================
 	Start Team CSS
@@ -2260,7 +2294,6 @@ body {
     background-repeat: no-repeat;
     position: relative;
 }
-
 
 .team.single-page {
     background: #fff;
@@ -2379,6 +2412,7 @@ body {
 .team .t-bottom h2 a:hover {
     color: #20BBC7 !important;
 }
+
 
 /*-- Doctor Details --*/
 
@@ -2505,7 +2539,7 @@ body {
 .doctor-details-item .doctor-details-biography h3 {
     font-weight: 600;
     font-size: 24px;
-    color: #2f60bd;
+    color: #20bbc7;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -2543,9 +2577,11 @@ body {
     font-size: 16px;
 }
 
+
 /*====================
 	End Team CSS
 ======================*/
+
 
 /*====================
 	Start Topic CSS
@@ -2685,9 +2721,11 @@ body {
     color: #20BBC7 !important;
 }
 
+
 /*=======================
 	End Topic CSS
 =========================*/
+
 
 /*=======================
 	Start Blog CSS
@@ -2795,6 +2833,7 @@ body {
     margin-top: 30px;
 }
 
+
 /* Blog Sidebar */
 
 .main-sidebar {
@@ -2885,6 +2924,7 @@ body {
     color: #fff;
 }
 
+
 /* Category List */
 
 .main-sidebar .categor-list {
@@ -2927,6 +2967,7 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
 
 /* Recent Posts */
 
@@ -2989,6 +3030,7 @@ body {
     margin-right: 5px;
 }
 
+
 /* Blog Tags */
 
 .main-sidebar .side-tags .tag {
@@ -3017,6 +3059,7 @@ body {
     background: #20BBC7 !important;
     border-color: transparent;
 }
+
 
 /* Services */
 
@@ -3094,6 +3137,7 @@ body {
     color: #20BBC7 !important;
 }
 
+
 /* Blog Meta */
 
 .news-single {
@@ -3170,6 +3214,7 @@ body {
     margin-bottom: 20px;
 }
 
+
 /* Image Gallery */
 
 .news-single .image-gallery {
@@ -3185,6 +3230,7 @@ body {
     -moz-transform: scale(1.2);
     transform: scale(1.2);
 }
+
 
 /* Blockqoute */
 
@@ -3212,6 +3258,7 @@ body {
 .news-single .blog-bottom {
     overflow: hidden;
 }
+
 
 /* Social Share */
 
@@ -3257,6 +3304,7 @@ body {
     background: #2B343E;
 }
 
+
 /* Prev Next Button */
 
 .news-single .prev-next {
@@ -3290,6 +3338,7 @@ body {
     background: #20BBC7 !important;
     border-color: transparent;
 }
+
 
 /* Blog Comments */
 
@@ -3591,9 +3640,11 @@ body {
     transition: all 0.3s ease 0s;
 }
 
+
 /*===================
 	End Blog CSS
 =====================*/
+
 
 /*==========================
 	Start Appointment CSS
@@ -3754,9 +3805,11 @@ body {
     float: right;
 }
 
+
 /*==========================
 	End Appointment CSS
 ============================*/
+
 
 /*====================
    Start Login CSS
@@ -3933,9 +3986,11 @@ body {
     color: #20BBC7 !important;
 }
 
+
 /*====================
    End Login CSS
 ======================*/
+
 
 /*=========================
    Start Register CSS
@@ -4110,9 +4165,11 @@ body {
     color: #2C2D3F;
 }
 
+
 /*=========================
    End Register CSS
 ===========================*/
+
 
 /*=====================
    Start Faq CSS
@@ -4203,9 +4260,11 @@ body {
     color: #ffffff;
 }
 
+
 /*=====================
    End Faq CSS
 =======================*/
+
 
 /*=========================
    Start Contact Us CSS
@@ -4436,6 +4495,7 @@ body {
     margin-top: 5px;
 }
 
+
 /* Google Map */
 
 .contact-us #myMap {
@@ -4443,9 +4503,11 @@ body {
     width: 100%;
 }
 
+
 /*=========================
    End Contact Us CSS
 ===========================*/
+
 
 /*========================
 	Start Error 404 CSS
@@ -4517,9 +4579,11 @@ body {
     font-size: 16px;
 }
 
+
 /*========================
 	End Error 404 CSS
 ==========================*/
+
 
 /*===========================
 	Start Mail Success CSS
@@ -4559,9 +4623,11 @@ body {
     color: #fff;
 }
 
+
 /*===========================
 	End Mail Success CSS
 =============================*/
+
 
 /*=========================
 	Start Newsletter CSS
@@ -4626,9 +4692,11 @@ body {
     box-shadow: none;
 }
 
+
 /*=========================
 	End Newsletter CSS
 ===========================*/
+
 
 /*===============================
 	Start Doctor Calendar CSS
@@ -4738,9 +4806,11 @@ body {
     border-bottom: none;
 }
 
+
 /*===============================
 	End Doctor Calendar CSS
 =================================*/
+
 
 /*=========================
 	Start About Us CSS
@@ -4832,6 +4902,7 @@ body {
 .about-content .btn {
     margin-top: 30px;
 }
+
 
 /* Start Our Vision Area CSS */
 
@@ -4939,7 +5010,9 @@ body {
     bottom: -50px;
 }
 
+
 /* End Our Vision CSS */
+
 
 /* Our Mission Area CSS */
 
@@ -5045,11 +5118,14 @@ body {
     border-radius: 100%;
 }
 
+
 /* End Our Mission CSS */
+
 
 /*=========================
 	End About Us CSS
 ===========================*/
+
 
 /*=========================
 	Start Footer CSS
@@ -5288,6 +5364,7 @@ body {
     display: inline-block;
     margin-left: 4px;
 }
+
 
 /*=========================
 	End Footer CSS

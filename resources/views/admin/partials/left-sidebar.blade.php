@@ -49,6 +49,10 @@
                                 "></i>Faq</a>
                         </li>
                         <li>
+                            <a href="{{route('admin.term-condition.index')}}"><i class="fas fa-exclamation-circle
+                                "></i>Term Condition</a>
+                        </li>
+                        <li>
                             <a href="{{route('admin.topic.index')}}"><i class="fas fa-star
                                 "></i>Topic</a>
                         </li>

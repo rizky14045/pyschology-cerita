@@ -25,7 +25,7 @@
                     <label>Header Image</label>
                     <br>
                     <img src="{{asset('uploads/header_image/'.$header->header_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
-                    <input class="form-control" name="header_image" type="file" required>
+                    <input class="form-control" name="header_image" type="file">
                     <small class="text-muted">File berformat Jpg,Jpeg, Png dan maksimal file 4MB</small>
                     @if($errors->has('header_image'))
                         <div class="error">{{ $errors->first('header_image') }}</div>

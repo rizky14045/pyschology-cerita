@@ -33,21 +33,30 @@
                                 <h3 class="name">Gouw Kelvin, M.Psi</h3>
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Topik Masalah</h3>
+                                <h3 style="color:#20bbc7">Biography</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
+                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
+                            accusamus saepe quo perferendis voluptatibus repellendus?
+                                </p>
+                                <br />
+                            </div>
+                            <div class="doctor-details-biography">
+                                <h3 style="color:#20bbc7">Topik Masalah</h3>
                                 <p>
                                     Adiksi atau ketergantungan, Karir, Depresi, Kecemasan
                                 </p>
                                 <br />
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Nomor Izin Praktek</h3>
+                                <h3 style="color:#20bbc7">Nomor Izin Praktek</h3>
                                 <p>
                                      1111212
                                 </p>
                                 <br />
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Pendidikan</h3>
+                                <h3 style="color:#20bbc7">Pendidikan</h3>
                                 <p>
                                     <ul>
                                         <li>
@@ -63,19 +72,19 @@
                                 <br />
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Karakter Personal</h3>
+                                <h3 style="color:#20bbc7">Karakter Personal</h3>
                                 <p>
                                     Humoris, senang melakukan kegiatan-kegiatan sosial yang bermanfaat bagi lingkungan sekitar
                                 </p>
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Motto</h3>
+                                <h3 style="color:#20bbc7">Motto</h3>
                                 <p>
                                     Kenali diri dengan baik, bermanfaat kemudian
                                 </p>
                             </div>
                             <div class="doctor-details-biography">
-                                <h3>Pengalaman</h3>
+                                <h3 style="color:#20bbc7">Pengalaman</h3>
                                 <p>
                                     Lebih dari 5 tahun menekuni bidang psikolog profesi dengan berbagai kasus yang pernah ditangani, seperti ketergantungan games, ketergantungan obat, kecemasan berlebih karena selalu gagal dalam berbagai hal
                                 </p>

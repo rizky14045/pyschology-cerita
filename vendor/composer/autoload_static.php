@@ -556,7 +556,7 @@ class ComposerStaticInit3aea1d58ab389750d0f99645351f61cd
         'App\\Models\\Price' => __DIR__ . '/../..' . '/app/Models/Price.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
         'App\\Models\\Psychology' => __DIR__ . '/../..' . '/app/Models/Psychology.php',
-        'App\\Models\\PyschologyOrder' => __DIR__ . '/../..' . '/app/Models/PyschologyOrder.php',
+        'App\\Models\\PsychologyOrder' => __DIR__ . '/../..' . '/app/Models/PsychologyOrder.php',
         'App\\Models\\Setting' => __DIR__ . '/../..' . '/app/Models/Setting.php',
         'App\\Models\\Testimony' => __DIR__ . '/../..' . '/app/Models/Testimony.php',
         'App\\Models\\Topic' => __DIR__ . '/../..' . '/app/Models/Topic.php',
