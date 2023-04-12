@@ -71,10 +71,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <button class="btn btn-primary btn-sm" type="submit">
-                                Submit
-                            </button>
+                        <div class="form-group" align="right">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-success">Reset</button>
+                            <a href="javascript:history.go(-1)" class="btn btn-danger">Back</a>
                         </div>
                     </div>
                 </form>

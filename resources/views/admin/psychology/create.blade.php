@@ -31,6 +31,15 @@
             </div>
             <div class="row pb-3">
                 <div class="form-group col-12">
+                    <label >Biography</label>
+                    <textarea class="form-control" rows="5" name="biography" placeholder="biography"></textarea>
+                    @if($errors->has('biography'))
+                        <div class="error">{{ $errors->first('biography') }}</div>
+                    @endif
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="form-group col-12">
                     <label>Number License</label>
                     <input type="number" class="form-control" name="number_license" required>
                     @if($errors->has('number_license'))
