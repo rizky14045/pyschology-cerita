@@ -74,9 +74,14 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="p-4">
+                                                <label for="">Nomor Telephone</label>
+                                                <input type="text" class="form-control" name="setting[phone]" value="{{$setting->where('key','phone')->first()->value}}">
+                                                <small class="text-muted">Format Number Phone : 62812345</small>
+                                                <br>
+                                                <br>
                                                 <label for="">Whatsapp</label>
                                                 <input type="text" class="form-control" name="setting[whatsapp]" value="{{$setting->where('key','whatsapp')->first()->value}}">
-                                                <small class="text-muted">Format Number Phone : 62812345</small>
+                                                <small class="text-muted">Format Whatsapp Number : 62812345</small>
                                                 <br>
                                                 <br>
                                                 <label for="">Facebook</label>
