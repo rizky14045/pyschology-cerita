@@ -468,11 +468,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>We Maintain Support System And Healing Properly To Your Mental Illness</h2>
+                        <h2>Membuka diri, berbicara dari hati ke hati, sambut hari-harimu dengan langkah pasti.</h2>
                         <img src="{{ asset('assets/images/brain1.png') }}" width="50">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
-                            aliquet. pretiumts
+                            Nikmati layanan konsultasi psikolog terpercaya dari kami.
                         </p>
                     </div>
                 </div>
