@@ -80,8 +80,8 @@
                     <div class="col-lg-6 col-md-7 col-12">
                         <ul class="top-contact">
                             <li><i class="fa fa-phone"></i>
-                                <a href="tel:+{{ $setting->where('key', 'whatsapp')->first()->value }}">
-                                    +{{ $setting->where('key', 'whatsapp')->first()->value }}
+                                <a href="tel:+{{ $setting->where('key', 'phone')->first()->value }}">
+                                    {{ $setting->where('key', 'phone')->first()->value }}
                                     </a>
                             </li>
                             <li>
