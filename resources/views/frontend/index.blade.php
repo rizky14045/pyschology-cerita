@@ -17,7 +17,7 @@
                                {!!$header->description!!}
                             </h2>
                             <p class="hero_desc">
-                                {{$header->sub_description}}
+                                <b>{{$header->sub_description}}</b>
                             </p>
                         </div>
                     </div>
