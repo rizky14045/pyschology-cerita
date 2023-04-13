@@ -468,7 +468,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Membuka diri, berbicara dari hati ke hati, sambut hari-harimu dengan langkah pasti.</h2>
+                        <h4>Membuka diri, berbicara dari hati ke hati, sambut hari-harimu dengan langkah pasti.</h4>
                         <img src="{{ asset('assets/images/brain1.png') }}" width="50">
                         <p>
                             Nikmati layanan konsultasi psikolog terpercaya dari kami.
