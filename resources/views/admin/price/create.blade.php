@@ -21,7 +21,7 @@
             @csrf
             <div class="row pb-3">
                 <div class="form-group col-12">
-                    <label>Title</label>
+                    <label>Medium</label>
                     <input type="text" class="form-control" name="title" required>
                     @if($errors->has('title'))
                         <div class="error">{{ $errors->first('title') }}</div>
