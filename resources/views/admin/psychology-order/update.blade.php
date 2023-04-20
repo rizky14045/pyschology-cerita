@@ -154,6 +154,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row pb-3">
+                            <div class="col-md-6">
+                                <div class="form-group col-12">
+                                    <i class="fa fa-calendar"></i>
+                                    <label>Lokasi ( Optional Jika Konseling dilakukan Secara Offline)</label>
+                                    <textarea class="form-control" id="location" rows="5" name="location">
+                                        {{$order->location}}
+                                    </textarea>
+                                    @if($errors->has('location'))
+                                    <div class="error">{{ $errors->first('location') }}</div>
+                                @endif
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group" align="right">
                             <button type="submit" class="btn btn-primary">Submit</button>
                             <button type="reset" class="btn btn-success">Reset</button>

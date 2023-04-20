@@ -50,6 +50,7 @@
                             <th>Extends</th>
                             <th>Extends Minute</th>
                             <th>Harga</th>
+                            <th>Lokasi</th>
                             <th>Status</th>
                             <th>Action</th>
 
@@ -68,11 +69,12 @@
                             <td>{{$order->time_end}}</td>
                             <td>{{$order->source}}</td>
                             <td>{{$order->number_counseling_session}}</td>
-                            <td>{{$order->price->title}} - {{$order->price->type}} - {{$order->price->price}}</td>
+                            <td>{{$order->price->title}} - {{$order->price->type}} - Rp. {{number_format($order->price->price)}}</td>
                             <td>{{($order->reschedule == false ) ? 'False' :'True'}}</td>
                             <td>{{($order->extended == false ) ? 'False' :'True'}}</td>
                             <td>{{$order->extended_counseling_minute}}</td>
                             <td>Rp .{{number_format($order->total_price)}}</td>
+                            <td>{{$order->location}}</td>
                             <td>{{$order->status}}</td>
                             <td>
                                 <a class="btn btn-sm btn-success text-white" href="{{route('admin.psychology-order.reschedule',['session'=>$order->session_id])}}">Reschedule</a>

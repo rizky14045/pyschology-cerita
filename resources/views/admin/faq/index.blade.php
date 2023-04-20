@@ -34,8 +34,8 @@
                         <thead style="background-color: #20BBC7;">
                         <tr class="text-white">
                             <th>No</th>
-                            <th>Title</th>
-                            <th>Description</th>
+                            <th>Question</th>
+                            <th>Answer</th>
                             <th>Action</th>
                         </tr>
                         </thead>

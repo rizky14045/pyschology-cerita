@@ -55,10 +55,10 @@
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{asset('uploads/psychology_image/'.$psychology->psychology_image)}}" alt="gambar" class="img-fluid card-img w-50">
+                        <img src="{{asset('uploads/psychology_image/'.$psychology->psychology_image)}}" alt="gambar" class="img-fluid card-img" style="width:144px;">
             </div>
             <div class="col-md-6">
-                <div class="card-body">
+                <div class="card-body mt-2">
                     <h5 class="card-title">{{$psychology->name}}</h5>
                     @php
                         $topics = json_decode($psychology->topics);
@@ -83,40 +83,5 @@
 
 @stop
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script>
-    $(document).ready(function() {
-    $('.psychology-select').select2({
-        theme: "bootstrap"
-    });
-});
-</script>
-<script>
-     $('.time-start').on('change', function(){
-        var start = $(this).val();
-        var end = $('.time-end').val();
 
-            $.ajax({
-                    type: "GET",
-                    url: "{{ url('/admin/psychology-order-get-minute') . '/' }}" +start+'/' + end,
-                    success: function(res) {
-                        $('.number-counseling-session').val(res)
-                        console.log(res)
-                    }
-                });
-            })
-     $('.time-end').on('change', function(){
-        var start = $('.time-start').val();
-        var end = $(this).val();
-
-            $.ajax({
-                    type: "GET",
-                    url: "{{ url('/admin/psychology-order-get-minute') . '/' }}" +start+'/' + end,
-                    success: function(res) {
-                        $('.number-counseling-session').val(res)
-                        console.log(res)
-                    }
-                });
-        })
-</script>
 @stop
