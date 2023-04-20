@@ -34,7 +34,7 @@
                         <thead style="background-color: #20BBC7;">
                         <tr class="text-white">
                             <th>No</th>
-                            <th>Title</th>
+                            <th>Medium</th>
                             <th>Type</th>
                             <th>Price</th>
                             <th>Action</th>

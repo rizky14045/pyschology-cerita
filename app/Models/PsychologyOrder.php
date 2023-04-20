@@ -29,7 +29,8 @@ class PsychologyOrder extends Model
         'extended',
         'extended_counseling_minute',
         'status',
-        'total_price'
+        'total_price',
+        'location'
     ];
 
     public function psychology()
