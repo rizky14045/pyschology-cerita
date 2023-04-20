@@ -22,7 +22,7 @@
             @method('PATCH')
             <div class="row pb-3">
                 <div class="form-group col-12">
-                    <label>Title</label>
+                    <label>Question</label>
                     <input type="text" class="form-control" name="title" required value="{{$faq->title}}">
                     @if($errors->has('title'))
                     <div class="error">{{ $errors->first('title') }}</div>
@@ -31,7 +31,7 @@
             </div>
             <div class="row pb-3">
                 <div class="form-group col-12">
-                    <label >Description</label>
+                    <label >Answer</label>
                     <textarea class="form-control" id="description" rows="12" name="description">
                         {{$faq->description}}
                     </textarea>
