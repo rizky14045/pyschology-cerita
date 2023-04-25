@@ -21,110 +21,19 @@
     <section id="team" class="section single-page">
         <div class="container-doctor">
             <div class="row">
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto2.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
+                @foreach ($doctors as $doctor)
+                    <div class="custom-single-team col-md-4">
+                        <div class="st-header">
+                            <img src="{{ asset('assets/vendor/img/' . $doctor->psychology_image) }}" alt="#" />
+                            <div class="">
+                                <h2><a href="{{ route('doctor_detail') }}">{{ $doctor->name }}</a></h2>
+                            </div>
+                        </div>
+                        <div class="ct-content mt-5">
+                            {!! $doctor->experience !!}
                         </div>
                     </div>
-                    <div class="ct-content mt-5">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
-                        <div>
-                            <h2 class="ml-5"><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
-                        </div>
-                    </div>
-                    <div class="ct-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto3.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
-                        </div>
-                    </div>
-                    <div class="ct-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
-                        </div>
-                    </div>
-                    <div class="ct-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
-                        </div>
-                    </div>
-                    <div class="ct-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto4.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
-                        </div>
-                    </div>
-                    <div class="ct-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
-                        </div>
-                    </div>
-                    <div class="ct-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
-                <div class="custom-single-team col-md-4">
-                    <div class="st-header">
-                        <img src="{{ asset('assets/vendor/img/foto3.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
-                        </div>
-                    </div>
-                    <div class="ct-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
-                            tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
-                            accusamus saepe quo perferendis voluptatibus repellendus?</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -7,6 +7,7 @@ use App\Models\Album;
 use App\Models\Topic;
 use App\Models\Header;
 use App\Models\Product;
+use App\Models\Psychology;
 use App\Models\Setting;
 use App\Models\Testimony;
 use Illuminate\Http\Request;
@@ -32,7 +33,9 @@ class HomeController extends Controller
 
     public function doctor()
     {
-        return view('frontend.doctors');
+        $data['doctors'] = Psychology::all();
+
+        return view('frontend.doctors', $data);
     }
 
     public function doctor_detail()
