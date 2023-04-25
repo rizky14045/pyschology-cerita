@@ -28,7 +28,7 @@
                             <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
                         </div>
                     </div>
-                    <div class="ct-content">
+                    <div class="ct-content mt-5">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis quisquam
                             tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime alias
                             accusamus saepe quo perferendis voluptatibus repellendus?</p>
@@ -37,8 +37,8 @@
                 <div class="custom-single-team col-md-4">
                     <div class="st-header">
                         <img src="{{ asset('assets/vendor/img/foto5.jpg') }}" alt="#" />
-                        <div class="">
-                            <h2><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
+                        <div>
+                            <h2 class="ml-5"><a href="{{ route('doctor_detail') }}">Gouw Kelvin, M.Psi</a></h2>
                         </div>
                     </div>
                     <div class="ct-content">

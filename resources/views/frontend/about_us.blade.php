@@ -28,7 +28,7 @@
                 <div class="col-lg-6 col-md-12 p-0">
                     <div class="about-content">
                         <span>Tentang Kami</span>
-                        <p align="justify">Saatnya kamu memiliki akses pada psikolog profesional yang sesuai dengan topik permasalahan yang sedang kamu alami. 
+                        <p align="justify">Saatnya kamu memiliki akses pada psikolog profesional yang sesuai dengan topik permasalahan yang sedang kamu alami.
                             Bagikan Ceritamu memberikan kebebasan kamu bercerita apapun masalahnya dan bertemu ahlinya untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi data yang kami terima akan kami jaga kerahasiaannya. Para Psikolog yang tergabung di bagikanceritamu adalah mereka yang memiliki pengalaman dan wawasan sesuai topik permasalahan. Ketika kamu datang pada kami dengan masalah yang sedang dialami, psikolog kami akan melakukan observasi yang kemudian melakukan pendalaman untuk memahami masalahmu. Sikap yang terbuka, ramah, pendengar dan tutur kata yang baik menjadi prioritas dalam memberikan layanan konseling. </p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-vision-box">
                         <div class="icon">
-                            <i class="icofont-tick-mark"></i>
+                            <i class="fa fa-book"></i>
                         </div>
                         <h3>Fokus</h3>
                         <p>Kami memberikan perhatian penuh pada keluhan masalah yang kamu sampaikan. Fokus kami memberikan pelayanan senyaman mungkin.</p>
@@ -52,7 +52,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-vision-box">
                         <div class="icon">
-                            <i class="icofont-tick-mark"></i>
+                            <i class="fa fa-smile"></i>
                         </div>
                         <h3>Ramah</h3>
                         <p>Sikap yang ramah dan tutur kata yang baik menjadi hal utama yang diberikan oleh para psikolog kami.</p>
@@ -61,7 +61,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-vision-box">
                         <div class="icon">
-                            <i class="icofont-tick-mark"></i>
+                            <i class="fa fa-key"></i>
                         </div>
                         <h3>Kerahasiaan Terjaga</h3>
                         <p>Kami sangat berkomitmen untuk menjaga kerahasiaan informasi yang kamu berikan</p>

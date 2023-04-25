@@ -72,7 +72,7 @@
                         <ul class="top-link">
                             <li><a href="{{ route('about-us') }}">Tentang Kami</a></li>
                             <li><a href="{{ route('doctors') }}">Psikolog</a></li>
-                            <li><a href="#">Kontak</a></li>
+                            <li><a href="{{ route('contact') }}">Kontak</a></li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>
                             <li><a href="{{ route('syarat-ketentuan') }}">Syarat dan Ketentuan</a></li>
                         </ul>
