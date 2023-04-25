@@ -7,6 +7,7 @@ use App\Models\Album;
 use App\Models\Topic;
 use App\Models\Header;
 use App\Models\Product;
+use App\Models\Setting;
 use App\Models\Testimony;
 use Illuminate\Http\Request;
 use App\Models\TermCondition;
@@ -17,11 +18,11 @@ class HomeController extends Controller
     {
         $data['albums'] = Album::latest()->limit(9)->get();
         $data['testimonies'] = Testimony::latest()->limit(10)->get();
-        $data['individu'] = Product::where('type','Individu')->latest()->get();
-        $data['pasangan'] = Product::where('type','Berpasangan')->latest()->get();
-        $data['header'] = Header::where('position','Homepage')->first();
+        $data['individu'] = Product::where('type', 'Individu')->latest()->get();
+        $data['pasangan'] = Product::where('type', 'Berpasangan')->latest()->get();
+        $data['header'] = Header::where('position', 'Homepage')->first();
 
-        return view('frontend.index',$data);
+        return view('frontend.index', $data);
     }
 
     public function about_us()
@@ -63,11 +64,18 @@ class HomeController extends Controller
     public function faq()
     {
         $data['faqs'] = Faq::all();
-        return view('frontend.faq',$data);
+        return view('frontend.faq', $data);
     }
     public function termCondition()
     {
         $data['termConditions'] = TermCondition::all();
-        return view('frontend.term-condition',$data);
+        return view('frontend.term-condition', $data);
+    }
+
+    public function contact()
+    {
+        $data['contact'] = Setting::all();
+        // dd($data['contact']);
+        return view('frontend.contact', $data);
     }
 }

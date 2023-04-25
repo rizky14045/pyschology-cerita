@@ -13,5 +13,7 @@ Route::get('/about-us', [HomeController::class, 'about_us'])->name('about-us');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/syarat-ketentuan', [HomeController::class, 'termCondition'])->name('syarat-ketentuan');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+
 
 
