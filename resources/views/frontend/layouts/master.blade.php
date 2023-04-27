@@ -7,12 +7,19 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="Site keywords here" />
-    <meta name="description" content="" />
-    <meta name="copyright" content="" />
+
+    <meta name="title" content="{{ $setting->where('key', 'name')->first()->value }}">
+    <meta name="description" content="{{$description}}">
+    <meta name="keywords" content="{{$keywords}}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>{{ $setting->where('key', 'name')->first()->value }}</title>
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="{{ $setting->where('key', 'name')->first()->value }}">
+    <meta itemprop="description" content="{{$description}}">
+    <meta itemprop="image" content="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}">
+
+   
+    <title>{{ $setting->where('key', 'name')->first()->value }} - {{$title}}</title>
 
     <link rel="icon" href="{{ asset('uploads/setting/' . $setting->where('key', 'favicon')->first()->value) }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -72,7 +79,7 @@
                         <ul class="top-link">
                             <li><a href="{{ route('about-us') }}">Tentang Kami</a></li>
                             <li><a href="{{ route('doctors') }}">Psikolog</a></li>
-                            <li><a href="#">Kontak</a></li>
+                            <li><a href="{{ route('contact') }}">Kontak</a></li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>
                             <li><a href="{{ route('syarat-ketentuan') }}">Syarat dan Ketentuan</a></li>
                         </ul>

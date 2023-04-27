@@ -2260,6 +2260,7 @@ body {
 
 .st-header {
     text-align: center;
+    margin-left: 40px;
 }
 
 .st-header h2 {
@@ -2270,7 +2271,7 @@ body {
 
 .ct-content {
     padding: 10px;
-    margin-top: 12%;
+    margin-top: 18%;
 }
 
 .container-doctor {
@@ -2280,7 +2281,7 @@ body {
 }
 
 .custom-single-team img {
-    width: 30%;
+    width: 35%;
     border-radius: 100%;
     position: absolute;
     left: -15px;
@@ -2423,6 +2424,14 @@ body {
     overflow: hidden;
 }
 
+.doctor-details-right {
+    -webkit-box-shadow: 0px 0px 10px 0px #ddd;
+    box-shadow: 0px 0px 10px 0px #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10%;
+}
+
 .doctor-details-item img {
     width: 100%;
     border-radius: 0;
@@ -2546,6 +2555,7 @@ body {
 
 .doctor-details-item .doctor-details-biography p {
     margin-bottom: 0;
+    margin-top: -20px;
 }
 
 .doctor-details-item .doctor-details-biography ul {

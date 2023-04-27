@@ -42,7 +42,7 @@
                                     <p>
                                         Kamu bisa memilih waktu konseling, yang disesuaikan dengan kenyamananmu bercerita.
                                     </p>
-                                    <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="{{route('services')}}">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                         Psikolog yang berpengalaman memberikan kamu ketenangan dalam bercerita, berkeluh
                                         kesah dan mencari solusi
                                     </p>
-                                    <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="{{route('doctors')}}">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                                         Setiap individu memiliki masalah yang berbeda-beda, untuk itu kami sediakan banyak
                                         pilihan topik masalah.
                                     </p>
-                                    <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="{{route('topics')}}">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                         <div class="signle-icon">
                             <img src="{{ asset('assets/images/offline-woman.jpg') }}" alt="">
                         </div>
-                        <h3>Offline Counselling
+                        <h3>Konseling Offline
                         </h3>
                         <p>
                             Layanan konsultasi psikolog secara tatap muka langsung yang dapat memberikan kenyamanan lebih
@@ -125,7 +125,7 @@
                         <div class="signle-icon">
                             <img src="{{ asset('assets/images/online-woman.jpg') }}" alt="#">
                         </div>
-                        <h3>Online Counselling</h3>
+                        <h3>Konseling Online</h3>
                         <p>
                             Layanan konsultasi psikolog secara daring yang dapat dilakukan fleksibel dimanapun kamu berada
                         </p>
@@ -185,13 +185,13 @@
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="content">
                         <h3>Jika kamu ingin langsung bercerita kegelisahanmu pada kami
-                            Silahkan hubungi 0813 - 9999 - 1459</h3>
+                            Silahkan hubungi {{ $setting->where('key', 'whatsapp')->first()->value }}</h3>
                         <p>
                             Kami akan sesegera mungkin merespon kebutuhanmu dan atur janji waktu untuk berkonsultasi.
                         </p>
                         <div class="button">
-                            <a href="#" class="btn">Contact Now</a>
-                            <a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
+                            <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}" target="_blank" class="btn">Contact Now</a>
+                            <a href="{{route('services')}}" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -364,7 +364,7 @@
             <div class="section-title">
                 <h3>Individu</h3>
             </div>
-            <div class="row">
+            <div class="row pb-5" style="margin-top:-50px;">
                 @foreach ($individu as $item)
                 @php
                 $list = json_decode($item->list_product);  
@@ -400,7 +400,7 @@
             <div class="section-title mt-3">
                 <h3>Berpasangan</h3>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top:-50px;">
                 @foreach ($pasangan as $item)
                 @php
                 $list = json_decode($item->list_product);  
