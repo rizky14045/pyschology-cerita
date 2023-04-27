@@ -1,5 +1,7 @@
 @extends('frontend.layouts.master')
-
+@php
+    $setting = App\Models\Setting::get();
+@endphp
 @section('content')
     <div class="breadcrumbs overlay">
         <div class="container">
@@ -23,32 +25,26 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="doctor-details-item doctor-details-left">
-                        <img src="{{ asset('assets/vendor/img/foto2.jpg') }}" alt="#" />
+                        <img src="{{asset('uploads/psychology_image/'.$doctor->psychology_image)}}" alt="#" />
                         <div class="doctor-details-contact">
                             <div class="doctor-details-biography">
                                 <h3 style="color:#20bbc7">Biography</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sit. Blanditiis
-                                    quisquam
-                                    tempora dolore repudiandae, similique excepturi laudantium ipsa veniam aut nemo maxime
-                                    alias
-                                    accusamus saepe quo perferendis voluptatibus repellendus?
+                                    {!!$doctor->biography!!}
                                 </p>
                             </div>
 
-                            <div class="doctor-details-biography">
+                            <div class="doctor-details-biography mt-5">
                                 <h3 style="color:#20bbc7">Pengalaman</h3>
                                 <p>
-                                    Lebih dari 5 tahun menekuni bidang psikolog profesi dengan berbagai kasus yang pernah
-                                    ditangani, seperti ketergantungan games, ketergantungan obat, kecemasan berlebih karena
-                                    selalu gagal dalam berbagai hal
+                                    {!!$doctor->experience!!}
                                 </p>
                             </div>
 
-                            <div class="doctor-details-biography">
+                            <div class="doctor-details-biography mt-5">
                                 <h3 style="color:#20bbc7">Motto</h3>
                                 <p>
-                                    Kenali diri dengan baik, bermanfaat kemudian
+                                    {!!$doctor->motto!!}
                                 </p>
                             </div>
 
@@ -60,50 +56,42 @@
                 <div class="col-lg-7">
                     <div class="doctor-details-item doctor-details-right">
                         <div class="doctor-name">
-                            <h3 class="name">Gouw Kelvin, M.Psi</h3>
+                            <h3 class="name">{{$doctor->name}}</h3>
                         </div>
+                        @php
+                            $topics = json_decode($doctor->topics);
+                        @endphp
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7;">Topik Masalah</h3>
                             <p class="degree" style="margin-top: -20px">
-                                <span class="badge badge-secondary">Adiksi atau ketergantungan</span>
-                                <span class="badge badge-secondary">Karir</span>
-                                <span class="badge badge-secondary">Depresi</span>
-                                <span class="badge badge-secondary">Topik Masalah</span>
+                                @foreach ($topics as $item)    
+                                    @if ($item)
+                                        <span class="badge bg-secondary text-white">{{$item}}</span>
+                                    @endif
+                                @endforeach
                             </p>
                         </div>
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7">Nomor Izin Praktek</h3>
                             <p>
-                                1111212
+                                {{$doctor->number_license}}
                             </p>
                             <br />
                         </div>
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7">Pendidikan</h3>
-                            <p>
-                            <ul>
-                                <li>
-                                    S2 Magister Psikologi Profesi Klinis Universitas Indonesia
-
-                                </li>
-                                <li>
-                                    S1 Sarjana Psikologi Universitas Indonesia
-
-                                </li>
-                            </ul>
-                            </p>
+                            {!!$doctor->education!!}
                             <br />
                         </div>
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7">Karakter Personal</h3>
                             <p>
-                                Humoris, senang melakukan kegiatan-kegiatan sosial yang bermanfaat bagi lingkungan
-                                sekitar
+                                {!!$doctor->personal_character!!}
                             </p>
                         </div>
                     </div>
                     <div class="mt-5">
-                        <a class="btn btn-lg btn-block">Konsultasi Sekarang</a>
+                        <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text=Saya ingin berkonsultasi dengan Psikology {{urlencode($doctor->name)}}"class="btn btn-lg btn-block text-white">Konsultasi Sekarang</a>
                     </div>
                 </div>
             </div>
