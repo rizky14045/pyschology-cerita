@@ -8,13 +8,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="title" content="{{ $setting->where('key', 'name')->first()->value }}">
+    <meta name="title" content="{{ $setting->where('key', 'name')->first()->value }} - {{$title}}">
     <meta name="description" content="{{$description}}">
     <meta name="keywords" content="{{$keywords}}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="{{ $setting->where('key', 'name')->first()->value }}">
+    <meta itemprop="name" content="{{ $setting->where('key', 'name')->first()->value }} - {{$title}}">
     <meta itemprop="description" content="{{$description}}">
     <meta itemprop="image" content="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}">
 
