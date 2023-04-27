@@ -42,7 +42,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12">
                                 <span class="ver-line"></span>
-                                <h2 class="service-sub-title-l">Offline Consultation</h2>
+                                <h2 class="service-sub-title-l">Konseling Offline</h2>
                                 <p align="justify">
                                     Dimana saja kamu bisa memulai melakukan konseling dengan psikolog. Jika kamu merasakan sebuah ketidaknyamanan mental yang sampai cukup mengganggu aktivitasmu, namun kamu tidak punya banyak waktu untuk berkonsultasi secara tatap muka, kami memberikan layanan konsultasi daring sesuai waktu yang telah disepakati bersama.
                                 </p>
@@ -56,7 +56,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <span class="ver-line-right"></span>
-                                <h2 class="service-sub-title-r">Online Consultation</h2>
+                                <h2 class="service-sub-title-r">Konseling Online</h2>
                                 <p align="justify">
                                     Konseling tatap muka dengan para psikolog profesional kami, dapat menciptakan komunikasi yang lebih private dan bercerita dari hati ke hati. Proses konseling dilakukan di tempat yang telah kami sediakan dengan waktu yang sudah disepakati bersama. Kami akan menyambut kedatanganmu dengan senang hati.
                                 </p>
