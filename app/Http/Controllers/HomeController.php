@@ -17,30 +17,57 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $data = [
+            'title' => 'Halaman Utama',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => 'Bagikan Ceritamu,bagikan ceritamu,ayo bercerita,psikolog,konseling,psikologi,konseling psikologi,galau,keresahan'
+        ];
         $data['albums'] = Album::latest()->limit(9)->get();
         $data['testimonies'] = Testimony::latest()->limit(10)->get();
         $data['individu'] = Product::where('type', 'Individu')->latest()->get();
         $data['pasangan'] = Product::where('type', 'Berpasangan')->latest()->get();
         $data['header'] = Header::where('position', 'Homepage')->first();
+  
 
         return view('frontend.index', $data);
     }
 
     public function about_us()
     {
-        return view('frontend.about_us');
+        $data = [
+            'title' => 'Tentang Kami',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
+        return view('frontend.about_us',$data);
     }
 
-    public function doctor()
+    public function doctor(Request $request)
     {
-        $data['doctors'] = Psychology::all();
+        $data = [
+            'title' => 'Psikologi',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
+
+        if($request){
+            $data['doctors'] = Psychology::where('topics', 'like', '%' . $request->topic . '%')->get();
+        }else{
+            $data['doctors'] = Psychology::all();
+        }
 
         return view('frontend.doctors', $data);
     }
 
-    public function doctor_detail()
+    public function doctor_detail($code)
     {
-        return view('frontend.doctor_detail');
+        $data = [
+            'title' => 'Detail Psikologi',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
+        $data['doctor'] = Psychology::where('code', $code)->first();
+        return view('frontend.doctor_detail',$data);
     }
 
     public function blog()
@@ -55,6 +82,11 @@ class HomeController extends Controller
 
     public function topic()
     {
+        $data = [
+            'title' => 'Topik Konseling',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
         $data['topics'] = Topic::all();
 
         return view('frontend.topics', $data);
@@ -62,23 +94,42 @@ class HomeController extends Controller
 
     public function services()
     {
-        return view('frontend.service');
+        $data = [
+            'title' => 'Layanan Kami',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
+
+        return view('frontend.service',$data);
     }
     public function faq()
     {
+        $data = [
+            'title' => 'Faq',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
         $data['faqs'] = Faq::all();
         return view('frontend.faq', $data);
     }
     public function termCondition()
     {
+        $data = [
+            'title' => 'Syarat dan Ketentuan',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
         $data['termConditions'] = TermCondition::all();
         return view('frontend.term-condition', $data);
     }
 
     public function contact()
     {
-        $data['contact'] = Setting::all();
-        // dd($data['contact']);
+        $data = [
+            'title' => 'Kontak Kami',
+            'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+            'keywords' => '',
+        ];
         return view('frontend.contact', $data);
     }
 }

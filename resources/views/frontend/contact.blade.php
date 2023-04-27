@@ -1,4 +1,7 @@
 @extends('frontend.layouts.master') @section('content')
+@php
+    $setting = App\Models\Setting::get();
+@endphp
     <div class="breadcrumbs overlay">
         <div class="container">
             <div class="bread-inner">
@@ -24,9 +27,9 @@
 
                         <div class="contact-us-form">
                             <div class="contact-info">
-                                <h2>Contact With Us</h2>
+                                <h2>Kontak Kami</h2>
                                 <p>
-                                    If you have any questions please fell free to contact with us.
+                                    Jika anda memiliki beberapa pertanyaan bisa kontak kami.
                                 </p>
                             </div>
                         </div>
@@ -37,10 +40,9 @@
                                 <div class="single-info">
                                     <i class="fa fa-phone"></i>
                                     <div class="content">
-                                        <h3>+{{ $contact[17]->value }}</h3>
+                                        <h3><a href="tel:+{{ $setting->where('key', 'phone')->first()->value }}">{{ $setting->where('key', 'phone')->first()->value }}</a></h3>
                                         <p>
-                                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                                data-cfemail="771e1911183714181a0716190e5914181a">{{ $contact[16]->value }}</a>
+                                            <a href="mailto:{{ $setting->where('key', 'email')->first()->value }}">{{ $setting->where('key', 'email')->first()->value }}</a>
                                         </p>
                                     </div>
                                 </div>

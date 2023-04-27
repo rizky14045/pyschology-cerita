@@ -164,15 +164,15 @@ class PsychologyController extends Controller
      */
     public function destroy($id)
     {
-        $psychohlogy = Psychohlogy::where('id',$id)->first();
+        $psychology = Psychology::where('id',$id)->first();
 
-        if($psychohlogy->psychohlogy_image){
-            unlink(public_path('uploads/psychohlogy_image/'.$psychohlogy->psychohlogy_image));
+        if($psychology->psychology_image){
+            unlink(public_path('uploads/psychology_image/'.$psychology->psychology_image));
         }
 
-        $psychohlogy->delete();
+        $psychology->delete();
 
-        Alert::success('Success', 'Psychohlogy Has been updated successfully');
-        return redirect()->route('admin.psychohlogy.index');
+        Alert::success('Success', 'Psychology Has been updated successfully');
+        return redirect()->route('admin.psychology.index');
     }
 }
