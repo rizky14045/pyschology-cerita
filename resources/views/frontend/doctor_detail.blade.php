@@ -72,7 +72,7 @@
                             </p>
                         </div>
                         <div class="doctor-details-biography">
-                            <h3 style="color:#20bbc7">Nomor Izin Praktek</h3>
+                            <h3 style="color:ss">Nomor Izin Praktek</h3>
                             <p>
                                 {!!$doctor->number_license!!}
                             </p>
