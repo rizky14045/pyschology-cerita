@@ -34,8 +34,8 @@
                     <label>Type</label>
                     <select class="form-select" aria-label="Default select example" name="type">
                         <option selected disabled>Open this select menu</option>
-                        <option {{ ($product->type == 'Individu') ? 'selected' : ''}}>Individu</option>
-                        <option {{ ($product->type == 'Berpasangan') ? 'selected' : ''}}>Berpasangan</option>
+                        <option {{ ($product->type == 'Online') ? 'selected' : ''}}>Online</option>
+                        <option {{ ($product->type == 'Offline') ? 'selected' : ''}}>Offline</option>
                     </select>
                     @if($errors->has('type'))
                         <div class="error">{{ $errors->first('type') }}</div>

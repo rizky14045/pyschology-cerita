@@ -54,7 +54,7 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$psychology->name}}</td>
                                 <td>{!!$psychology->biography!!}</td>
-                                <td>{{$psychology->number_license}}</td>
+                                <td>{!!$psychology->number_license!!}</td>
                                 <td>
                                     <img src="{{asset('uploads/psychology_image/'.$psychology->psychology_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
                                 </td>

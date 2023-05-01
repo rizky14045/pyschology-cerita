@@ -6,11 +6,11 @@
             <div class="bread-inner">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Para Psikologi Kami</h2>
+                        <h2>Para Psikolog Kami</h2>
                         <ul class="bread-list">
                             <li><a href="index.html">Home</a></li>
                             <li><i class="fa-solid fa-chevron-right"></i></li>
-                            <li class="active">Psychologys</li>
+                            <li class="active">Psikolog Kami</li>
                         </ul>
                     </div>
                 </div>

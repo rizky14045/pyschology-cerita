@@ -18,14 +18,14 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
-            'title' => 'Halaman Utama',
+            'title' => 'Layanan Konseling Psikolog Profesional',
             'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
             'keywords' => 'Bagikan Ceritamu,bagikan ceritamu,ayo bercerita,psikolog,konseling,psikologi,konseling psikologi,galau,keresahan'
         ];
         $data['albums'] = Album::latest()->limit(9)->get();
         $data['testimonies'] = Testimony::latest()->limit(10)->get();
-        $data['individu'] = Product::where('type', 'Individu')->latest()->get();
-        $data['pasangan'] = Product::where('type', 'Berpasangan')->latest()->get();
+        $data['online'] = Product::where('type', 'Online')->latest()->get();
+        $data['offline'] = Product::where('type', 'Offline')->latest()->get();
         $data['header'] = Header::where('position', 'Homepage')->first();
   
 

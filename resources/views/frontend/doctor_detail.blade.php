@@ -8,11 +8,11 @@
             <div class="bread-inner">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Doctor Details</h2>
+                        <h2>Profil Psikolog</h2>
                         <ul class="bread-list">
                             <li><a href="index.html">Home</a></li>
                             <li><i class="fa-solid fa-chevron-right"></i></li>
-                            <li class="active">Doctor Details</li>
+                            <li class="active">Profil Psikolog</li>
                         </ul>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7">Nomor Izin Praktek</h3>
                             <p>
-                                {{$doctor->number_license}}
+                                {!!$doctor->number_license!!}
                             </p>
                             <br />
                         </div>
@@ -84,9 +84,9 @@
                             <br />
                         </div>
                         <div class="doctor-details-biography">
-                            <h3 style="color:#20bbc7">Karakter Personal</h3>
+                            <h3 style="color:#20bbc7">Sertifikat</h3>
                             <p>
-                                {!!$doctor->personal_character!!}
+                                {!!$doctor->certificate!!}
                             </p>
                         </div>
                     </div>

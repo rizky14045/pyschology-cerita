@@ -41,7 +41,7 @@
             <div class="row pb-3">
                 <div class="form-group col-12">
                     <label>Number License</label>
-                    <input type="number" class="form-control" name="number_license" required>
+                     <textarea class="form-control" rows="5" name="number_license" placeholder="Education"></textarea>
                     @if($errors->has('number_license'))
                     <div class="error">{{ $errors->first('number_license') }}</div>
                 @endif
@@ -68,10 +68,10 @@
             </div>
             <div class="row pb-3">
                 <div class="form-group col-12">
-                    <label >Personal Character</label>
-                    <textarea class="form-control" rows="5" name="personal_character" placeholder="personal_character"></textarea>
-                    @if($errors->has('personal_character'))
-                        <div class="error">{{ $errors->first('personal_character') }}</div>
+                    <label >Certificate</label>
+                    <textarea class="form-control" rows="5" name="certificate" placeholder="certificate"></textarea>
+                    @if($errors->has('certificate'))
+                        <div class="error">{{ $errors->first('certificate') }}</div>
                     @endif
                 </div>
             </div>
@@ -125,13 +125,16 @@
     CKEDITOR.replace( 'biography' );
 </script>
 <script>
+    CKEDITOR.replace( 'number_license' );
+</script>
+<script>
     CKEDITOR.replace( 'education' );
 </script>
 <script>
     CKEDITOR.replace( 'motto' );
 </script>
 <script>
-    CKEDITOR.replace( 'personal_character' );
+    CKEDITOR.replace( 'certificate' );
 </script>
 <script>
     CKEDITOR.replace( 'experience' );

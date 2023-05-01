@@ -21,6 +21,7 @@ class Psychology extends Model
         'education',
         'motto',
         'experience',
-        'topics'
+        'topics',
+        'certificate'
     ];
 }

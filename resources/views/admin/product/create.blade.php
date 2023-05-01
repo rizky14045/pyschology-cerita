@@ -33,8 +33,8 @@
                     <label>Type</label>
                     <select class="form-select" aria-label="Default select example" name="type">
                         <option selected disabled>Open this select menu</option>
-                        <option>Individu</option>
-                        <option>Berpasangan</option>
+                        <option>Online</option>
+                        <option>Offline</option>
                     </select>
                     @if($errors->has('type'))
                     <div class="error">{{ $errors->first('type') }}</div>
