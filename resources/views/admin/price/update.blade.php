@@ -41,7 +41,7 @@
             <div class="row pb-3">
                 <div class="form-group col-12">
                     <label>Type</label>
-                    <input type="number" class="form-control" name="type" required value="{{$type->type}}">
+                    <input type="text" class="form-control" name="type" required value="{{$price->type}}">
                     @if($errors->has('type'))
                     <div class="error">{{ $errors->first('type') }}</div>
                 @endif

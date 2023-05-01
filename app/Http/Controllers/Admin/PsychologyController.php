@@ -43,13 +43,9 @@ class PsychologyController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'number_license' => 'required|integer',
+            'number_license' => 'required|string',
             'psychology_image' => 'required|image|mimes:jpg,jpeg,png|max:4096',
-            'education' => 'required',
-            'motto' => 'required',
-            'experience' => 'required',
             'topics' => 'required',
-            'personal_character' => 'required',
         ]);
 
         $psychology = Psychology::latest()->first();

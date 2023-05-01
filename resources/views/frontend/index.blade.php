@@ -184,8 +184,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="content">
-                        <h3>Jika kamu ingin langsung bercerita kegelisahanmu pada kami
-                            Silahkan hubungi {{ $setting->where('key', 'whatsapp')->first()->value }}</h3>
+                        <h3>Jika kamu ingin bercerita dengan psikolog kami mengenai kegelisahan mu silahkan hubungi nomor {{ $setting->where('key', 'whatsapp')->first()->value }}</h3>
                         <p>
                             Kami akan sesegera mungkin merespon kebutuhanmu dan atur janji waktu untuk berkonsultasi.
                         </p>
@@ -204,7 +203,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="choose-left">
-                        <h3>Tentang Mari Bercerita</h3>
+                        <h3>Tentang Bagikan Ceritamu</h3>
                         <p>
                             Saatnya kamu memiliki akses pada psikolog profesional yang sesuai dengan topik permasalahan yang
                             sedang kamu alami.
@@ -361,11 +360,11 @@
                     </div>
                 </div>
             </div>
-            <div class="section-title">
-                <h3>Individu</h3>
+            <div class="section-title pb-1">
+                <h3>Online</h3>
             </div>
             <div class="row pb-5" style="margin-top:-50px;">
-                @foreach ($individu as $item)
+                @foreach ($online as $item)
                 @php
                 $list = json_decode($item->list_product);  
                 @endphp
@@ -397,11 +396,11 @@
                 @endforeach
             </div>
 
-            <div class="section-title mt-3">
-                <h3>Berpasangan</h3>
+            <div class="section-title mt-2">
+                <h3>Offline</h3>
             </div>
             <div class="row" style="margin-top:-50px;">
-                @foreach ($pasangan as $item)
+                @foreach ($offline as $item)
                 @php
                 $list = json_decode($item->list_product);  
                 @endphp

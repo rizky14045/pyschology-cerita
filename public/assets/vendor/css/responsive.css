@@ -320,7 +320,7 @@ Version:	1.1
         height: 400px;
     }
     .doctor-details-area .doctor-details-right {
-        padding-left: 0;
+        padding-left: 30px;
         padding-top: 40px;
     }
     .doctor-details-item .doctor-name .name {
@@ -898,7 +898,7 @@ Version:	1.1
         padding: 30px 30px;
     }
     .doctor-details-area .doctor-details-right {
-        padding-left: 0;
+        padding-left: 30px;
         padding-top: 30px;
     }
     .doctor-details-item .doctor-details-contact {
