@@ -74,6 +74,16 @@ Version:	1.1
     font-size: 20px;
 }
 
+.doctor-name {
+    /* background: red; */
+    text-align: right;
+    margin-left: 6%;
+}
+
+.doctor-name p {
+    font-size: 12px;
+}
+
 .icon-bar a i {
     background: #fff;
     padding: 4px;
@@ -526,7 +536,7 @@ body {
     opacity: 0;
     visibility: hidden;
     top: 74px;
-    border-left: 3px solid #2889e4;
+    border-left: 3px solid #59B8C3;
 }
 
 .header .nav li:hover .dropdown {
@@ -1334,6 +1344,17 @@ body {
     margin-right: 16px;
 }
 
+.list li i {
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    text-align: center;
+    background: #20BBC7 !important;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 100%;
+    padding-left: 2px;
+}
 
 /* Start Faq CSS */
 
@@ -1839,6 +1860,54 @@ body {
 /*=========================
 	End service CSS
 ===========================*/
+
+/*=============================
+	Start Testimonials doctor detail CSS
+===============================*/
+
+.testimonials-dd .single-testimonial-dd {
+    text-align: left;
+
+    width: 250px;
+    background: #e8e2e2;
+    padding: 40px 30px;
+
+    margin-right: 300px;
+    border-radius: 5px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.testimonials-dd .single-testimonial-dd:hover {
+    box-shadow: 0px 10px 10px #0000001c;
+    transform: translateY(-4px);
+}
+
+.testimonials-dd .single-testimonial-dd img {
+    position: absolute;
+    left: 30px;
+    bottom: -26px;
+    height: 53px;
+    width: 53px;
+    border-radius: 100%;
+}
+
+.testimonials-dd .single-testimonial-dd p {
+    color: #868686;
+    font-size: 14px;
+}
+
+.testimonials-dd .single-testimonial-dd .name {
+    margin-top: 22px;
+    color: #2C2D3F;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/*=============================
+	End Testimonials CSS
+===============================*/
 
 
 /*=============================

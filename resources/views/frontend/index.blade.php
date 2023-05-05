@@ -6,7 +6,7 @@
 @section('content')
     <section class="slider">
         {{-- <div class="single-slider" style="background-image: url('assets/vendor/img/slider2.jpg')"> --}}
-            
+
         {{-- <div class="single-slider" style="background-image: url('assets/images/header3.jpeg')"> --}}
         <div class="single-slider" style="background-image: url('{{asset('uploads/header_image/'.$header->header_image)}}')">
             <div class="container">
@@ -55,10 +55,9 @@
                                 </div>
                                 <div class="single-content">
                                     <span>- Para Psikolog Profesional</span>
-                                    <h4>Berpengalaman Lebih dari 5 Tahun</h4>
-                                    <p>
-                                        Psikolog yang berpengalaman memberikan kamu ketenangan dalam bercerita, berkeluh
-                                        kesah dan mencari solusi
+                                    <h4>Psikolog Profesional</h4>
+                                    <p class="py-4">
+                                        Para Psikolog Terbaik dan Berpengalaman Di Bidangnya
                                     </p>
                                     <a href="{{route('doctors')}}">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                                 </div>
@@ -176,8 +175,6 @@
             </div>
         </div>
     </div>
-
-
 
     <section class="call-action">
         <div class="container">
@@ -366,7 +363,7 @@
             <div class="row pb-5" style="margin-top:-50px;">
                 @foreach ($online as $item)
                 @php
-                $list = json_decode($item->list_product);  
+                $list = json_decode($item->list_product);
                 @endphp
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="single-table">
@@ -402,7 +399,7 @@
             <div class="row" style="margin-top:-50px;">
                 @foreach ($offline as $item)
                 @php
-                $list = json_decode($item->list_product);  
+                $list = json_decode($item->list_product);
                 @endphp
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="single-table">

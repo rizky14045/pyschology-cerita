@@ -27,7 +27,7 @@ class HomeController extends Controller
         $data['online'] = Product::where('type', 'Online')->latest()->get();
         $data['offline'] = Product::where('type', 'Offline')->latest()->get();
         $data['header'] = Header::where('position', 'Homepage')->first();
-  
+
 
         return view('frontend.index', $data);
     }
@@ -67,6 +67,8 @@ class HomeController extends Controller
             'keywords' => '',
         ];
         $data['doctor'] = Psychology::where('code', $code)->first();
+        $data['testimonies'] = Testimony::all();
+
         return view('frontend.doctor_detail',$data);
     }
 

@@ -24,14 +24,14 @@
                 @foreach ($doctors as $doctor)
                     <div class="custom-single-team col-md-4">
                         <div class="st-header">
-                            <img src="{{asset('uploads/psychology_image/'.$doctor->psychology_image)}}" alt="#" />
-                            <div class="">
-                                <h2><a href="{{route('doctor_detail',['id'=>$doctor->code])}}">{{ $doctor->name }}</a></h2>
+                            <img src="{{ asset('uploads/psychology_image/' . $doctor->psychology_image) }}"
+                                alt="#" />
+                            <div class="doctor-name">
+                                <h2><a href="{{ route('doctor_detail', ['id' => $doctor->code]) }}">{{ $doctor->name }}</a></h2>
                             </div>
-                            
                         </div>
                         <div class="ct-content mt-5">
-                            {!! $doctor->biography!!}
+                            {!! $doctor->biography !!}
                         </div>
                     </div>
                 @endforeach

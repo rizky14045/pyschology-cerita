@@ -25,26 +25,26 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="doctor-details-item doctor-details-left">
-                        <img src="{{asset('uploads/psychology_image/'.$doctor->psychology_image)}}" alt="#" />
+                        <img src="{{ asset('uploads/psychology_image/' . $doctor->psychology_image) }}" alt="#" />
                         <div class="doctor-details-contact">
                             <div class="doctor-details-biography">
                                 <h3 style="color:#20bbc7">Biography</h3>
                                 <p>
-                                    {!!$doctor->biography!!}
+                                    {!! $doctor->biography !!}
                                 </p>
                             </div>
 
                             <div class="doctor-details-biography mt-5">
                                 <h3 style="color:#20bbc7">Pengalaman</h3>
                                 <p>
-                                    {!!$doctor->experience!!}
+                                    {!! $doctor->experience !!}
                                 </p>
                             </div>
 
                             <div class="doctor-details-biography mt-5">
                                 <h3 style="color:#20bbc7">Motto</h3>
                                 <p>
-                                    {!!$doctor->motto!!}
+                                    {!! $doctor->motto !!}
                                 </p>
                             </div>
 
@@ -55,8 +55,8 @@
 
                 <div class="col-lg-7">
                     <div class="doctor-details-item doctor-details-right">
-                        <div class="doctor-name">
-                            <h3 class="name">{{$doctor->name}}</h3>
+                        <div class="">
+                            <h3 class="name">{{ $doctor->name }}</h3>
                         </div>
                         @php
                             $topics = json_decode($doctor->topics);
@@ -64,34 +64,60 @@
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7;">Topik Masalah</h3>
                             <p class="degree" style="margin-top: -20px">
-                                @foreach ($topics as $item)    
+                                @foreach ($topics as $item)
                                     @if ($item)
-                                        <span class="badge bg-secondary text-white">{{$item}}</span>
+                                        <span class="badge bg-secondary text-white">{{ $item }}</span>
                                     @endif
                                 @endforeach
                             </p>
                         </div>
                         <div class="doctor-details-biography">
-                            <h3 style="color:ss">Nomor Izin Praktek</h3>
+                            <h3 style="color:#20bbc7">Nomor Izin Praktek</h3>
                             <p>
-                                {!!$doctor->number_license!!}
+                                {!! $doctor->number_license !!}
                             </p>
                             <br />
                         </div>
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7">Pendidikan</h3>
-                            {!!$doctor->education!!}
+                            {!! $doctor->education !!}
                             <br />
                         </div>
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7">Sertifikat</h3>
                             <p>
-                                {!!$doctor->certificate!!}
+                                {!! $doctor->certificate !!}
                             </p>
                         </div>
                     </div>
+                    <div class="doctor-details-biography">
+                        <section class="section testimonials-dd">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 col-12 mr-5">
+                                        <div class="owl-carousel testimonial-slider">
+                                            @foreach ($testimonies as $testimony)
+                                                <div class="single-testimonial-dd">
+                                                    <img src="{{ asset('uploads/testimony_image/' . $testimony->client_image ?? 'default.png') }}"
+                                                        alt="#" />
+                                                    <p>
+                                                        "{{ $testimony->description }}"
+                                                    </p>
+                                                    <h4 class="name">{{ $testimony->client_name }}</h4>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                    </div>
+
                     <div class="mt-5">
-                        <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text=Saya ingin berkonsultasi dengan Psikology {{urlencode($doctor->name)}}"class="btn btn-lg btn-block text-white">Konsultasi Sekarang</a>
+                        <a
+                            href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text=Saya ingin berkonsultasi dengan Psikology {{ urlencode($doctor->name) }}"class="btn btn-lg btn-block text-white">Konsultasi
+                            Sekarang</a>
                     </div>
                 </div>
             </div>

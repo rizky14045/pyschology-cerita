@@ -8,18 +8,18 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="title" content="{{ $setting->where('key', 'name')->first()->value }} - {{$title}}">
-    <meta name="description" content="{{$description}}">
-    <meta name="keywords" content="{{$keywords}}">
+    <meta name="title" content="{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}">
+    <meta name="description" content="{{ $description }}">
+    <meta name="keywords" content="{{ $keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="{{ $setting->where('key', 'name')->first()->value }} - {{$title}}">
-    <meta itemprop="description" content="{{$description}}">
+    <meta itemprop="name" content="{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}">
+    <meta itemprop="description" content="{{ $description }}">
     <meta itemprop="image" content="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}">
 
-   
-    <title>{{ $setting->where('key', 'name')->first()->value }} - {{$title}}</title>
+
+    <title>{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}</title>
 
     <link rel="icon" href="{{ asset('uploads/setting/' . $setting->where('key', 'favicon')->first()->value) }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -89,7 +89,7 @@
                             <li><i class="fa fa-phone"></i>
                                 <a href="tel:+{{ $setting->where('key', 'phone')->first()->value }}">
                                     {{ $setting->where('key', 'phone')->first()->value }}
-                                    </a>
+                                </a>
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i><a
@@ -122,11 +122,11 @@
                                             <a href="/">Beranda</a>
                                         </li>
                                         <li class="{{ Route::is('services') ? 'active' : '' }}">
-                                            <a href="{{ route('services') }}">Layanan</i></a>
 
-                                            {{-- JANGAN DIHAPUS! --}}
+                                            <a href="{{ route('services') }}">Layanan <i
+                                                    class="fa fa-angle-down"></i></a>
 
-                                            {{-- <ul class="dropdown" aria-labelledby="navbarDropdownMenuLink">
+                                            <ul class="dropdown" aria-labelledby="navbarDropdownMenuLink">
                                                 <li class="dropdown-submenu">
                                                     <a class="dropdown-item" href="#">Konseling Online</a>
                                                     <ul class="dropdown-menu changing-dropdown" id="">
@@ -136,27 +136,21 @@
                                                                 href="#">Konseling Online Pasangan</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="dropdown-submenu">
-                                                    <a class="dropdown-item" href="#">Konseling Offline</a>
-                                                    <ul class="dropdown-menu changing-dropdown">
-                                                        <li><a class="dropdown-item submenuNav "
-                                                                href="#">Konseling Offline Individu</a></li>
-                                                        <li><a class="dropdown-item submenuNav "
-                                                                href="#">Konseling Offline Pasangan</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul> --}}
+                                                <a class="dropdown-item" href="#">Konseling Offline / <br> Tatap
+                                                    Muka</a>
+                                            </ul>
                                         </li>
                                         <li class="{{ Route::is('topics') ? 'active' : '' }}">
                                             <a href="{{ route('topics') }}">Topik Konseling</a>
                                         </li>
                                         <li class="{{ Route::is('doctors') ? 'active' : '' }}">
-                                            <a href="{{ route('doctors') }}">Psikologi Kami</i></a>
+                                            <a href="{{ route('doctors') }}">Psikolog Kami</i></a>
                                         </li>
                                         {{-- <li>
                                             <a href="{{ route('blogs') }}">Artikel</i></a>
                                         </li> --}}
-                                        <li class="{{ Route::is('about-us') ? 'active' : '' }}"><a href="{{ route('about-us') }}">Tentang Kami</a></li>
+                                        <li class="{{ Route::is('about-us') ? 'active' : '' }}"><a
+                                                href="{{ route('about-us') }}">Tentang Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -177,7 +171,10 @@
                         <div class="single-footer">
                             <h2>About Us</h2>
                             <p align="justify">
-                                Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.
+                                Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan
+                                bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas
+                                keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan
+                                kami jaga kerahasiaannya.
                             </p>
                         </div>
                     </div>
@@ -210,7 +207,7 @@
                                         </li>
                                         <li>
                                             <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Psikologi Kami</a>
+                                                    aria-hidden="true"></i>Psikolog Kami</a>
                                         </li>
                                         <li>
                                             <a href="#"><i class="fa fa-caret-right"
@@ -253,7 +250,8 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-12">
                         <div class="copyright-content">
-                            <p class="text-white"> © {{date('Y')}} bagikanceritamu.com <span class="d-none d-sm-inline-block"> by Ditama Digital.</span></p>
+                            <p class="text-white"> © {{ date('Y') }} bagikanceritamu.com <span
+                                    class="d-none d-sm-inline-block"> by Ditama Digital.</span></p>
                         </div>
                     </div>
                 </div>
