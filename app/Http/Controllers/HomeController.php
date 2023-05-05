@@ -24,8 +24,8 @@ class HomeController extends Controller
         ];
         $data['albums'] = Album::latest()->limit(9)->get();
         $data['testimonies'] = Testimony::latest()->limit(10)->get();
-        $data['online'] = Product::where('type', 'Online')->latest()->get();
-        $data['offline'] = Product::where('type', 'Offline')->latest()->get();
+        $data['online'] = Product::where('type', 'Online')->get();
+        $data['offline'] = Product::where('type', 'Offline')->get();
         $data['header'] = Header::where('position', 'Homepage')->first();
 
 
@@ -66,8 +66,11 @@ class HomeController extends Controller
             'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
             'keywords' => '',
         ];
-        $data['doctor'] = Psychology::where('code', $code)->first();
-        $data['testimonies'] = Testimony::all();
+        $doctor =  Psychology::where('code', $code)->first();
+        $data['doctor'] = $doctor;
+        $data['testimonies'] = Testimony::where('psychology_id',$doctor->id)->get();
+
+        // dd($data);
 
         return view('frontend.doctor_detail',$data);
     }

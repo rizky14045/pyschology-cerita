@@ -1,5 +1,11 @@
 @extends('frontend.layouts.master')
-
+@section('styles')
+    <style>
+        .doctor-name h2:hover{
+            color:#20BBC7;
+        }
+    </style>
+@endsection
 @section('content')
     <div class="breadcrumbs overlay">
         <div class="container">

@@ -37,6 +37,7 @@
                             <th>Client Name</th>
                             <th>Client Image</th>
                             <th>Description</th>
+                            <th>Psychology</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -49,6 +50,7 @@
                                     <img src="{{asset('uploads/testimony_image/'.$testimony->client_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
                                 </td>
                                 <td>{{$testimony->description}}</td>
+                                <td>{{$testimony->psychology->name ??''}}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary text-white" href="{{route('admin.testimony.edit',['id'=>$testimony->id])}}">Edit</a>
                                     <form action="{{route('admin.testimony.delete',['id'=>$testimony->id])}}" class="d-inline" method="POST">

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Psychology;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Testimony extends Model
 {
@@ -12,6 +13,12 @@ class Testimony extends Model
     protected $fillable = [
         'client_name',
         'client_image',
-        'description'
+        'description',
+        'psychology_id'
     ];
+
+    public function psychology()
+    {
+        return $this->hasOne(Psychology::class, 'id', 'psychology_id');
+    }
 }

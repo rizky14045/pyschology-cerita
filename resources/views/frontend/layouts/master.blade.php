@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/color/color1.css') }}" />
 
     <link rel="stylesheet" href="#" id="colors" />
+@yield('styles')
 </head>
 
 <body>
@@ -122,6 +123,10 @@
                                             <a href="/">Beranda</a>
                                         </li>
                                         <li class="{{ Route::is('services') ? 'active' : '' }}">
+                                            <a href="{{route('services')}}">Layanan</a>
+                                        </li>
+                                        
+                                        {{-- <li class="{{ Route::is('services') ? 'active' : '' }}">
 
                                             <a href="{{ route('services') }}">Layanan <i
                                                     class="fa fa-angle-down"></i></a>
@@ -139,7 +144,7 @@
                                                 <a class="dropdown-item" href="#">Konseling Offline / <br> Tatap
                                                     Muka</a>
                                             </ul>
-                                        </li>
+                                        </li> --}}
                                         <li class="{{ Route::is('topics') ? 'active' : '' }}">
                                             <a href="{{ route('topics') }}">Topik Konseling</a>
                                         </li>
@@ -185,11 +190,11 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fa fa-caret-right"
+                                            <a href="{{url('')}}"><i class="fa fa-caret-right"
                                                     aria-hidden="true"></i>Beranda</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa fa-caret-right"
+                                            <a href="{{ route('topics') }}"><i class="fa fa-caret-right"
                                                     aria-hidden="true"></i>Topik Konseling</a>
                                         </li>
                                         {{-- <li>
@@ -206,12 +211,12 @@
                                                     aria-hidden="true"></i>Layanan</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa fa-caret-right"
+                                            <a href="{{ route('doctors') }}"><i class="fa fa-caret-right"
                                                     aria-hidden="true"></i>Psikolog Kami</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>About Us</a>
+                                            <a href="{{ route('about-us') }}"><i class="fa fa-caret-right"
+                                                    aria-hidden="true"></i>Tentang Kami</a>
                                         </li>
                                     </ul>
                                 </div>

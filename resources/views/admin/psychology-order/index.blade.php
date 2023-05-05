@@ -70,8 +70,8 @@
                             <td>{{$order->source}}</td>
                             <td>{{$order->number_counseling_session}}</td>
                             <td>{{$order->price->title}} - {{$order->price->type}} - Rp. {{number_format($order->price->price)}}</td>
-                            <td>{{($order->reschedule == false ) ? 'False' :'True'}}</td>
-                            <td>{{($order->extended == false ) ? 'False' :'True'}}</td>
+                            <td>{{($order->reschedule == false ) ? 'No' :'Yes'}}</td>
+                            <td>{{($order->extended == false ) ? 'No' :'Yes'}}</td>
                             <td>{{$order->extended_counseling_minute}}</td>
                             <td>Rp .{{number_format($order->total_price)}}</td>
                             <td>{{$order->location}}</td>
