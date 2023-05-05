@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Testimony;
+use App\Models\Psychology;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Intervention\Image\Facades\Image;
@@ -29,7 +30,8 @@ class TestimonyController extends Controller
      */
     public function create()
     {
-        return view('admin.testimony.create');
+        $data['psychologies'] = Psychology::all();
+        return view('admin.testimony.create',$data);
     }
 
     /**
@@ -90,6 +92,7 @@ class TestimonyController extends Controller
     public function edit($id)
     {
         $data['testimony'] = Testimony::where('id', $id)->first();
+        $data['psychologies'] = Psychology::all();
         return view('admin.testimony.update',$data);
     }
 

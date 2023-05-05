@@ -90,29 +90,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="doctor-details-biography">
-                        <section class="section testimonials-dd">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12 col-12 mr-5">
-                                        <div class="owl-carousel testimonial-slider">
-                                            @foreach ($testimonies as $testimony)
-                                                <div class="single-testimonial-dd">
-                                                    <img src="{{ asset('uploads/testimony_image/' . $testimony->client_image ?? 'default.png') }}"
-                                                        alt="#" />
-                                                    <p>
-                                                        "{{ $testimony->description }}"
-                                                    </p>
-                                                    <h4 class="name">{{ $testimony->client_name }}</h4>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <br />
-                    </div>
+                    
 
                     <div class="mt-5">
                         <a
@@ -123,6 +101,42 @@
             </div>
 
         </div>
+    </div>
+    @if ($testimonies)
+        
+    @endif
+    <div class="doctor-details-biography">
+        <section class="section testimonials overlay" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>Testimoni</h2>
+                            <img src="{{ asset('assets/vendor/img/section-img2.png') }}" alt="#" />
+                        </div>
+                    </div>
+                </div>
+                @if ($testimonies)
+                <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <div class="owl-carousel testimonial-slider">
+                            @foreach ($testimonies as $testimony)
+                            <div class="single-testimonial">
+                                <img src="{{asset('uploads/testimony_image/'.$testimony->client_image ?? '')}}" alt="#" />
+                                <p>
+                                    "{{$testimony->description}}"
+                                </p>
+                                <h4 class="name">{{$testimony->client_name}}</h4>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                @endif
+                
+            </div>
+        </section>
+        <div class="p-5"></div>
     </div>
     </div>
 @endsection

@@ -177,7 +177,6 @@ class PsychologyOrderController extends Controller
             'date' => 'required',
             'time_start' => 'required',
             'time_end' => 'required',
-            'number_counseling_session' => 'required',
         ]);
 
         $start = Carbon::parse($request->time_start);
