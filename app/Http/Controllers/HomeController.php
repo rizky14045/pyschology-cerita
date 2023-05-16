@@ -6,10 +6,11 @@ use App\Models\Faq;
 use App\Models\Album;
 use App\Models\Topic;
 use App\Models\Header;
+use App\Models\Article;
 use App\Models\Product;
-use App\Models\Psychology;
 use App\Models\Setting;
 use App\Models\Testimony;
+use App\Models\Psychology;
 use Illuminate\Http\Request;
 use App\Models\TermCondition;
 
@@ -75,14 +76,38 @@ class HomeController extends Controller
         return view('frontend.doctor_detail',$data);
     }
 
-    public function blog()
-    {
-        return view('frontend.blogs');
+    public function blog(Request $request)
+    {      
+        $data = [
+        'title' => 'Artikel',
+        'description' => ' Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi yang kami terima akan kami jaga kerahasiaannya.',
+        'keywords' => '',
+        ];
+        if($request){
+            $articles =  Article::where('title', 'like', '%' . $request->judul . '%')->latest()->paginate(10);
+        }else{
+            $articles = Article::latest()->paginate(10);
+
+        }
+        $data['articles'] =$articles;
+        $data['judul'] = $request->judul;
+        // dd($data);
+        return view('frontend.blogs',$data);
     }
 
-    public function blog_detail()
+    public function blog_detail($slug)
     {
-        return view('frontend.blog_detail');
+        $article = Article::where('slug',$slug)->first();
+        $recent = Article::where('slug','!=',$slug)->latest()->limit(5)->get();
+        $data = [
+            'title' => $article->title,
+            'description' => $article->description,
+            'keywords' => '',
+            'image' =>$article->banner_image,
+            'article' => $article,
+            'recent' =>$recent
+            ];
+        return view('frontend.blog_detail',$data);
     }
 
     public function topic()

@@ -16,7 +16,12 @@
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}">
     <meta itemprop="description" content="{{ $description }}">
+    @isset($image)
+    <meta itemprop="image" content="{{asset('uploads/banner_image/'.$image)}}">
+    @else    
     <meta itemprop="image" content="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}">
+    @endisset
+ 
 
 
     <title>{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}</title>
@@ -151,9 +156,9 @@
                                         <li class="{{ Route::is('doctors') ? 'active' : '' }}">
                                             <a href="{{ route('doctors') }}">Psikolog Kami</i></a>
                                         </li>
-                                        {{-- <li>
+                                        <li class="{{ Route::is('blogs') ? 'active' : '' }}">
                                             <a href="{{ route('blogs') }}">Artikel</i></a>
-                                        </li> --}}
+                                        </li>
                                         <li class="{{ Route::is('about-us') ? 'active' : '' }}"><a
                                                 href="{{ route('about-us') }}">Tentang Kami</a></li>
                                     </ul>
@@ -174,7 +179,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="single-footer">
-                            <h2>About Us</h2>
+                            <h2>Tentang Kami</h2>
                             <p align="justify">
                                 Bagikan Ceritamu memberikan kebebasan padamu untuk bercerita apapun masalahnya dan
                                 bertemu dengan para psikolog profesional untuk mendapat jawaban-jawaban terbaik atas
@@ -197,10 +202,10 @@
                                             <a href="{{ route('topics') }}"><i class="fa fa-caret-right"
                                                     aria-hidden="true"></i>Topik Konseling</a>
                                         </li>
-                                        {{-- <li>
+                                        <li>
                                             <a href="#"><i class="fa fa-caret-right"
                                                     aria-hidden="true"></i>Artikel</a>
-                                        </li> --}}
+                                        </li>
                                         </li>
                                     </ul>
                                 </div>
@@ -225,7 +230,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="single-footer">
-                            <h2>Social Media</h2>
+                            <h2>Sosial Media</h2>
                             <ul class="social">
                                 <li>
                                     <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}"><i
@@ -244,6 +249,16 @@
                                             class="fa-brands fa-instagram"></i></a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="single-footer pt-5">
+                            <h2>Alamat Kami</h2>
+                            <p align="justify">
+                                <a href="https://goo.gl/maps/8dniU33a9JkmL2KQA" target="_blank">
+                                    Infiniti Office, Arcade Business Center 6th Floor
+                                    Unit 6-03, Jl. Pantai Indah Kapuk 2 kav C1,
+                                    PIK, Penjaringan Jakarta Utara14460
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -341,6 +356,7 @@
             }
         })
     </script>
+    @yield('scripts')
 </body>
 
 </html>

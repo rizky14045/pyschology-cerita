@@ -9,7 +9,7 @@
                     <div class="col-12">
                         <h2>Tentang Kami</h2>
                         <ul class="bread-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{url('')}}">Beranda</a></li>
                             <li><i class="fa-solid fa-chevron-right"></i></li>
                             <li class="active">Tentang Kami</li>
                         </ul>

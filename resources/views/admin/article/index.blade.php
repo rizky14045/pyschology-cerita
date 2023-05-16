@@ -38,8 +38,8 @@
                             <th>Created By</th>
                             <th>Title</th>
                             <th>Banner</th>
-                            {{-- <th>Description</th> --}}
-                            <th>Body</th>
+                            <th>Description</th>
+                            {{-- <th>Body</th> --}}
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -53,8 +53,8 @@
                                 <td>
                                     <img src="{{asset('uploads/banner_image/'.$article->banner_image)}}" alt="" class="img-fluid pb-3" style="width:50%;">
                                 </td>
-                                {{-- <td>{{$article->description}}</td> --}}
-                                <td>{!!$article->body!!}</td>
+                                <td>{{$article->description}}</td>
+                                {{-- <td>{!!$article->body!!}</td> --}}
                                 <td>
                                     <a class="btn btn-sm btn-primary text-white" href="{{route('admin.article.edit',['id'=>$article->id])}}">Edit</a>
                                     <form action="{{route('admin.article.delete',['id'=>$article->id])}}" class="d-inline" method="POST">
