@@ -6,6 +6,7 @@ use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ArticleController extends Controller
@@ -54,12 +55,18 @@ class ArticleController extends Controller
             $this->validate($request, [
                 'banner_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
+
             $file= $request->file('banner_image');
 
+            $image_name = 'bagikan-cerita-banner-' . time() .'.'. $file->getClientOriginalExtension();
 
-            $image_name = $file->getClientOriginalName();
+            Image::make($file)->resize(1280, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save('uploads/banner_image/'.$image_name);
 
-            $file->move(public_path('uploads/banner_image/'),$image_name);
+            // $image_name = $file->getClientOriginalName();
+
+            // $file->move(public_path('uploads/banner_image/'),$image_name);
             
             $requestData['banner_image'] = $image_name;
         }
@@ -112,13 +119,20 @@ class ArticleController extends Controller
                 'banner_image' => 'image|mimes:jpg,jpeg,png|max:4096'
             ]);
             $file= $request->file('banner_image');
-            $image_name = $file->getClientOriginalName();
+            $image_name = 'bagikan-cerita-banner-' . time() .'.'. $file->getClientOriginalExtension();
             if($article->banner_image){
-                
+               
                 unlink(public_path('uploads/banner_image/'.$article->banner_image));
-                $file->move(public_path('uploads/banner_image/'),$image_name);
+
+                Image::make($file)->resize(1280, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/banner_image/'.$image_name);
+
             }else{
-                $file->move(public_path('uploads/banner_image/'),$image_name);
+
+                Image::make($file)->resize(1280, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('uploads/banner_image/'.$image_name);
             }
             $requestData['banner_image'] = $image_name;
         }

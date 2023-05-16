@@ -6,143 +6,61 @@
             <div class="bread-inner">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Blog Grid</h2>
+                        <h2>Artikel</h2>
                         <ul class="bread-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{url('/')}}">Beranda</a></li>
                             <li><i class="fa-solid fa-chevron-right"></i></li>
-                            <li class="active">Blogs</li>
+                            <li class="active">Artikel</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <section class="blog grid section">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="col-lg-12 col-12">
+                    <div class="main-sidebar">
+                        <div class="single-widget search">
+                            <div class="form">
+                                <form action="{{ route('blogs') }}" method="GET">
+                                    <input type="text" placeholder="Cari judul artikel" name="judul" value="{{$judul}}" />
+                                    <button type="submit" class="button"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section class="blog grid section" style="margin-top:-70px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-12">
+                <div class="col-lg-12 col-12">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
+                        @foreach ($articles as $article)
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <a href="{{ route('blog_detail',['slug'=>'saat-berduka-tidak-selamanya-hanya-bisa-bersedih']) }}">
+                           
                             <div class="single-news">
                                 <div class="news-head">
-                                    <img src="{{ asset('assets/vendor/img/blog1.jpg') }}" alt="#" />
+                                    <img src="{{asset('uploads/banner_image/'.$article->banner_image)}}" alt="#" />
                                 </div>
                                 <div class="news-body">
                                     <div class="news-content">
-                                        <div class="date">22 Aug, 2020</div>
+                                        <div class="date">{{$article->created_at->format('d F Y')}}</div>
                                         <h2>
-                                            <a href="{{ route('blog_detail') }}">We have annnocuced our new product.</a>
+                                            <a href="{{ route('blog_detail',['slug'=>$article->slug]) }}">{{$article->title}}</a>
                                         </h2>
-                                        <p class="text">
-                                            Lorem ipsum dolor a sit ameti, consectetur adipisicing
-                                            elit, sed do eiusmod tempor incididunt sed do incididunt
-                                            sed.
+                                        <p class="text" id="artikel" align="justify"> 
+                                        {{substr($article->description, 0, 200) . '...'}}
                                         </p>
                                     </div>
                                 </div>
                             </div>
+                        </a>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="{{ asset('assets/vendor/img/blog2.jpg') }}" alt="#" />
-                                </div>
-                                <div class="news-body">
-                                    <div class="news-content">
-                                        <div class="date">15 Jul, 2020</div>
-                                        <h2>
-                                            <a href="{{ route('blog_detail') }}">Top five way for solving teeth problems.</a>
-                                        </h2>
-                                        <p class="text">
-                                            Lorem ipsum dolor a sit ameti, consectetur adipisicing
-                                            elit, sed do eiusmod tempor incididunt sed do incididunt
-                                            sed.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="{{ asset('assets/vendor/img/blog3.jpg') }}" alt="#" />
-                                </div>
-                                <div class="news-body">
-                                    <div class="news-content">
-                                        <div class="date">05 Jan, 2020</div>
-                                        <h2>
-                                            <a href="{{ route('blog_detail') }}">We provide highly business soliutions.</a>
-                                        </h2>
-                                        <p class="text">
-                                            Lorem ipsum dolor a sit ameti, consectetur adipisicing
-                                            elit, sed do eiusmod tempor incididunt sed do incididunt
-                                            sed.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="{{ asset('assets/vendor/img/blog3.jpg') }}" alt="#" />
-                                </div>
-                                <div class="news-body">
-                                    <div class="news-content">
-                                        <div class="date">05 Jan, 2020</div>
-                                        <h2>
-                                            <a href="{{ route('blog_detail') }}">We provide highly business soliutions.</a>
-                                        </h2>
-                                        <p class="text">
-                                            Lorem ipsum dolor a sit ameti, consectetur adipisicing
-                                            elit, sed do eiusmod tempor incididunt sed do incididunt
-                                            sed.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="{{ asset('assets/vendor/img/blog1.jpg') }}" alt="#" />
-                                </div>
-                                <div class="news-body">
-                                    <div class="news-content">
-                                        <div class="date">22 Aug, 2020</div>
-                                        <h2>
-                                            <a href="{{ route('blog_detail') }}">We have annnocuced our new product.</a>
-                                        </h2>
-                                        <p class="text">
-                                            Lorem ipsum dolor a sit ameti, consectetur adipisicing
-                                            elit, sed do eiusmod tempor incididunt sed do incididunt
-                                            sed.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="{{ asset('assets/vendor/img/blog2.jpg') }}" alt="#" />
-                                </div>
-                                <div class="news-body">
-                                    <div class="news-content">
-                                        <div class="date">15 Jul, 2020</div>
-                                        <h2>
-                                            <a href="{{ route('blog_detail') }}">Top five way for solving teeth problems.</a>
-                                        </h2>
-                                        <p class="text">
-                                            Lorem ipsum dolor a sit ameti, consectetur adipisicing
-                                            elit, sed do eiusmod tempor incididunt sed do incididunt
-                                            sed.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                         {{-- <div class="col-12">
                             <div class="pagination">
                                 <ul class="pagination-list">
@@ -160,79 +78,9 @@
                         </div> --}}
                     </div>
                 </div>
-                <div class="col-lg-4 col-12">
-                    <div class="main-sidebar">
-                        <div class="single-widget search">
-                            <div class="form">
-                                <input type="email" placeholder="Search Here..." />
-                                <a class="button" href="#"><i class="fa fa-search"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="single-widget recent-post">
-                            <h3 class="title">Recent post</h3>
-
-                            <div class="single-post">
-                                <div class="image">
-                                    <img src="{{ asset('assets/vendor/img/blog-sidebar1.jpg') }}" alt="#" />
-                                </div>
-                                <div class="content">
-                                    <h5><a href="#">We have annnocuced our new product.</a></h5>
-                                    <ul class="comment">
-                                        <li>
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>Jan 11,
-                                            2020
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-commenting-o" aria-hidden="true"></i>35
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="single-post">
-                                <div class="image">
-                                    <img src="{{ asset('assets/vendor/img/blog-side') }}bar2.jpg" alt="#" />
-                                </div>
-                                <div class="content">
-                                    <h5>
-                                        <a href="#">Top five way for solving teeth problems.</a>
-                                    </h5>
-                                    <ul class="comment">
-                                        <li>
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>Mar 05,
-                                            2019
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-commenting-o" aria-hidden="true"></i>59
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="single-post">
-                                <div class="image">
-                                    <img src="{{ asset('assets/vendor/img/blog-side') }}bar3.jpg" alt="#" />
-                                </div>
-                                <div class="content">
-                                    <h5>
-                                        <a href="#">We provide highly business soliutions.</a>
-                                    </h5>
-                                    <ul class="comment">
-                                        <li>
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>June
-                                            09, 2019
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-commenting-o" aria-hidden="true"></i>44
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+        {{-- {{$articles->links()}} --}}
     </section>
 @endsection
+

@@ -10,7 +10,7 @@
                     <div class="col-12">
                         <h2>Profil Psikolog</h2>
                         <ul class="bread-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{url('')}}">Beranda</a></li>
                             <li><i class="fa-solid fa-chevron-right"></i></li>
                             <li class="active">Profil Psikolog</li>
                         </ul>
@@ -60,15 +60,15 @@
                         </div>
                         @php
                             $topics = json_decode($doctor->topics);
+                            $topic= implode(' , ', $topics);    
+                                
                         @endphp
                         <div class="doctor-details-biography">
                             <h3 style="color:#20bbc7;">Topik Masalah</h3>
                             <p class="degree" style="margin-top: -20px">
-                                @foreach ($topics as $item)
-                                    @if ($item)
-                                        <span class="badge bg-secondary text-white">{{ $item }}</span>
-                                    @endif
-                                @endforeach
+                                <span>
+                                    {{$topic}}
+                                </span>
                             </p>
                         </div>
                         <div class="doctor-details-biography">
