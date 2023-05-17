@@ -86,9 +86,9 @@ class HomeController extends Controller
         ];
 
         if ($request) {
-            $articles =  Article::where('title', 'like', '%' . $request->judul . '%')->latest()->paginate(3);
+            $articles =  Article::where('title', 'like', '%' . $request->judul . '%')->latest()->paginate(9);
         } else {
-            $articles = Article::latest()->paginate(3);
+            $articles = Article::latest()->paginate(9);
         }
         $data['articles'] = $articles;
         $data['judul'] = $request->judul;
