@@ -16,4 +16,37 @@
     <link href="{{asset('/assets/css/app.min.css')}}" rel="stylesheet" type="text/css">
 
     @yield('styles')
+    <style>
+        .pagination .pagination-list{
+            display: flex;
+            list-style: none !important;
+            gap: 15px;
+            align-items: center !important;
+        }
+        .pagination-list li a{
+   
+                text-decoration: none;
+                position: relative;
+                display: block;
+                color: #20BBC7;
+                background-color: #fff;
+                border: 1px solid #ced4da;
+                border-radius: 2px;
+                padding: 7px;
+        }
+        .pagination-list .active a{
+   
+                text-decoration: none;
+                position: relative;
+                display: block;
+                color: #fff !important;
+                background-color: #20BBC7;
+                border: 1px solid #ced4da;
+                border-radius: 2px;
+                padding: 7px;
+        }
+        .pagination-list .disabled .page-link{
+                background-color: #ced4da;
+                }
+    </style>
 </head>
