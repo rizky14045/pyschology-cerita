@@ -2828,7 +2828,7 @@ body {
 }
 
 .blog .single-news img {
-    width: 100%;
+    aspect-ratio: 3/2;
     margin: 0;
     padding: 0;
     -webkit-transition: all 0.4s ease;
