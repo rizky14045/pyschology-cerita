@@ -75,7 +75,7 @@
             </div>
             <div class="row pb-3">
                 <div class="form-group col-12">
-                    <label >Certificate</label>
+                    <label >Schedule Psycholog</label>
                     <textarea class="form-control" rows="5" name="certificate" placeholder="certificate">
                         {{$psychology->certificate }}
                     </textarea>
