@@ -15,7 +15,7 @@ class DashboardController extends Controller
         
         foreach ($order as $item) {
             $events[] = [
-                'title' => $item->client_name.' - '.$item->psychology->name,
+                'title' => $item->client_name.' - '.$item->client_email.' - '.$item->psychology->name,
                 'start' => $item->date.'T'.$item->time_start,
                 'end' => $item->date.'T'.$item->time_end,
                 'color' =>sprintf("#%06x",rand(0,16777215)),

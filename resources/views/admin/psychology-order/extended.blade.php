@@ -35,18 +35,25 @@
                             </div>
                         </div>
                         <div class="row pb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <i class="fa fa-calendar"></i>
                                     <label class="form-label">Nama Client</label>
                                     <input class="form-control" type="text" name="client_name" value="{{$order->client_name}}" disabled/>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <i class="fa fa-calendar"></i>
                                     <label class="form-label">No Handphone</label>
                                     <input class="form-control" type="text" name="client_phone" value="{{$order->client_phone}}" disabled/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <i class="fa fa-calendar"></i>
+                                    <label class="form-label">Email</label>
+                                    <input class="form-control" type="email" name="client_email" value="{{$order->client_email}}" disabled/>
                                 </div>
                             </div>
                         </div>

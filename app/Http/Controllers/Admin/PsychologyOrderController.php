@@ -55,6 +55,7 @@ class PsychologyOrderController extends Controller
         $request->validate([
             'client_name' => 'required',
             'client_phone' => 'required',
+            'client_email' => 'required|email:rfc,dns',
             'psychology_id' => 'required',
             'date' => 'required',
             'time_start' => 'required',

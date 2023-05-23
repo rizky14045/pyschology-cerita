@@ -61,6 +61,11 @@
 
     <link rel="stylesheet" href="#" id="colors" />
 @yield('styles')
+<style>
+        .address p:hover{
+            color:#ffffffce !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -250,15 +255,21 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="single-footer pt-5">
+                           <div class="single-footer address pt-5">
                             <h2>Alamat Kami</h2>
-                            <p align="justify">
-                                <a href="https://goo.gl/maps/8dniU33a9JkmL2KQA" target="_blank">
-                                    Infiniti Office, Arcade Business Center 6th Floor
-                                    Unit 6-03, Jl. Pantai Indah Kapuk 2 kav C1,
-                                    PIK, Penjaringan Jakarta Utara14460
-                                </a>
-                            </p>
+                            <ul>
+                                <li>
+                                    <p align="justify">
+                                        <a href="https://goo.gl/maps/8dniU33a9JkmL2KQA" target="_blank">
+                                            <i class="fa fa-map-marker"
+                                                    aria-hidden="true"></i>
+                                            Infiniti Office, Arcade Business Center 6th Floor
+                                            Unit 6-03, Jl. Pantai Indah Kapuk 2 kav C1,
+                                            PIK, Penjaringan Jakarta Utara14460
+                                        </a>
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -39,6 +39,7 @@
                             <th>Session ID</th>
                             <th>Nama Client</th>
                             <th>Nomor Handphone Client</th>
+                            <th>Email</th>
                             <th>Nama Pyschology</th>
                             <th>Tanggal</th>
                             <th>Jam Mulai</th>
@@ -63,6 +64,7 @@
                             <td>{{$order->session_id}}</td>
                             <td>{{$order->client_name}}</td>
                             <td>{{$order->client_phone}}</td>
+                            <td>{{$order->client_email}}</td>
                             <td>{{$order->psychology->name}}</td>
                             <td>{{$order->date}}</td>
                             <td>{{$order->time_start}}</td>
