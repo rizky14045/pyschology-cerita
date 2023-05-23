@@ -27,7 +27,7 @@
                     @csrf
                     <div class="row">
                         <div class="row pb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <i class="fa fa-calendar"></i>
                                     <label class="form-label">Nama Client</label>
@@ -37,13 +37,23 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <i class="fa fa-calendar"></i>
                                     <label class="form-label">No Handphone</label>
                                     <input class="form-control" type="text" name="client_phone" value="" required placeholder="No Handphone Client"/>
                                     @if($errors->has('client_phone'))
                                         <div class="error">{{ $errors->first('client_phone') }}</div>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <i class="fa fa-calendar"></i>
+                                    <label class="form-label">Email</label>
+                                    <input class="form-control" type="email" name="client_email" value="" required placeholder="Email Client"/>
+                                    @if($errors->has('client_email'))
+                                        <div class="error">{{ $errors->first('client_email') }}</div>
                                     @endif
                                 </div>
                             </div>
