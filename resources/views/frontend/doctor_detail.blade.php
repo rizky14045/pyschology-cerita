@@ -84,7 +84,7 @@
                             <br />
                         </div>
                         <div class="doctor-details-biography">
-                            <h3 style="color:#20bbc7">Sertifikat</h3>
+                            <h3 style="color:#20bbc7">Jadwal Psikolog</h3>
                             <p>
                                 {!! $doctor->certificate !!}
                             </p>
@@ -102,9 +102,6 @@
 
         </div>
     </div>
-    @if ($testimonies)
-        
-    @endif
     <div class="doctor-details-biography">
         <section class="section testimonials overlay" data-stellar-background-ratio="0.5">
             <div class="container">
