@@ -53,6 +53,26 @@ Version:	1.1
 	Global CSS
 ===============================*/
 
+@media screen and (max-width: 390px) {
+    .icon-bar {
+        display: none;
+    }
+
+    .icon-bar-mobile {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    .icon-bar {
+        display: inline;
+    }
+
+    .icon-bar-mobile {
+        display: none;
+    }
+}
+
 .icon-bar {
     position: fixed;
     background: #5AB8C3;
@@ -72,16 +92,6 @@ Version:	1.1
     transition: all 0.3s ease;
     color: white;
     font-size: 20px;
-}
-
-.doctor-name {
-    /* background: red; */
-    text-align: right;
-    margin-left: 6%;
-}
-
-.doctor-name p {
-    font-size: 12px;
 }
 
 .icon-bar a i {
@@ -116,6 +126,46 @@ Version:	1.1
     color: white;
     transform: scale(1.5);
 }
+
+.icon-bar-mobile {
+    width: 35px;
+    height: 50px;
+    position: fixed;
+    background: #5AB8C3;
+    top: 50%;
+    right: 0;
+    padding: 5px 10px 5px 5px;
+    border-radius: 10px 0 0 10px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.icon-bar-mobile i {
+    background: #fff;
+    margin-top: 8px;
+
+    padding: 5px 5px 5px 5px;
+    border-radius: 50%;
+    width: 140%;
+    text-align: center;
+    transition: transform .2s;
+}
+
+.icon-bar-mobile a i {
+    color: #5AB8C3;
+}
+
+.doctor-name {
+    text-align: right;
+    margin-left: 6%;
+}
+
+.doctor-name p {
+    font-size: 12px;
+}
+
 
 body {
     font-family: 'Poppins', sans-serif;

@@ -18,10 +18,10 @@
     <meta itemprop="description" content="{{ $description }}">
     @isset($image)
     <meta itemprop="image" content="{{asset('uploads/banner_image/'.$image)}}">
-    @else    
+    @else
     <meta itemprop="image" content="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}">
     @endisset
- 
+
 
 
     <title>{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}</title>
@@ -135,7 +135,7 @@
                                         <li class="{{ Route::is('services') ? 'active' : '' }}">
                                             <a href="{{route('services')}}">Layanan</a>
                                         </li>
-                                        
+
                                         {{-- <li class="{{ Route::is('services') ? 'active' : '' }}">
 
                                             <a href="{{ route('services') }}">Layanan <i
@@ -290,7 +290,7 @@
         </div>
     </footer>
 
-    <div class="icon-bar">
+    <div class="icon-bar" id="icon-bar">
         <a href="{{ $setting->where('key', 'instagram')->first()->value }}" class="instagram">
             <i class="fa fa-instagram"></i>
         </a>
@@ -300,6 +300,10 @@
         <a href="{{ $setting->where('key', 'twitter')->first()->value }}" class="twitter">
             <i class="fa fa-twitter"></i>
         </a>
+    </div>
+
+    <div class="icon-bar-mobile" id="icon-bar-mobile">
+            <i class="fa fa-chevron-left"></i>
     </div>
 
     <a href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}" class="float" target="_blank">
@@ -357,6 +361,12 @@
             } else {
                 $('.changing-dropdown').remove('dropdown').addClass('dropdown-menu');
             }
+
+            if (window_size > 414) {
+                $('#icon-bar').css('display', 'block')
+                $('#icon-bar-mobile').css('display', 'none')
+
+            }
         });
 
         $(window).on('resize', function() {
@@ -364,6 +374,24 @@
                 $('.changing-dropdown').addClass('dropdown').removeClass('dropdown-menu');
             } else {
                 $('.changing-dropdown').remove('dropdown').addClass('dropdown-menu');
+            }
+        })
+
+        $('#icon-bar-mobile').on('click', function() {
+            $(this).css('display', 'none')
+            $('#icon-bar').css({
+                'display': 'block',
+                'animation': 'fade-in 1s',
+            })
+        })
+
+        $(document).click(function(e) {
+            if ($(window).width() < 414) {
+                if (!$(e.target).hasClass("fa fa-chevron-left") && !$(e.target).hasClass("left-icon")) {
+                    console.log('asd')
+                    $('#icon-bar').css('display', 'none')
+                    $('#icon-bar-mobile').css('display', 'block')
+                }
             }
         })
     </script>
