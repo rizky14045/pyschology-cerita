@@ -354,26 +354,28 @@
 
     <script>
         $(document).ready(function() {
-            var window_size = $(window).width();
 
+            var window_size = $(window).width();
             if (window_size < 767) {
                 $('.changing-dropdown').addClass('dropdown').removeClass('dropdown-menu');
+                $('#icon-bar').css('display', 'none')
+                $('#icon-bar-mobile').css('display', 'block')
             } else {
                 $('.changing-dropdown').remove('dropdown').addClass('dropdown-menu');
-            }
-
-            if (window_size > 414) {
                 $('#icon-bar').css('display', 'block')
                 $('#icon-bar-mobile').css('display', 'none')
-
             }
         });
 
         $(window).on('resize', function() {
             if ($(window).width() < 767) {
                 $('.changing-dropdown').addClass('dropdown').removeClass('dropdown-menu');
+                $('#icon-bar').css('display', 'none')
+                $('#icon-bar-mobile').css('display', 'block')
             } else {
                 $('.changing-dropdown').remove('dropdown').addClass('dropdown-menu');
+                $('#icon-bar').css('display', 'block')
+                $('#icon-bar-mobile').css('display', 'none')
             }
         })
 
