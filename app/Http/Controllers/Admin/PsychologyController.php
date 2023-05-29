@@ -43,7 +43,6 @@ class PsychologyController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'number_license' => 'required|string',
             'psychology_image' => 'required|image|mimes:jpg,jpeg,png|max:4096',
             'topics' => 'required',
         ]);

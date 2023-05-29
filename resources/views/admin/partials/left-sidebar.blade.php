@@ -6,6 +6,7 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
+                @if (Auth::user()->role == 'admin')
                 <li>
                     <a href="{{url('admin')}}" class="waves-effect">
                         <i class="fas fa-home"></i>
@@ -79,7 +80,29 @@
                         </li>
                         <li>
                             <a href="{{route('admin.settings.general.index')}}"><i class="fas fa-cog"></i>Setting</a>
-                        </li>
+                        </li>       
+                @else
+                <li>
+                    <a href="{{url('admin')}}" class="waves-effect">
+                        <i class="fas fa-home"></i>
+                        <span> Dashboard </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('admin.psychology-order.index')}}" class="waves-effect">
+                        <i class="fas fa-table"></i>
+                        <span>Psychology Order</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="far fa-file-excel"></i>
+                        <span>Export Data</span>
+                    </a>
+                </li>
+                @endif
+               
                     </ul>
                 </li>
 
