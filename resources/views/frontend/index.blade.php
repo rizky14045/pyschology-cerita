@@ -168,7 +168,7 @@
                         <i class="fa-solid fa-users"></i>
                         <div class="content">
                             <span>Konseling Berjalan </span>
-                            <p>Sudah terhubung dengan kami, maka kamu bisa langsung melakukan konseling</p>
+                            <p>Saat kamu sudah terhubung dengan kami, melakukan pembayaran dan konseling sudah terjadwalkan</p>
                         </div>
                     </div>
                 </div>

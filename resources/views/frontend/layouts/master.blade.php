@@ -21,9 +21,20 @@
     @else
     <meta itemprop="image" content="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}">
     @endisset
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}" />
+    <meta property="og:description" content="{{ $description }}" />
+    <meta property="og:url" content="{{ URL::current() }}"/>
+    @isset($image)
+    <meta property="og:image" content="{{asset('uploads/banner_image/'.$image)}}" />
+    @else
+    <meta property="og:image" content="{{ asset('uploads/setting/' . $setting->where('key', 'logo')->first()->value) }}" />
+    @endisset
+    <meta property="og:site_name" content="{{ $setting->where('key', 'name')->first()->value }}" />
 
-
-
+    <meta name="google-site-verification" content="sjJcDUuEMkfG_T6-N3dFnwuBNEnlRbtIz-uFyCCWrdw" />
+    <meta name="robots" content="index, follow">
     <title>{{ $setting->where('key', 'name')->first()->value }} - {{ $title }}</title>
 
     <link rel="icon" href="{{ asset('uploads/setting/' . $setting->where('key', 'favicon')->first()->value) }}" />
@@ -60,12 +71,23 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/color/color1.css') }}" />
 
     <link rel="stylesheet" href="#" id="colors" />
+    <link rel="canonical" href="{{ URL::current() }}" />
 @yield('styles')
 <style>
         .address p:hover{
             color:#ffffffce !important;
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRRXCX9TP2">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-KRRXCX9TP2');
+    </script>
 </head>
 
 <body>
