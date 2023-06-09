@@ -79,6 +79,7 @@
                             <td>{{$order->location}}</td>
                             <td>{{$order->status}}</td>
                             <td>
+                                @if ($order->status =='Belum Selesai')
                                 <a class="btn btn-sm btn-success text-white" href="{{route('admin.psychology-order.reschedule',['session'=>$order->session_id])}}">Reschedule</a>
 
                                 <a class="btn btn-sm btn-warning text-white" href="{{route('admin.psychology-order.extended',['session'=>$order->session_id])}}">Extend</a>
@@ -95,7 +96,8 @@
                                     @csrf
                                     @method('patch')
                                     <button type="submit" class="btn btn-sm btn-info text-white" >Finish</button>
-                                </form>
+                                </form>                     
+                                @endif
                             </td>
                         </tr>
                         @endforeach
