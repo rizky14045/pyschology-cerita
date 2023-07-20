@@ -61,7 +61,7 @@
                         <select id="psychology" class="form-select psychology-select" name="psychology_id">
                             <option selected disabled>Pilih Psychology</option>
                             @foreach ($psychologies as $psychology)
-                                <option {{($order->psychology_id == $psychology->id ) ? 'Selected' :''}} value="{{$psychology->id}}">{{$psychology->name}}</option>
+                                <option {{($testimony->psychology_id == $psychology->id ) ? 'Selected' :''}} value="{{$psychology->id}}">{{$psychology->name}}</option>
                             @endforeach
                         </select>
                         @if($errors->has('psychology_id'))

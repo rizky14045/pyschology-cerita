@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="{{route('admin.export-data.index')}}" class="waves-effect">
                         <i class="far fa-file-excel"></i>
                         <span>Export Data</span>
                     </a>

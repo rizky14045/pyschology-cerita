@@ -94,7 +94,7 @@
 
                     <div class="mt-5">
                         <a
-                            href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text=Saya ingin berkonsultasi dengan Psikology {{ urlencode($doctor->name) }}"class="btn btn-lg btn-block text-white">Konsultasi
+                            href="https://wa.me/{{ $setting->where('key', 'whatsapp')->first()->value }}?text=Saya ingin berkonsultasi dengan psikolog {{ urlencode($doctor->name) }}"class="btn btn-lg btn-block text-white">Konsultasi
                             Sekarang</a>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TestimonyController;
+use App\Http\Controllers\Admin\ExportDataController;
 use App\Http\Controllers\Admin\PsychologyController;
 use App\Http\Controllers\Admin\TermConditionController;
 use App\Http\Controllers\Admin\PsychologyOrderController;
@@ -125,7 +126,12 @@ Route::prefix('admin')->group(function () {
         Route::patch('/article/update/{id}', ArticleController::class . '@update')->name('admin.article.update');
         Route::delete('/article/delete/{id}', ArticleController::class . '@destroy')->name('admin.article.delete');
         Route::post('/article/upload-image', ArticleController::class . '@uploadImage')->name('admin.article.upload');
-        
+
+        //export data
+        Route::get('/export-index', ExportDataController::class . '@index')->name('admin.export-data.index');
+        //export data
+        Route::get('/export-data', ExportDataController::class . '@export')->name('admin.export-data.export');
+       
         // user
         Route::get('/user', UserController::class . '@index')->name('admin.user.index');
         Route::get('/user/create', UserController::class . '@create')->name('admin.user.create');
