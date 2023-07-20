@@ -229,10 +229,8 @@ class PsychologyOrderController extends Controller
         $price = Price::where('id',$order->price_id)->first();
         $totalPrice = $price->price * $number_counseling_session;
  
-        $order->number_counseling_session = $number_counseling_session;
         $order->extended_counseling_minute = $request->extended_counseling_minute;
         $order->extended = true;
-        $order->total_price = $totalPrice;
         $order->save();
 
         Alert::success('Success', 'Psychology Order Has been extend successfully');

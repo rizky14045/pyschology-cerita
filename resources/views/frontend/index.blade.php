@@ -181,7 +181,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="content">
-                        <h3>Jika kamu ingin bercerita dengan psikolog kami mengenai kegelisahan mu silahkan hubungi nomor {{ $setting->where('key', 'whatsapp')->first()->value }}</h3>
+                        <h3>Jika kamu ingin menjadwalkan sesi konseling dengan psikolog kami, kamu bisa menghubungi customer service kami di nomor {{ $setting->where('key', 'whatsapp')->first()->value }}</h3>
                         <p>
                             Kami akan sesegera mungkin merespon kebutuhanmu dan atur janji waktu untuk berkonsultasi.
                         </p>
